@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_MAC
+
 #include <ApplicationServices/ApplicationServices.h>
 #include <Cocoa/Cocoa.h>
 #include <CoreFoundation/CoreFoundation.h>
@@ -218,3 +222,5 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
 }
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

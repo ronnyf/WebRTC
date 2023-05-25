@@ -19,7 +19,7 @@
 
 namespace webrtc {
 
-enum class H264Profile {
+enum class RTC_EXPORT H264Profile {
   kProfileConstrainedBaseline,
   kProfileBaseline,
   kProfileMain,
@@ -30,7 +30,7 @@ enum class H264Profile {
 
 // All values are equal to ten times the level number, except level 1b which is
 // special.
-enum class H264Level {
+enum class RTC_EXPORT H264Level {
   kLevel1_b = 0,
   kLevel1 = 10,
   kLevel1_1 = 11,
@@ -50,7 +50,7 @@ enum class H264Level {
   kLevel5_2 = 52
 };
 
-struct H264ProfileLevelId {
+struct RTC_EXPORT H264ProfileLevelId {
   constexpr H264ProfileLevelId(H264Profile profile, H264Level level)
       : profile(profile), level(level) {}
   H264Profile profile;
@@ -60,7 +60,7 @@ struct H264ProfileLevelId {
 // Parse profile level id that is represented as a string of 3 hex bytes.
 // Nothing will be returned if the string is not a recognized H264
 // profile level id.
-absl::optional<H264ProfileLevelId> ParseH264ProfileLevelId(const char* str);
+RTC_EXPORT absl::optional<H264ProfileLevelId> ParseH264ProfileLevelId(const char* str);
 
 // Parse profile level id that is represented as a string of 3 hex bytes
 // contained in an SDP key-value map. A default profile level id will be

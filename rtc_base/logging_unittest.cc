@@ -10,7 +10,7 @@
 
 #include "rtc_base/logging.h"
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
 
 #include <string.h>
 
@@ -383,4 +383,4 @@ TEST(LogTest, ToLogStringUsedForUnknownTypes) {
 }
 
 }  // namespace rtc
-#endif  // RTC_LOG_ENABLED()
+#endif  // RTC_LOG_ENABLED

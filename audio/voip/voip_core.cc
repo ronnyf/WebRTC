@@ -16,6 +16,7 @@
 
 #include "api/audio_codecs/audio_format.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

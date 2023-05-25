@@ -12,6 +12,7 @@
 #define SYSTEM_WRAPPERS_INCLUDE_CPU_INFO_H_
 
 #include <stdint.h>
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

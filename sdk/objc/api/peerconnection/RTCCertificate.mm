@@ -10,7 +10,7 @@
 
 #import "RTCCertificate.h"
 
-#import "base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
 #include "rtc_base/logging.h"
 #include "rtc_base/rtc_certificate_generator.h"

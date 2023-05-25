@@ -8,9 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCNetworkMonitor.h"
+#import <WebRTC/RTCNetworkMonitor.h>
 
-#include "sdk/objc/native/src/network_monitor_observer.h"
+#include "network_monitor_observer.h"
 
 @interface RTCNetworkMonitor ()
 

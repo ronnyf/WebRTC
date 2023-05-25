@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCDataChannel.h"
+#import <WebRTC/RTCDataChannel.h>
 
 #include "api/data_channel_interface.h"
 #include "api/scoped_refptr.h"

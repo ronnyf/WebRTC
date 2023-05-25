@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "base/RTCEncodedImage.h"
+#import <WebRTC/RTCEncodedImage.h>
 
 #include "api/video/encoded_image.h"
 

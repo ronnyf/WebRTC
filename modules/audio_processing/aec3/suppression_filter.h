@@ -16,7 +16,7 @@
 
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "modules/audio_processing/aec3/aec3_fft.h"
-#include "modules/audio_processing/aec3/block.h"
+#include "modules/audio_processing/aec3/block.hpp"
 #include "modules/audio_processing/aec3/fft_data.h"
 
 namespace webrtc {

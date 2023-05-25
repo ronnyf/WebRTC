@@ -29,7 +29,11 @@ struct Dav1dDecoderTemplateAdapter {
 
   static std::unique_ptr<VideoDecoder> CreateDecoder(
       const SdpVideoFormat& format) {
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
     return CreateDav1dDecoder();
+#else
+	return nullptr;
+#endif
   }
 };
 

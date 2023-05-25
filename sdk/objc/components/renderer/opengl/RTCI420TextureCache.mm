@@ -12,8 +12,8 @@
 
 #import <OpenGLES/ES3/gl.h>
 
-#import "base/RTCI420Buffer.h"
-#import "base/RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 #include <vector>
 

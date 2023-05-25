@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 RTC_EXTERN const char kRTCVertexShaderSource[];
 

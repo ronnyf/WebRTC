@@ -14,7 +14,7 @@
 #import "RTCRtpCodecParameters+Private.h"
 #import "RTCRtpEncodingParameters+Private.h"
 #import "RTCRtpHeaderExtension+Private.h"
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 @implementation RTC_OBJC_TYPE (RTCRtpParameters)
 

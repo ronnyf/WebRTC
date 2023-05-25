@@ -11,6 +11,7 @@
 #include "modules/desktop_capture/desktop_capture_options.h"
 
 #include "api/make_ref_counted.h"
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
 #include "modules/desktop_capture/mac/full_screen_mac_application_handler.h"

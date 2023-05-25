@@ -26,6 +26,7 @@
 #include "modules/desktop_capture/screen_drawer.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/third_party/base64/base64.h"
 #include "test/gmock.h"
 #include "test/gtest.h"

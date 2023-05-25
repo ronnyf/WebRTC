@@ -16,6 +16,7 @@
 #include "api/task_queue/task_queue_factory.h"
 #include "modules/audio_device/include/audio_device_defines.h"
 #include "rtc_base/ref_count.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

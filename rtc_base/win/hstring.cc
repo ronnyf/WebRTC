@@ -10,6 +10,8 @@
 
 #include "rtc_base/win/hstring.h"
 
+#if defined(WEBRTC_WIN)
+
 #include <libloaderapi.h>
 #include <winstring.h>
 
@@ -60,3 +62,5 @@ HRESULT DeleteHstring(HSTRING hstr) {
 }
 
 }  // namespace webrtc
+
+#endif

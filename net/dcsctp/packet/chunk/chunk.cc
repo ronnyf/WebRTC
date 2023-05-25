@@ -15,7 +15,7 @@
 
 #include "absl/types/optional.h"
 #include "api/array_view.h"
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/packet/chunk/abort_chunk.h"
 #include "net/dcsctp/packet/chunk/cookie_ack_chunk.h"
 #include "net/dcsctp/packet/chunk/cookie_echo_chunk.h"

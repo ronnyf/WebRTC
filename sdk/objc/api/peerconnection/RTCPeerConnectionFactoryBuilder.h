@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCPeerConnectionFactory.h"
+#import <WebRTC/RTCPeerConnectionFactory.h>
 
 #include "api/scoped_refptr.h"
 

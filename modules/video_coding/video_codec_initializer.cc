@@ -19,6 +19,7 @@
 #include "api/scoped_refptr.h"
 #include "api/units/data_rate.h"
 #include "api/video_codecs/video_encoder.h"
+#include "video/config/video_encoder_config.h"
 #include "modules/video_coding/codecs/av1/av1_svc_config.h"
 #include "modules/video_coding/codecs/vp8/vp8_scalability.h"
 #include "modules/video_coding/codecs/vp9/svc_config.h"
@@ -320,6 +321,7 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
       break;
     }
     case kVideoCodecAV1:
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
       if (SetAv1SvcConfig(video_codec,
                           /*num_temporal_layers=*/
                           streams.back().num_temporal_layers.value_or(1),
@@ -331,6 +333,9 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
       } else {
         RTC_LOG(LS_WARNING) << "Failed to configure svc bitrates for av1.";
       }
+#else
+	  RTC_LOG(LS_INFO) << "AV1 codec not available.";
+#endif
       break;
     case kVideoCodecH264: {
       RTC_CHECK(!config.encoder_specific_settings);

@@ -11,9 +11,9 @@
 #ifndef RTC_BASE_WIN32_H_
 #define RTC_BASE_WIN32_H_
 
-#ifndef WEBRTC_WIN
-#error "Only #include this header in Windows builds"
-#endif
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
 
 // Make sure we don't get min/max macros
 #ifndef NOMINMAX
@@ -45,4 +45,5 @@ int win32_inet_pton(int af, const char* src, void* dst);
 
 }  // namespace rtc
 
+#endif
 #endif  // RTC_BASE_WIN32_H_

@@ -11,8 +11,8 @@
 #import <AudioUnit/AudioUnit.h>
 #import <Foundation/Foundation.h>
 
-#import "objc_audio_device.h"
-#import "objc_audio_device_delegate.h"
+#include "objc_audio_device.h"
+#include "objc_audio_device_delegate.h"
 
 #include "api/make_ref_counted.h"
 #include "api/ref_counted_base.h"

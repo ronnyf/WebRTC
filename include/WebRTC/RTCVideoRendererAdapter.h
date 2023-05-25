@@ -1,0 +1,1 @@
+../../sdk/objc/api/RTCVideoRendererAdapter.h

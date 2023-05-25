@@ -10,6 +10,8 @@
 
 #include "rtc_base/win32.h"
 
+#if defined(WEBRTC_WIN)
+
 #include <winsock2.h>
 #include <ws2tcpip.h>
 
@@ -311,3 +313,5 @@ int inet_pton_v6(const char* src, void* dst) {
 }
 
 }  // namespace rtc
+
+#endif

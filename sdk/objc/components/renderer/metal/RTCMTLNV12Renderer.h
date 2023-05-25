@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMTLRenderer.h"
+#import <WebRTC/RTCMTLRenderer.h>
 
 NS_AVAILABLE(10_11, 9_0)
 @interface RTCMTLNV12Renderer : RTCMTLRenderer

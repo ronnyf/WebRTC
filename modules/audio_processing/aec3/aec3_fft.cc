@@ -15,6 +15,7 @@
 #include <iterator>
 
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
 namespace webrtc {

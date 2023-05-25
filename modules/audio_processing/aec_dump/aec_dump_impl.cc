@@ -10,6 +10,8 @@
 
 #include "modules/audio_processing/aec_dump/aec_dump_impl.h"
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include <memory>
 #include <utility>
 
@@ -279,3 +281,5 @@ std::unique_ptr<AecDump> AecDumpFactory::Create(FILE* handle,
 }
 
 }  // namespace webrtc
+
+#endif // WEBRTC_ENABLE_PROTOBUF

@@ -18,6 +18,7 @@
 #include "modules/audio_device/audio_device_generic.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "system_wrappers/include/metrics.h"
 
 #if defined(_WIN32)
@@ -35,7 +36,7 @@
 #include "modules/audio_device/linux/audio_device_pulse_linux.h"
 #endif
 #elif defined(WEBRTC_IOS)
-#include "sdk/objc/native/src/audio/audio_device_ios.h"
+#include "modules/audio_device/ios/audio_device_ios.h"
 #elif defined(WEBRTC_MAC)
 #include "modules/audio_device/mac/audio_device_mac.h"
 #endif

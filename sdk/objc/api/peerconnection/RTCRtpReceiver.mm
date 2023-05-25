@@ -9,12 +9,13 @@
  */
 
 #import "RTCRtpReceiver+Private.h"
+#import "RTCRtpReceiver+Native.h"
 
 #import "RTCMediaStreamTrack+Private.h"
 #import "RTCRtpParameters+Private.h"
 #import "RTCRtpReceiver+Native.h"
-#import "base/RTCLogging.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import "NSString+StdString.h"
 
 #include "api/media_stream_interface.h"
 

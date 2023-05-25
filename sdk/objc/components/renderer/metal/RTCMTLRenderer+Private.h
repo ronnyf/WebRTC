@@ -10,7 +10,7 @@
 
 #import <Metal/Metal.h>
 
-#import "RTCMTLRenderer.h"
+#import <WebRTC/RTCMTLRenderer.h>
 
 #define MTL_STRINGIFY(s) @ #s
 

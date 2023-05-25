@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "base/RTCVideoEncoderSettings.h"
+#import <WebRTC/RTCVideoEncoderSettings.h>
 
 #include "modules/video_coding/include/video_codec_interface.h"
 

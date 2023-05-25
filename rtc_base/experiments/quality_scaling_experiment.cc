@@ -14,6 +14,7 @@
 #include <string>
 
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "system_wrappers/include/field_trial.h"
 
 namespace webrtc {

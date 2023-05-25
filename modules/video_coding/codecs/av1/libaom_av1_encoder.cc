@@ -7,7 +7,12 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
 #include "modules/video_coding/codecs/av1/libaom_av1_encoder.h"
+
+#include "rtc_base/rtc_defines.h"
+
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
 
 #include <stddef.h>
 #include <stdint.h>
@@ -37,9 +42,9 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/experiments/encoder_info_settings.h"
 #include "rtc_base/logging.h"
-#include "third_party/libaom/source/libaom/aom/aom_codec.h"
-#include "third_party/libaom/source/libaom/aom/aom_encoder.h"
-#include "third_party/libaom/source/libaom/aom/aomcx.h"
+#include "aom/aom_codec.h"
+#include "aom/aom_encoder.h"
+#include "aom/aomcx.h"
 
 #define SET_ENCODER_PARAM_OR_RETURN_ERROR(param_id, param_value) \
   do {                                                           \
@@ -857,3 +862,5 @@ std::unique_ptr<VideoEncoder> CreateLibaomAv1Encoder(
 }
 
 }  // namespace webrtc
+
+#endif // defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)

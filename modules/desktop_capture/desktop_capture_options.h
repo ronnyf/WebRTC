@@ -11,6 +11,7 @@
 #define MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURE_OPTIONS_H_
 
 #include "api/scoped_refptr.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/rtc_export.h"
 
 #if defined(WEBRTC_USE_X11)

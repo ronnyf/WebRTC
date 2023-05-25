@@ -23,6 +23,7 @@ extern "C" {
 #include "modules/audio_processing/utility/delay_estimator_wrapper.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
+#include "rtc_base/system/arch.h"
 
 namespace webrtc {
 

@@ -20,7 +20,7 @@
 #include "absl/memory/memory.h"
 #include "absl/types/optional.h"
 #include "api/array_view.h"
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/packet/bounded_byte_reader.h"
 #include "net/dcsctp/packet/parameter/add_incoming_streams_request_parameter.h"
 #include "net/dcsctp/packet/parameter/add_outgoing_streams_request_parameter.h"

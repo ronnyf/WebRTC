@@ -8,9 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCVideoRendererAdapter.h"
+#import <WebRTC/RTCVideoRendererAdapter.h>
 
-#import "base/RTCVideoRenderer.h"
+#import <WebRTC/RTCVideoRenderer.h>
 
 #include "api/media_stream_interface.h"
 

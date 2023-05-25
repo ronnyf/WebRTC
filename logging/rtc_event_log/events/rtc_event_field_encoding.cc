@@ -20,6 +20,7 @@
 #include "logging/rtc_event_log/events/rtc_event_field_extraction.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 using webrtc_event_logging::UnsignedDelta;
 

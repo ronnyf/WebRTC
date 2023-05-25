@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCIceServer.h"
+#import <WebRTC/RTCIceServer.h>
 
 #include "api/peer_connection_interface.h"
 

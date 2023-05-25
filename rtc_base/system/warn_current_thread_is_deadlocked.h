@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_SYSTEM_WARN_CURRENT_THREAD_IS_DEADLOCKED_H_
 #define RTC_BASE_SYSTEM_WARN_CURRENT_THREAD_IS_DEADLOCKED_H_
 
+#include "rtc_base/rtc_defines.h"
+
 namespace webrtc {
 
 #if defined(WEBRTC_ANDROID) && !defined(WEBRTC_CHROMIUM_BUILD)

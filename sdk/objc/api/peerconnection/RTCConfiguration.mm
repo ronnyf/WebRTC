@@ -9,13 +9,14 @@
  */
 
 #import "RTCConfiguration+Private.h"
+#import "RTCConfiguration+Native.h"
 
 #include <memory>
 
-#import "RTCCertificate.h"
+#import <WebRTC/RTCCertificate.h>
 #import "RTCConfiguration+Native.h"
 #import "RTCIceServer+Private.h"
-#import "base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
 #include "rtc_base/checks.h"
 #include "rtc_base/rtc_certificate_generator.h"

@@ -12,8 +12,8 @@
 
 #include <memory>
 
-#import "base/RTCLogging.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import "NSString+StdString.h"
 
 @implementation RTC_OBJC_TYPE (RTCIceCandidate)
 

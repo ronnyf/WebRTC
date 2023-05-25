@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#import <WebRTC/RTCMacros.h>
+
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 
 #include "api/video_codecs/h264_profile_level_id.h"
@@ -17,3 +21,5 @@
 + (absl::optional<webrtc::H264ProfileLevelId>)maxSupportedH264Profile;
 
 @end
+
+#endif

@@ -11,6 +11,10 @@
 #ifndef RTC_BASE_WIN_CREATE_DIRECT3D_DEVICE_H_
 #define RTC_BASE_WIN_CREATE_DIRECT3D_DEVICE_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include <windows.graphics.directX.direct3d11.h>
 #include <windows.graphics.directX.direct3d11.interop.h>
 #include <winerror.h>
@@ -30,5 +34,7 @@ HRESULT CreateDirect3DDeviceFromDXGIDevice(
         out_d3d11_device);
 
 }  // namespace webrtc
+
+#endif
 
 #endif  // RTC_BASE_WIN_CREATE_DIRECT3D_DEVICE_H_

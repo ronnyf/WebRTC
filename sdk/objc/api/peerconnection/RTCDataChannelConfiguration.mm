@@ -10,7 +10,7 @@
 
 #import "RTCDataChannelConfiguration+Private.h"
 
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 @implementation RTC_OBJC_TYPE (RTCDataChannelConfiguration)
 

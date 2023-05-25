@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_WIN_GET_ACTIVATION_FACTORY_H_
 #define RTC_BASE_WIN_GET_ACTIVATION_FACTORY_H_
 
+#if defined(WEBRTC_WIN)
+
 #include <winerror.h>
 
 #include "rtc_base/win/hstring.h"
@@ -49,5 +51,7 @@ HRESULT GetActivationFactory(InterfaceType** factory) {
 }
 
 }  // namespace webrtc
+
+#endif
 
 #endif  // RTC_BASE_WIN_GET_ACTIVATION_FACTORY_H_

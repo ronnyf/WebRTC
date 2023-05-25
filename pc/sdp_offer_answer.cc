@@ -57,6 +57,7 @@
 #include "rtc_base/helpers.h"
 #include "rtc_base/logging.h"
 #include "rtc_base/rtc_certificate.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/ssl_stream_adapter.h"
 #include "rtc_base/string_encode.h"
 #include "rtc_base/strings/string_builder.h"
@@ -5126,8 +5127,10 @@ bool SdpOfferAnswerHandler::CreateDataChannel(const std::string& mid) {
         RTC_DCHECK_RUN_ON(context_->network_thread());
         return pc_->SetupDataChannelTransport_n(mid);
       });
-  if (!transport_name)
-    return false;
+	if (!transport_name) {
+		RTC_LOG(LS_ERROR) << "Failed to create data channel (mid: " << mid << ") pc: " << pc_;
+		return false;
+	}
 
   pc_->SetSctpDataInfo(mid, *transport_name);
   return true;

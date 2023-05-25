@@ -27,6 +27,7 @@
 #ifdef HAVE_WEBRTC_VIDEO
 #include "media/engine/webrtc_video_engine.h"
 #else
+#error Should `HAVE_WEBRTC_VIDEO` be defined?
 #include "media/engine/null_webrtc_video_engine.h"
 #endif
 

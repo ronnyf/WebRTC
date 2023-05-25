@@ -62,6 +62,7 @@
 #include "absl/types/optional.h"
 #include "api/units/timestamp.h"
 #include "rtc_base/platform_thread_types.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/strings/string_builder.h"
 #include "rtc_base/system/inline.h"
 
@@ -72,9 +73,9 @@
 #endif
 
 #if defined(RTC_DISABLE_LOGGING)
-#define RTC_LOG_ENABLED() 0
+#define RTC_LOG_ENABLED 0
 #else
-#define RTC_LOG_ENABLED() 1
+#define RTC_LOG_ENABLED 1
 #endif
 
 namespace rtc {
@@ -123,7 +124,7 @@ class LogLineRef {
   absl::string_view tag() const { return tag_; }
   LoggingSeverity severity() const { return severity_; }
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
   std::string DefaultLogLine() const;
 #else
   std::string DefaultLogLine() const { return ""; }
@@ -174,7 +175,7 @@ class LogSink {
 
  private:
   friend class ::rtc::LogMessage;
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
   // Members for LogMessage class to keep linked list of the registered sinks.
   LogSink* next_ = nullptr;
   LoggingSeverity min_severity_;
@@ -360,13 +361,13 @@ ToStringVal MakeVal(const T& x) {
   return {os.str()};
 }
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
 void Log(const LogArgType* fmt, ...);
 #else
 inline void Log(const LogArgType* fmt, ...) {
   // Do nothing, shouldn't be invoked
 }
-#endif
+#endif // RTC_LOG_ENABLED
 
 // Ephemeral type that represents the result of the logging << operator.
 template <typename... Ts>
@@ -477,7 +478,7 @@ class LogMessage {
                            std::integral_constant<LoggingSeverity, S>)
       : LogMessage(file, line, S) {}
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
   LogMessage(const char* file, int line, LoggingSeverity sev);
   LogMessage(const char* file,
              int line,
@@ -579,12 +580,12 @@ class LogMessage {
   static constexpr bool IsNoop() {
     return IsNoop(S);
   }
-#endif  // RTC_LOG_ENABLED()
+#endif  // RTC_LOG_ENABLED
 
  private:
   friend class LogMessageForTesting;
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
   // Updates min_sev_ appropriately when debug sinks change.
   static void UpdateMinLogSeverity();
 
@@ -616,7 +617,7 @@ class LogMessage {
 
   // Determines if logs will be directed to stderr in debug mode.
   static bool log_to_stderr_;
-#else  // RTC_LOG_ENABLED()
+#else  // RTC_LOG_ENABLED
   // Next methods do nothing; no one will call these functions.
   inline static void UpdateMinLogSeverity() {}
 #if defined(WEBRTC_ANDROID)
@@ -632,7 +633,7 @@ class LogMessage {
                                    LoggingSeverity severity) {}
 #endif  // defined(WEBRTC_ANDROID)
   inline void FinishPrintStream() {}
-#endif  // RTC_LOG_ENABLED()
+#endif  // RTC_LOG_ENABLED
 
   // The stringbuilder that buffers the formatted message before output
   rtc::StringBuilder print_stream_;

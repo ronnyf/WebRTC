@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #include "modules/video_coding/codecs/av1/av1_svc_config.h"
 
 #include <algorithm>
@@ -116,3 +118,5 @@ bool SetAv1SvcConfig(VideoCodec& video_codec,
 }
 
 }  // namespace webrtc
+
+#endif // defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)

@@ -15,6 +15,7 @@
 #include <string.h>
 
 #include "absl/strings/string_view.h"
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_WIN)
 #include <malloc.h>
@@ -29,8 +30,6 @@
 #endif  // WEBRTC_POSIX
 
 #include <string>
-
-#include "absl/strings/string_view.h"
 
 namespace rtc {
 

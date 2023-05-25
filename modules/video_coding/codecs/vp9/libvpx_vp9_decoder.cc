@@ -9,7 +9,7 @@
  *
  */
 
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
 
 #include "modules/video_coding/codecs/vp9/libvpx_vp9_decoder.h"
 
@@ -23,7 +23,7 @@
 #include "modules/video_coding/utility/vp9_uncompressed_header_parser.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
-#include "third_party/libyuv/include/libyuv/convert.h"
+#include <libyuv/convert.h>
 #include "vpx/vp8dx.h"
 #include "vpx/vpx_decoder.h"
 

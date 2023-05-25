@@ -14,10 +14,10 @@
 #import <MetalKit/MetalKit.h>
 
 #import "RTCMTLRenderer+Private.h"
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
 #include "rtc_base/checks.h"
 

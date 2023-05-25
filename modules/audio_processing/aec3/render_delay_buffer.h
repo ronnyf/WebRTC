@@ -16,7 +16,7 @@
 #include <vector>
 
 #include "api/audio/echo_canceller3_config.h"
-#include "modules/audio_processing/aec3/block.h"
+#include "modules/audio_processing/aec3/block.hpp"
 #include "modules/audio_processing/aec3/downsampled_render_buffer.h"
 #include "modules/audio_processing/aec3/render_buffer.h"
 

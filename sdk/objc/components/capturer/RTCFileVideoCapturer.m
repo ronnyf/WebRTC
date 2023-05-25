@@ -10,9 +10,9 @@
 
 #import "RTCFileVideoCapturer.h"
 
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 #include "rtc_base/system/gcd_helpers.h"
 
 NSString *const kRTCFileVideoCapturerErrorDomain =

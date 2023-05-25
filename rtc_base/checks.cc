@@ -15,6 +15,7 @@
 #include <cstdio>
 #include <cstdlib>
 
+#include "rtc_base/rtc_defines.h"
 #include "absl/strings/string_view.h"
 
 #if defined(WEBRTC_ANDROID)

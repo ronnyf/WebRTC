@@ -12,8 +12,8 @@
 #ifndef SDK_OBJC_FRAMEWORK_CLASSES_VIDEOTOOLBOX_HELPERS_H_
 #define SDK_OBJC_FRAMEWORK_CLASSES_VIDEOTOOLBOX_HELPERS_H_
 
-#include <CoreFoundation/CoreFoundation.h>
-#include <VideoToolbox/VideoToolbox.h>
+#import <CoreFoundation/CoreFoundation.h>
+#import <VideoToolbox/VideoToolbox.h>
 
 #include <string>
 

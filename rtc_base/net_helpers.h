@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_NET_HELPERS_H_
 #define RTC_BASE_NET_HELPERS_H_
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_POSIX)
 #include <sys/socket.h>
 #elif WEBRTC_WIN

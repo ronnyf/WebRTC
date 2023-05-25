@@ -9,6 +9,7 @@
  */
 
 #include "rtc_base/test_utils.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 namespace testing {

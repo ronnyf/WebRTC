@@ -10,29 +10,24 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
+
+#import <WebRTC/RTCAudioDevice.h>
+#import <WebRTC/RTCAudioSource.h>
+#import <WebRTC/RTCAudioTrack.h>
+#import <WebRTC/RTCConfiguration.h>
+#import <WebRTC/RTCMediaConstraints.h>
+#import <WebRTC/RTCMediaStream.h>
+#import <WebRTC/RTCPeerConnection.h>
+#import <WebRTC/RTCVideoSource.h>
+#import <WebRTC/RTCVideoTrack.h>
+#import <WebRTC/RTCPeerConnectionFactoryOptions.h>
+#import <WebRTC/RTCVideoEncoderFactory.h>
+#import <WebRTC/RTCVideoDecoderFactory.h>
+#import <WebRTC/RTCPeerConnection.h>
+#import <WebRTC/RTCSSLCertificateVerifier.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@class RTC_OBJC_TYPE(RTCAudioSource);
-@class RTC_OBJC_TYPE(RTCAudioTrack);
-@class RTC_OBJC_TYPE(RTCConfiguration);
-@class RTC_OBJC_TYPE(RTCMediaConstraints);
-@class RTC_OBJC_TYPE(RTCMediaStream);
-@class RTC_OBJC_TYPE(RTCPeerConnection);
-@class RTC_OBJC_TYPE(RTCVideoSource);
-@class RTC_OBJC_TYPE(RTCVideoTrack);
-@class RTC_OBJC_TYPE(RTCPeerConnectionFactoryOptions);
-@protocol RTC_OBJC_TYPE
-(RTCPeerConnectionDelegate);
-@protocol RTC_OBJC_TYPE
-(RTCVideoDecoderFactory);
-@protocol RTC_OBJC_TYPE
-(RTCVideoEncoderFactory);
-@protocol RTC_OBJC_TYPE
-(RTCSSLCertificateVerifier);
-@protocol RTC_OBJC_TYPE
-(RTCAudioDevice);
 
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCPeerConnectionFactory) : NSObject

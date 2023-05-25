@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/window_finder_win.h"
 
 #include <windows.h>
@@ -44,3 +48,5 @@ std::unique_ptr<WindowFinder> WindowFinder::Create(
 }
 
 }  // namespace webrtc
+
+#endif

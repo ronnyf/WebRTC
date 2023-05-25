@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMTLRenderer.h"
+#import <WebRTC/RTCMTLRenderer.h>
 
 /** @abstract RGB/BGR renderer.
  *  @discussion This renderer handles both kCVPixelFormatType_32BGRA and

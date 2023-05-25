@@ -16,6 +16,7 @@
  */
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
+#include "rtc_base/rtc_defines.h"
 
 #ifdef WEBRTC_ARCH_ARM_V7
 

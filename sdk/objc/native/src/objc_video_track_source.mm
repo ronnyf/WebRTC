@@ -8,14 +8,14 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_video_track_source.h"
+#include "objc_video_track_source.h"
 
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
 #include "api/video/i420_buffer.h"
-#include "sdk/objc/native/src/objc_frame_buffer.h"
+#include "objc_frame_buffer.h"
 
 @interface RTCObjCVideoSourceAdapter ()
 @property(nonatomic) webrtc::ObjCVideoTrackSource *objCVideoTrackSource;

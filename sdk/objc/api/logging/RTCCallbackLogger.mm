@@ -10,11 +10,11 @@
 
 #import "RTCCallbackLogger.h"
 
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 #include <memory>
 
-#include "absl/strings/string_view.h"
+#include <absl/strings/string_view.h>
 #include "rtc_base/checks.h"
 #include "rtc_base/log_sinks.h"
 #include "rtc_base/logging.h"

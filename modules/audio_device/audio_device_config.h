@@ -11,6 +11,8 @@
 #ifndef AUDIO_DEVICE_AUDIO_DEVICE_CONFIG_H_
 #define AUDIO_DEVICE_AUDIO_DEVICE_CONFIG_H_
 
+#include "rtc_base/rtc_defines.h"
+
 // Enumerators
 //
 enum { GET_MIC_VOLUME_INTERVAL_MS = 1000 };

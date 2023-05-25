@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/cropping_window_capturer.h"
 #include "modules/desktop_capture/desktop_capturer_differ_wrapper.h"
 #include "modules/desktop_capture/win/screen_capture_utils.h"
@@ -333,3 +337,5 @@ std::unique_ptr<DesktopCapturer> CroppingWindowCapturer::CreateCapturer(
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_WIN)

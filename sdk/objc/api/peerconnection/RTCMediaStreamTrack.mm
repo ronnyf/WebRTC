@@ -12,7 +12,7 @@
 #import "RTCMediaStreamTrack+Private.h"
 #import "RTCVideoTrack+Private.h"
 
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 NSString * const kRTCMediaStreamTrackKindAudio =
     @(webrtc::MediaStreamTrackInterface::kAudioKind);

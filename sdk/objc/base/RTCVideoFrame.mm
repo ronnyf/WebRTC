@@ -10,8 +10,8 @@
 
 #import "RTCVideoFrame.h"
 
-#import "RTCI420Buffer.h"
-#import "RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 @implementation RTC_OBJC_TYPE (RTCVideoFrame) {
   RTCVideoRotation _rotation;

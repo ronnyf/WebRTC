@@ -9,11 +9,14 @@
  */
 
 #include "objc_audio_device_module.h"
+#include "objc_audio_device.h"
 
 #include "api/make_ref_counted.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_export_bridge.h"
 
-#include "sdk/objc/native/src/objc_audio_device.h"
+#include "modules/audio_device/include/audio_device.h"
+#import <WebRTC/RTCAudioDevice.h>
 
 namespace webrtc {
 

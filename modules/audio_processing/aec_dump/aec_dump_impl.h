@@ -11,6 +11,8 @@
 #ifndef MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_
 #define MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include <memory>
 #include <string>
 #include <vector>
@@ -24,13 +26,13 @@
 #include "rtc_base/thread_annotations.h"
 
 // Files generated at build-time by the protobuf compiler.
-RTC_PUSH_IGNORING_WUNDEF()
+RTC_PUSH_IGNORING_WUNDEF
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_processing/debug.pb.h"
 #else
-#include "modules/audio_processing/debug.pb.h"
+#include "generated/modules/audio_processing/debug.pb.h"
 #endif
-RTC_POP_IGNORING_WUNDEF()
+RTC_POP_IGNORING_WUNDEF
 
 namespace webrtc {
 
@@ -81,5 +83,7 @@ class AecDumpImpl : public AecDump {
   CaptureStreamInfo capture_stream_info_;
 };
 }  // namespace webrtc
+
+#endif // WEBRTC_ENABLE_PROTOBUF
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_

@@ -25,6 +25,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/platform_thread.h"
 #include "rtc_base/platform_thread_types.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/synchronization/mutex.h"
 #include "rtc_base/thread_annotations.h"
 #include "rtc_base/time_utils.h"

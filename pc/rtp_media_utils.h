@@ -14,6 +14,7 @@
 #include <ostream>  // no-presubmit-check TODO(webrtc:8982)
 
 #include "api/rtp_transceiver_direction.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

@@ -272,7 +272,7 @@ VideoCodecType GetRuntimeCodecType(rtclog2::FrameDecodedEvents::Codec codec) {
 
 ParsedRtcEventLog::ParseStatus GetHeaderExtensions(
     std::vector<RtpExtension>* header_extensions,
-    const RepeatedPtrField<rtclog::RtpHeaderExtension>&
+	const google::protobuf::RepeatedPtrField<rtclog::RtpHeaderExtension>&
         proto_header_extensions) {
   header_extensions->clear();
   for (auto& p : proto_header_extensions) {

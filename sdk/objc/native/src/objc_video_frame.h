@@ -12,7 +12,7 @@
 #define SDK_OBJC_NATIVE_SRC_OBJC_VIDEO_FRAME_H_
 
 #include "api/video/video_frame.h"
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 namespace webrtc {
 

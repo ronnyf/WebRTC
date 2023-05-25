@@ -23,7 +23,7 @@
 #include "absl/strings/string_view.h"
 #include "absl/types/optional.h"
 #include "api/array_view.h"
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/common/sequence_numbers.h"
 #include "net/dcsctp/common/str_join.h"
 #include "net/dcsctp/packet/chunk/data_chunk.h"

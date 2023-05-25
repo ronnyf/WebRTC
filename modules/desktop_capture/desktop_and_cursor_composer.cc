@@ -22,6 +22,7 @@
 #include "modules/desktop_capture/mouse_cursor_monitor.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

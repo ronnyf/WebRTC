@@ -8,10 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
-#import "RTCMacros.h"
+#include "rtc_base/rtc_export_bridge.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

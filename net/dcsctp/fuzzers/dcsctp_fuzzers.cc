@@ -13,7 +13,7 @@
 #include <utility>
 #include <vector>
 
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/packet/chunk/cookie_ack_chunk.h"
 #include "net/dcsctp/packet/chunk/cookie_echo_chunk.h"
 #include "net/dcsctp/packet/chunk/data_chunk.h"

@@ -9,6 +9,7 @@
  */
 
 #include <stdio.h>
+#include "rtc_base/rtc_defines.h"
 
 #ifdef WIN32
 #include <winsock2.h>

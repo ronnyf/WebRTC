@@ -16,6 +16,7 @@
 
 #include "modules/desktop_capture/cropped_desktop_frame.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

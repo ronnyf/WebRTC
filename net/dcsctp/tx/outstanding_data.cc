@@ -14,7 +14,7 @@
 #include <utility>
 #include <vector>
 
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/common/sequence_numbers.h"
 #include "net/dcsctp/public/types.h"
 #include "rtc_base/logging.h"

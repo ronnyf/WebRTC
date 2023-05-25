@@ -10,6 +10,8 @@
 
 #include "rtc_base/task_queue_win.h"
 
+#if defined(WEBRTC_WIN)
+
 // clang-format off
 // clang formating would change include order.
 
@@ -403,3 +405,5 @@ std::unique_ptr<TaskQueueFactory> CreateTaskQueueWinFactory() {
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_WIN)

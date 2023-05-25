@@ -11,6 +11,10 @@
 #ifndef SDK_OBJC_BASE_RTCMACROS_H_
 #define SDK_OBJC_BASE_RTCMACROS_H_
 
+#ifdef __APPLE__
+#include <TargetConditionals.h>
+#endif
+
 #ifdef WEBRTC_ENABLE_OBJC_SYMBOL_EXPORT
 
 #if defined(WEBRTC_LIBRARY_IMPL)

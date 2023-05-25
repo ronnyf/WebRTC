@@ -8,13 +8,13 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_video_renderer.h"
+#include "objc_video_renderer.h"
 
-#import "base/RTCMacros.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoRenderer.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoRenderer.h>
 
-#include "sdk/objc/native/src/objc_video_frame.h"
+#include "objc_video_frame.h"
 
 namespace webrtc {
 

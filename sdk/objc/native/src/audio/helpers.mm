@@ -10,13 +10,16 @@
 
 #import <Foundation/Foundation.h>
 #import <sys/sysctl.h>
+
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_IOS)
 #import <UIKit/UIKit.h>
 #endif
 
 #include <memory>
 
-#include "helpers.h"
+#import "modules/audio_device/ios/helpers.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 

@@ -8,9 +8,12 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import <AppKit/AppKit.h>
+#import <WebRTC/RTCVideoRenderer.h>
+#import <WebRTC/RTCMacros.h>
 
-#import "RTCVideoRenderer.h"
+#if TARGET_OS_OSX
+
+#import <AppKit/AppKit.h>
 
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCMTLNSVideoView) : NSView <RTC_OBJC_TYPE(RTCVideoRenderer)>
@@ -20,3 +23,5 @@ RTC_OBJC_EXPORT
 + (BOOL)isMetalAvailable;
 
 @end
+
+#endif

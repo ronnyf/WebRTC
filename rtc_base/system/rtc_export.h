@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_SYSTEM_RTC_EXPORT_H_
 #define RTC_BASE_SYSTEM_RTC_EXPORT_H_
 
+#include "rtc_base/rtc_defines.h"
+
 // RTC_EXPORT is used to mark symbols as exported or imported when WebRTC is
 // built or used as a shared library.
 // When WebRTC is built as a static library the RTC_EXPORT macro expands to

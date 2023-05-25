@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if !WEBRTC_ENABLE_PROTOBUF
+
 #include "absl/strings/string_view.h"
 #include "modules/audio_processing/aec_dump/aec_dump_factory.h"
 #include "modules/audio_processing/include/aec_dump.h"
@@ -32,3 +34,5 @@ std::unique_ptr<AecDump> AecDumpFactory::Create(FILE* handle,
   return nullptr;
 }
 }  // namespace webrtc
+
+#endif // !WEBRTC_ENABLE_PROTOBUF

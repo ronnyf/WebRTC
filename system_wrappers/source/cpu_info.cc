@@ -14,7 +14,7 @@
 #include <windows.h>
 #elif defined(WEBRTC_LINUX)
 #include <unistd.h>
-#elif defined(WEBRTC_MAC)
+#elif defined(WEBRTC_MAC) || defined(WEBRTC_IOS)
 #include <sys/sysctl.h>
 #elif defined(WEBRTC_FUCHSIA)
 #include <zircon/syscalls.h>

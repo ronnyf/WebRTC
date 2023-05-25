@@ -13,9 +13,9 @@
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
 
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 #include "api/video/video_rotation.h"
 #include "rtc_base/checks.h"

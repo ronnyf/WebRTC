@@ -10,12 +10,12 @@
 
 #import "RTCCVPixelBuffer.h"
 
-#import "api/video_frame_buffer/RTCNativeMutableI420Buffer.h"
+#import <WebRTC/RTCNativeMutableI420Buffer.h>
 
 #include "common_video/libyuv/include/webrtc_libyuv.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
-#include "third_party/libyuv/include/libyuv.h"
+#include <libyuv/libyuv.h>
 
 #if !defined(NDEBUG) && defined(WEBRTC_IOS)
 #import <UIKit/UIKit.h>

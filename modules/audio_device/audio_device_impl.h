@@ -11,6 +11,8 @@
 #ifndef MODULES_AUDIO_DEVICE_AUDIO_DEVICE_IMPL_H_
 #define MODULES_AUDIO_DEVICE_AUDIO_DEVICE_IMPL_H_
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_INCLUDE_INTERNAL_AUDIO_DEVICE)
 
 #include <stdint.h>

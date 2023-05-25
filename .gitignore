@@ -20,12 +20,10 @@
 *.vpw
 *.vpwhistu
 *.vtg
-*.xcodeproj
-*.xcworkspace
 *_proto.xml
 *_proto_cpp.xml
 *~
-.*.sw?
+.*.swp
 .cache
 .cipd
 .clangd
@@ -35,10 +33,9 @@
 .gdbinit
 .landmines
 .metadata
-.project
 .pydevproject
 .settings
-.sw?
+.swp
 /Makefile
 /base
 /build
@@ -47,7 +44,7 @@
 /mojo
 /out
 /testing
-/third_party
+#/third_party
 /tools
 /tools_webrtc/android/profiling/flamegraph
 /tools_webrtc/android/profiling/simpleperf
@@ -72,3 +69,5 @@
 /xcodebuild
 /.vscode
 !webrtc/*
+xcuserdata/
+Package.resolved

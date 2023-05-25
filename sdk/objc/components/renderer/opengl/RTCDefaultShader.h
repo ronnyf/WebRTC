@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCVideoViewShading.h"
+#import <WebRTC/RTCVideoViewShading.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

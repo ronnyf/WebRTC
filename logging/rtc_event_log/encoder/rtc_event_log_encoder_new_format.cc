@@ -66,13 +66,13 @@
 #include "system_wrappers/include/field_trial.h"
 
 // *.pb.h files are generated at build-time by the protobuf compiler.
-RTC_PUSH_IGNORING_WUNDEF()
+RTC_PUSH_IGNORING_WUNDEF
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/logging/rtc_event_log/rtc_event_log2.pb.h"
 #else
-#include "logging/rtc_event_log/rtc_event_log2.pb.h"
+#include "generated/logging/rtc_event_log/rtc_event_log2.pb.h"
 #endif
-RTC_POP_IGNORING_WUNDEF()
+RTC_POP_IGNORING_WUNDEF
 
 using webrtc_event_logging::ToUnsigned;
 

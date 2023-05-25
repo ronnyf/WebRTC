@@ -13,8 +13,8 @@
 #import "RTCMediaStreamTrack+Private.h"
 #import "RTCPeerConnectionFactory+Private.h"
 #import "RTCVideoSource+Private.h"
-#import "api/RTCVideoRendererAdapter+Private.h"
-#import "helpers/NSString+StdString.h"
+#import "RTCVideoRendererAdapter+Private.h"
+#import "NSString+StdString.h"
 
 @implementation RTC_OBJC_TYPE (RTCVideoTrack) {
   rtc::Thread *_workerThread;

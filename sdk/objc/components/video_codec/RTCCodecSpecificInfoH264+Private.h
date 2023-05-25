@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCCodecSpecificInfoH264.h"
+#import <WebRTC/RTCCodecSpecificInfoH264.h>
 
 #include "modules/video_coding/include/video_codec_interface.h"
 

@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_PLATFORM_THREAD_TYPES_H_
 #define RTC_BASE_PLATFORM_THREAD_TYPES_H_
 
+#include "rtc_base/rtc_defines.h"
+
 // clang-format off
 // clang formating would change include order.
 #if defined(WEBRTC_WIN)
@@ -41,6 +43,8 @@ typedef zx_handle_t PlatformThreadRef;
 #elif defined(WEBRTC_POSIX)
 typedef pid_t PlatformThreadId;
 typedef pthread_t PlatformThreadRef;
+#else
+#error unsupported platform
 #endif
 
 // Retrieve the ID of the current thread.

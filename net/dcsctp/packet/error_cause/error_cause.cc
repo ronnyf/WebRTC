@@ -19,7 +19,7 @@
 
 #include "absl/types/optional.h"
 #include "api/array_view.h"
-#include "net/dcsctp/common/math.h"
+#include "net/dcsctp/common/math.hpp"
 #include "net/dcsctp/packet/error_cause/cookie_received_while_shutting_down_cause.h"
 #include "net/dcsctp/packet/error_cause/invalid_mandatory_parameter_cause.h"
 #include "net/dcsctp/packet/error_cause/invalid_stream_identifier_cause.h"

@@ -13,6 +13,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include "rtc_base/rtc_defines.h"
 
 #if WEBRTC_APM_DEBUG_DUMP == 1
 #include <memory>

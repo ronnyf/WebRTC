@@ -18,13 +18,15 @@
 #include "rtc_base/ignore_wundef.h"
 
 // Files generated at build-time by the protobuf compiler.
-RTC_PUSH_IGNORING_WUNDEF()
+RTC_PUSH_IGNORING_WUNDEF
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_processing/debug.pb.h"
 #else
-#include "modules/audio_processing/debug.pb.h"
+#if WEBRTC_ENABLE_PROTOBUF
+#include "generated/modules/audio_processing/debug.pb.h"
 #endif
-RTC_POP_IGNORING_WUNDEF()
+#endif
+RTC_POP_IGNORING_WUNDEF
 
 namespace webrtc {
 
@@ -35,6 +37,7 @@ class CaptureStreamInfo {
   CaptureStreamInfo& operator=(const CaptureStreamInfo&) = delete;
   ~CaptureStreamInfo() = default;
 
+#if WEBRTC_ENABLE_PROTOBUF
   void AddInput(const AudioFrameView<const float>& src);
   void AddOutput(const AudioFrameView<const float>& src);
 
@@ -52,13 +55,17 @@ class CaptureStreamInfo {
     CreateNewEvent();
     return result;
   }
-
+#endif
  private:
   void CreateNewEvent() {
+#if WEBRTC_ENABLE_PROTOBUF
     event_ = std::make_unique<audioproc::Event>();
     event_->set_type(audioproc::Event::STREAM);
+#endif
   }
-  std::unique_ptr<audioproc::Event> event_;
+#if WEBRTC_ENABLE_PROTOBUF
+	std::unique_ptr<audioproc::Event> event_;
+#endif
 };
 
 }  // namespace webrtc

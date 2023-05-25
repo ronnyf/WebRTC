@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 #include <math.h>
 
@@ -79,3 +83,5 @@ void VectorMath::AccumulateAVX2(rtc::ArrayView<const float> x,
 
 }  // namespace aec3
 }  // namespace webrtc
+
+#endif // HAVE_AVX2

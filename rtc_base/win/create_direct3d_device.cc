@@ -10,6 +10,8 @@
 
 #include "rtc_base/win/create_direct3d_device.h"
 
+#if defined(WEBRTC_WIN)
+
 #include <libloaderapi.h>
 
 #include <utility>
@@ -56,3 +58,5 @@ HRESULT CreateDirect3DDeviceFromDXGIDevice(
 }
 
 }  // namespace webrtc
+
+#endif

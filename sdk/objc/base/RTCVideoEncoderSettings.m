@@ -9,6 +9,7 @@
  */
 
 #import "RTCVideoEncoderSettings.h"
+#import <WebRTC/RTCMacros.h>
 
 @implementation RTC_OBJC_TYPE (RTCVideoEncoderSettings)
 

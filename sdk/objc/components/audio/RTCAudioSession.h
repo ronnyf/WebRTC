@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
+#include "rtc_base/rtc_export_bridge.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +27,7 @@ extern NSInteger const kRTCAudioSessionErrorConfiguration;
 // Surfaces AVAudioSession events. WebRTC will listen directly for notifications
 // from AVAudioSession and handle them before calling these delegate methods,
 // at which point applications can perform additional processing if required.
+
 RTC_OBJC_EXPORT
 @protocol RTC_OBJC_TYPE
 (RTCAudioSessionDelegate)<NSObject>

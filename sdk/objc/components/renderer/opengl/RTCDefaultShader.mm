@@ -14,9 +14,9 @@
 
 #import "RTCOpenGLDefines.h"
 #import "RTCShader.h"
-#import "base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
-#include "absl/types/optional.h"
+#include <absl/types/optional.h>
 
 static const int kYTextureUnit = 0;
 static const int kUTextureUnit = 1;

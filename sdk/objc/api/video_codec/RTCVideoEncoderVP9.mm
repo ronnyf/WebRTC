@@ -11,11 +11,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
 #import "RTCVideoEncoderVP9.h"
 #import "RTCWrappedNativeVideoEncoder.h"
 
 #include "modules/video_coding/codecs/vp9/include/vp9.h"
+#include "rtc_base/rtc_defines.h"
 
 @implementation RTC_OBJC_TYPE (RTCVideoEncoderVP9)
 

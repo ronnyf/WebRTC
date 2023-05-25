@@ -18,7 +18,7 @@
 #include "api/test/metrics/metric.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
-#include "third_party/libyuv/include/libyuv/compare.h"
+#include "libyuv/compare.h"
 
 namespace webrtc {
 namespace test {

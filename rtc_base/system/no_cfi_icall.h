@@ -12,6 +12,7 @@
 #define RTC_BASE_SYSTEM_NO_CFI_ICALL_H_
 
 #include "rtc_base/sanitizer.h"
+#include "rtc_base/rtc_defines.h"
 
 // DISABLE_CFI_ICALL -- Disable Control Flow Integrity indirect call checks.
 // Note that the same macro is defined in "base/compiler_specific.h".

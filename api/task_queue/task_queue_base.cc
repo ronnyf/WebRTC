@@ -14,6 +14,7 @@
 #include "absl/functional/any_invocable.h"
 #include "api/units/time_delta.h"
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 
 #if defined(ABSL_HAVE_THREAD_LOCAL)
 

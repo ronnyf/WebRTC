@@ -1,0 +1,1 @@
+../sdk/objc/api/peerconnection/RTCRtpHeaderExtension+Private.h

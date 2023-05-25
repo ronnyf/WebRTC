@@ -11,6 +11,7 @@
 #ifndef SDK_OBJC_NATIVE_SRC_AUDIO_HELPERS_H_
 #define SDK_OBJC_NATIVE_SRC_AUDIO_HELPERS_H_
 
+#include "rtc_base/rtc_defines.h"
 #import <Foundation/Foundation.h>
 #include <objc/objc.h>
 

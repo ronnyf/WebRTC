@@ -10,8 +10,8 @@
 
 #import "RTCRtpCodecParameters+Private.h"
 
-#import "RTCMediaStreamTrack.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCMediaStreamTrack.h>
+#import "NSString+StdString.h"
 
 #include "media/base/media_constants.h"
 #include "rtc_base/checks.h"

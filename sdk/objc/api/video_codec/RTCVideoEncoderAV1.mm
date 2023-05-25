@@ -9,9 +9,12 @@
  *
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
 #import "RTCVideoEncoderAV1.h"
 #import "RTCWrappedNativeVideoEncoder.h"
 #include "modules/video_coding/codecs/av1/libaom_av1_encoder.h"
@@ -29,3 +32,5 @@
 }
 
 @end
+
+#endif

@@ -10,6 +10,7 @@
 #include "test/scenario/hardware_codecs.h"
 
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 
 #ifdef WEBRTC_ANDROID
 #include "modules/video_coding/codecs/test/android_codec_factory_helper.h"

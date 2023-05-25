@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCStatisticsReport.h"
+#import <WebRTC/RTCStatisticsReport.h>
 
 #include "api/stats/rtc_stats_report.h"
 

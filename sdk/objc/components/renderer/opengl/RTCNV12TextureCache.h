@@ -10,7 +10,9 @@
 
 #import <GLKit/GLKit.h>
 
-#import "base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
+
+#if TARGET_OS_IOS
 
 @class RTC_OBJC_TYPE(RTCVideoFrame);
 
@@ -31,3 +33,5 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif // TARGET_OS_IOS

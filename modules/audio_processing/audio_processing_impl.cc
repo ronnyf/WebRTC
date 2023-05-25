@@ -25,7 +25,11 @@
 #include "api/audio/audio_frame.h"
 #include "common_audio/audio_converter.h"
 #include "common_audio/include/audio_util.h"
+#if WEBRTC_ENABLE_PROTOBUF
 #include "modules/audio_processing/aec_dump/aec_dump_factory.h"
+#else
+#include "modules/audio_processing/aec_dump/null_aec_dump_factory.cc"
+#endif // WEBRTC_ENABLE_PROTOBUF
 #include "modules/audio_processing/audio_buffer.h"
 #include "modules/audio_processing/include/audio_frame_view.h"
 #include "modules/audio_processing/logging/apm_data_dumper.h"

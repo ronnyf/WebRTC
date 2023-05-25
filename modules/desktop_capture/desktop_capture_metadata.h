@@ -11,6 +11,8 @@
 #ifndef MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURE_METADATA_H_
 #define MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURE_METADATA_H_
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_USE_GIO)
 #include "modules/portal/xdg_session_details.h"
 #endif  // defined(WEBRTC_USE_GIO)

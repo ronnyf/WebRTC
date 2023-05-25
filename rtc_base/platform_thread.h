@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_PLATFORM_THREAD_H_
 #define RTC_BASE_PLATFORM_THREAD_H_
 
+#include "rtc_base/rtc_defines.h"
+
 #include <functional>
 #include <string>
 #if !defined(WEBRTC_WIN)

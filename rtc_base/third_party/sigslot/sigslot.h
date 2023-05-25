@@ -100,6 +100,8 @@
 #include <list>
 #include <set>
 
+#include "rtc_base/rtc_defines.h"
+
 // On our copy of sigslot.h, we set single threading as default.
 #define SIGSLOT_DEFAULT_MT_POLICY single_threaded
 

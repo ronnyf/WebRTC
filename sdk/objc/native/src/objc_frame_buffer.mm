@@ -8,11 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_frame_buffer.h"
+#include "objc_frame_buffer.h"
 
 #include "api/make_ref_counted.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "sdk/objc/api/video_frame_buffer/RTCNativeI420Buffer+Private.h"
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import "RTCNativeI420Buffer+Private.h"
 
 namespace webrtc {
 

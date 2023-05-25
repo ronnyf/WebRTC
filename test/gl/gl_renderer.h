@@ -11,6 +11,8 @@
 #ifndef TEST_GL_GL_RENDERER_H_
 #define TEST_GL_GL_RENDERER_H_
 
+#include "rtc_base/rtc_defines.h"
+
 #ifdef WEBRTC_MAC
 #include <OpenGL/gl.h>
 #else

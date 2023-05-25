@@ -19,7 +19,7 @@
 #import "frame_buffer_helpers.h"
 
 #include "common_video/libyuv/include/webrtc_libyuv.h"
-#include "third_party/libyuv/include/libyuv.h"
+#include <libyuv/libyuv.h>
 
 namespace {
 

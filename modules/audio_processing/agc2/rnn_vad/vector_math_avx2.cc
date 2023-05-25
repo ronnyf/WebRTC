@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 
 #include "api/array_view.h"
@@ -52,3 +56,5 @@ float VectorMath::DotProductAvx2(rtc::ArrayView<const float> x,
 
 }  // namespace rnn_vad
 }  // namespace webrtc
+
+#endif // HAVE_AVX2

@@ -8,7 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_ANDROID)
+
 #include "rtc_base/ifaddrs_android.h"
 
 #include <errno.h>

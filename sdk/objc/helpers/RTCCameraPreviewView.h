@@ -8,12 +8,12 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import <Foundation/Foundation.h>
+#import <WebRTC/RTCMacros.h>
+
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
-
-#import "RTCMacros.h"
-
-@class AVCaptureSession;
+#import <AVFoundation/AVFoundation.h>
 
 /** RTCCameraPreviewView is a view that renders local video from an
  *  AVCaptureSession.
@@ -28,3 +28,5 @@ RTC_OBJC_EXPORT
 @property(nonatomic, strong) AVCaptureSession* captureSession;
 
 @end
+
+#endif // TARGET_OS_IOS

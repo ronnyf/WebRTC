@@ -12,7 +12,7 @@
 #ifndef SDK_OBJC_FRAMEWORK_CLASSES_VIDEOTOOLBOX_NALU_REWRITER_H_
 #define SDK_OBJC_FRAMEWORK_CLASSES_VIDEOTOOLBOX_NALU_REWRITER_H_
 
-#include <CoreMedia/CoreMedia.h>
+#import <CoreMedia/CoreMedia.h>
 
 #include <vector>
 

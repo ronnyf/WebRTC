@@ -8,18 +8,18 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_video_decoder_factory.h"
+#include "objc_video_decoder_factory.h"
 
-#import "base/RTCMacros.h"
-#import "base/RTCVideoDecoder.h"
-#import "base/RTCVideoDecoderFactory.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_codec/RTCCodecSpecificInfoH264.h"
-#import "sdk/objc/api/peerconnection/RTCEncodedImage+Private.h"
-#import "sdk/objc/api/peerconnection/RTCVideoCodecInfo+Private.h"
-#import "sdk/objc/api/video_codec/RTCWrappedNativeVideoDecoder.h"
-#import "sdk/objc/helpers/NSString+StdString.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoDecoder.h>
+#import <WebRTC/RTCVideoDecoderFactory.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCodecSpecificInfoH264.h>
+#import "RTCEncodedImage+Private.h"
+#import "RTCVideoCodecInfo+Private.h"
+#import "RTCWrappedNativeVideoDecoder.h"
+#import "NSString+StdString.h"
 
 #include "api/video_codecs/sdp_video_format.h"
 #include "api/video_codecs/video_decoder.h"
@@ -27,7 +27,7 @@
 #include "modules/video_coding/include/video_error_codes.h"
 #include "rtc_base/logging.h"
 #include "rtc_base/time_utils.h"
-#include "sdk/objc/native/src/objc_frame_buffer.h"
+#include "objc_frame_buffer.h"
 
 namespace webrtc {
 

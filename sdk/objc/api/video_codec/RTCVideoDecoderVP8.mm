@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
 #import "RTCVideoDecoderVP8.h"
 #import "RTCWrappedNativeVideoDecoder.h"
 

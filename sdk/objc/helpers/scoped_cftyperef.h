@@ -12,7 +12,8 @@
 #ifndef SDK_OBJC_HELPERS_SCOPED_CFTYPEREF_H_
 #define SDK_OBJC_HELPERS_SCOPED_CFTYPEREF_H_
 
-#include <CoreFoundation/CoreFoundation.h>
+#import <CoreFoundation/CoreFoundation.h>
+
 namespace rtc {
 
 // RETAIN: ScopedTypeRef should retain the object when it takes

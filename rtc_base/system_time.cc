@@ -15,6 +15,7 @@
 #include <stdint.h>
 
 #include <limits>
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_POSIX)
 #include <sys/time.h>

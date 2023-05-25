@@ -8,10 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_video_frame.h"
+#include "objc_video_frame.h"
 
 #include "rtc_base/time_utils.h"
-#include "sdk/objc/native/src/objc_frame_buffer.h"
+#include "objc_frame_buffer.h"
 
 namespace webrtc {
 

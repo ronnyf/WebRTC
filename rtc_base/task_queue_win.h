@@ -11,6 +11,10 @@
 #ifndef RTC_BASE_TASK_QUEUE_WIN_H_
 #define RTC_BASE_TASK_QUEUE_WIN_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include <memory>
 
 #include "api/task_queue/task_queue_factory.h"
@@ -20,5 +24,7 @@ namespace webrtc {
 std::unique_ptr<TaskQueueFactory> CreateTaskQueueWinFactory();
 
 }
+
+#endif // defined(WEBRTC_WIN)
 
 #endif  // RTC_BASE_TASK_QUEUE_WIN_H_

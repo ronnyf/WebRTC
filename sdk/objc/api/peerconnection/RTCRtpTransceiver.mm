@@ -14,8 +14,8 @@
 #import "RTCRtpParameters+Private.h"
 #import "RTCRtpReceiver+Private.h"
 #import "RTCRtpSender+Private.h"
-#import "base/RTCLogging.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import "NSString+StdString.h"
 
 NSString *const kRTCRtpTransceiverErrorDomain = @"org.webrtc.RTCRtpTranceiver";
 

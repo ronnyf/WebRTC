@@ -8,7 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCAudioSession+Private.h"
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_IOS)
+
+#import "modules/audio_device/ios/components/audio/RTCAudioSession+Private.h"
 
 #import <UIKit/UIKit.h>
 
@@ -19,8 +23,9 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/synchronization/mutex.h"
 
-#import "RTCAudioSessionConfiguration.h"
-#import "base/RTCLogging.h"
+#import "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
+#include "rtc_base/RTCObjCLogging.h"
+
 
 #if !defined(ABSL_HAVE_THREAD_LOCAL)
 #error ABSL_HAVE_THREAD_LOCAL should be defined for MacOS / iOS Targets.
@@ -66,7 +71,7 @@ ABSL_CONST_INIT thread_local bool mutex_locked = false;
   static dispatch_once_t onceToken;
   static RTC_OBJC_TYPE(RTCAudioSession) *sharedInstance = nil;
   dispatch_once(&onceToken, ^{
-    sharedInstance = [[self alloc] init];
+    sharedInstance = [[RTC_OBJC_TYPE(RTCAudioSession) alloc] init];
   });
   return sharedInstance;
 }
@@ -1008,3 +1013,5 @@ ABSL_CONST_INIT thread_local bool mutex_locked = false;
 }
 
 @end
+
+#endif // defined(WEBRTC_IOS)

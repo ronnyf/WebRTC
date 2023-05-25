@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "base/RTCVideoCodecInfo.h"
+#import <WebRTC/RTCVideoCodecInfo.h>
 
 #include "api/video_codecs/sdp_video_format.h"
 

@@ -11,6 +11,7 @@
 #include "api/audio_options.h"
 
 #include "api/array_view.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/strings/string_builder.h"
 
 namespace cricket {

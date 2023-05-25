@@ -12,7 +12,7 @@
 
 #include "pc/video_track_source_proxy.h"
 #include "rtc_base/checks.h"
-#include "sdk/objc/native/src/objc_video_track_source.h"
+#include "objc_video_track_source.h"
 
 static webrtc::ObjCVideoTrackSource *getObjCVideoSource(
     const rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> nativeSource) {

@@ -13,7 +13,7 @@
 
 #include <memory>
 
-#import "RTCSSLCertificateVerifier.h"
+#import <WebRTC/RTCSSLCertificateVerifier.h>
 #include "rtc_base/ssl_certificate.h"
 
 namespace webrtc {

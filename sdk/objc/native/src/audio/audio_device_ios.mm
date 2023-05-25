@@ -8,10 +8,14 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_IOS
+
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-#include "audio_device_ios.h"
+#import "modules/audio_device/ios/audio_device_ios.h"
 
 #include <cmath>
 
@@ -26,12 +30,14 @@
 #include "rtc_base/time_utils.h"
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
+#include "rtc_base/system/rtc_export.h"
+#include "rtc_base/rtc_export_bridge.h"
+#include "rtc_base/RTCObjCLogging.h"
 
-#import "base/RTCLogging.h"
-#import "components/audio/RTCAudioSession+Private.h"
-#import "components/audio/RTCAudioSession.h"
-#import "components/audio/RTCAudioSessionConfiguration.h"
-#import "components/audio/RTCNativeAudioSessionDelegateAdapter.h"
+#include "modules/audio_device/ios/components/audio/RTCAudioSession.h"
+#include "modules/audio_device/ios/components/audio/RTCAudioSession+Private.h"
+#include "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
+#include "modules/audio_device/ios/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
 
 namespace webrtc {
 namespace ios_adm {
@@ -1125,3 +1131,5 @@ int32_t AudioDeviceIOS::RecordingIsAvailable(bool& available) {
 
 }  // namespace ios_adm
 }  // namespace webrtc
+
+#endif // TARGET_OS_IOS

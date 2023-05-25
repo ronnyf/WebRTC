@@ -13,6 +13,7 @@
 
 #include <math.h>
 
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/arch.h"
 
 #if defined(WEBRTC_POSIX)

@@ -23,6 +23,19 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
+/* from ABSL */
+#ifdef __has_attribute
+#define ILBC_HAVE_ATTRIBUTE(x) __has_attribute(x)
+#else
+#define ILBC_HAVE_ATTRIBUTE(x) 0
+#endif
+
+#if defined(__clang__) && ILBC_HAVE_ATTRIBUTE(warn_unused_result)
+#define ILBC_MUST_USE_RESULT __attribute__((warn_unused_result))
+#else
+#define ILBC_MUST_USE_RESULT
+#endif
+
 /* general codec settings */
 
 #define FS 8000

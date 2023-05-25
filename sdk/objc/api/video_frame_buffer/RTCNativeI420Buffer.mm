@@ -12,9 +12,9 @@
 
 #include "api/video/i420_buffer.h"
 
-#if !defined(NDEBUG) && defined(WEBRTC_IOS)
+#if !defined(NDEBUG) && TARGET_OS_IOS
 #import <UIKit/UIKit.h>
-#include "third_party/libyuv/include/libyuv.h"
+#include <libyuv/libyuv.h>
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCI420Buffer)
@@ -127,7 +127,7 @@
 
 #pragma mark - Debugging
 
-#if !defined(NDEBUG) && defined(WEBRTC_IOS)
+#if !defined(NDEBUG) && TARGET_OS_IOS
 - (id)debugQuickLookObject {
   UIGraphicsBeginImageContext(CGSizeMake(_i420Buffer->width(), _i420Buffer->height()));
   CGContextRef c = UIGraphicsGetCurrentContext();

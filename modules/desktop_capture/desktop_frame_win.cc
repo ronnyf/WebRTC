@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/desktop_frame_win.h"
 
 #include <utility>
@@ -71,3 +75,5 @@ std::unique_ptr<DesktopFrameWin> DesktopFrameWin::Create(
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_WIN)

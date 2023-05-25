@@ -14,6 +14,8 @@
 #include <memory>
 #include <vector>
 
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #include "absl/container/inlined_vector.h"
 #include "api/video_codecs/sdp_video_format.h"
 #include "modules/video_coding/codecs/av1/av1_svc_config.h"
@@ -39,5 +41,7 @@ struct LibaomAv1EncoderTemplateAdapter {
 };
 
 }  // namespace webrtc
+
+#endif
 
 #endif  // API_VIDEO_CODECS_VIDEO_ENCODER_FACTORY_TEMPLATE_LIBAOM_AV1_ADAPTER_H_

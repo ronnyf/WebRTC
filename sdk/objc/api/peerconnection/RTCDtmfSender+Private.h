@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCDtmfSender.h"
+#import <WebRTC/RTCDtmfSender.h>
 
 #include "api/dtmf_sender_interface.h"
 

@@ -8,11 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/api/video_capturer.h"
+#include "video_capturer.h"
 
-#include "absl/memory/memory.h"
+#include <absl/memory/memory.h>
 #include "api/video_track_source_proxy_factory.h"
-#include "sdk/objc/native/src/objc_video_track_source.h"
+#include "objc_video_track_source.h"
 
 namespace webrtc {
 

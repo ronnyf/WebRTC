@@ -33,6 +33,7 @@
 #include "rtc_base/ssl_adapter.h"
 #include "rtc_base/ssl_certificate.h"
 #include "rtc_base/ssl_identity.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/ssl_stream_adapter.h"
 
 namespace rtc {

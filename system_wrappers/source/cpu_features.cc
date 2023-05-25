@@ -10,6 +10,7 @@
 
 // Parts of this file derived from Chromium's base/cpu.cc.
 
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/arch.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 #include "system_wrappers/include/field_trial.h"

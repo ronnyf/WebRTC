@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_NETWORK_MONITOR_FACTORY_H_
 #define RTC_BASE_NETWORK_MONITOR_FACTORY_H_
 
+#include "rtc_base/rtc_defines.h"
+
 namespace webrtc {
 class FieldTrialsView;
 }  // namespace webrtc

@@ -10,8 +10,7 @@
 
 #import "RTCCameraPreviewView.h"
 
-#import <AVFoundation/AVFoundation.h>
-#import <UIKit/UIKit.h>
+#if TARGET_OS_IOS
 
 #import "RTCDispatcher+Private.h"
 
@@ -121,3 +120,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

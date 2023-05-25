@@ -25,6 +25,7 @@
 
 #include "common_audio/third_party/ooura/fft_size_128/ooura_fft_tables_common.h"
 #include "rtc_base/system/arch.h"
+#include "rtc_base/rtc_defines.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
 namespace webrtc {
@@ -355,7 +356,11 @@ void OouraFft::cft1st_128(float* a) const {
   cft1st_128_neon(a);
 #elif defined(WEBRTC_ARCH_X86_FAMILY)
   if (use_sse2_) {
+#if defined(WEBRTC_HAS_SSE2)
     cft1st_128_SSE2(a);
+#else
+	cft1st_128_C(a);
+#endif
   } else {
     cft1st_128_C(a);
   }

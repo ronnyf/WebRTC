@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "base/RTCMacros.h"
-#import "base/RTCVideoEncoder.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoEncoder.h>
 
 #include "api/video_codecs/sdp_video_format.h"
 #include "api/video_codecs/video_encoder.h"

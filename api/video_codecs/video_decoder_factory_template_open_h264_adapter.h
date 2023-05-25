@@ -14,6 +14,7 @@
 #include <memory>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
 #include "modules/video_coding/codecs/h264/include/h264.h"
 
 namespace webrtc {

@@ -14,7 +14,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 
-#import "base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 #include "api/video/video_frame.h"
 #include "api/video/video_sink_interface.h"

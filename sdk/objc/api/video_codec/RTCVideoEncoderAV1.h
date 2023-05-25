@@ -8,10 +8,12 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoEncoder.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoEncoder.h>
 
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCVideoEncoderAV1) : NSObject
@@ -25,3 +27,5 @@ RTC_OBJC_EXPORT
 + (bool)isSupported;
 
 @end
+
+#endif

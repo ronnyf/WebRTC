@@ -14,6 +14,8 @@
 #ifndef RTC_BASE_SYSTEM_ARCH_H_
 #define RTC_BASE_SYSTEM_ARCH_H_
 
+#include "rtc_base/rtc_defines.h"
+
 // Processor architecture detection.  For more info on what's defined, see:
 //   https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros
 //   https://www.agner.org/optimize/calling_conventions.pdf

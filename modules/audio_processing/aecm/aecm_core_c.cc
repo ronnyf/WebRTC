@@ -24,6 +24,7 @@ extern "C" {
 }
 
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/sanitizer.h"
 

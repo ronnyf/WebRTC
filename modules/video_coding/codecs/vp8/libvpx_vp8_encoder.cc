@@ -39,10 +39,11 @@
 #include "rtc_base/experiments/field_trial_parser.h"
 #include "rtc_base/experiments/field_trial_units.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/field_trial.h"
-#include "third_party/libyuv/include/libyuv/scale.h"
-#include "vpx/vp8cx.h"
+#include <libyuv/scale.h>
+#include <libvpx/vp8cx.h>
 
 namespace webrtc {
 namespace {

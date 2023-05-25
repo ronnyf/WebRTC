@@ -8,11 +8,15 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCNativeAudioSessionDelegateAdapter.h"
+#include "rtc_base/rtc_defines.h"
 
-#include "sdk/objc/native/src/audio/audio_session_observer.h"
+#if defined(WEBRTC_IOS)
 
-#import "base/RTCLogging.h"
+#import "modules/audio_device/ios/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
+
+#include "modules/audio_device/ios/audio_session_observer.h"
+#include "rtc_base/logging.h"
+#include "rtc_base/rtc_export_bridge.h"
 
 @implementation RTCNativeAudioSessionDelegateAdapter {
   webrtc::AudioSessionObserver *_observer;
@@ -59,7 +63,7 @@
       // configuration has, e.g., a port’s selected data source has
       // changed. Ignore this type of route change since we are focusing
       // on detecting headset changes.
-      RTCLog(@"Ignoring RouteConfigurationChange");
+      RTC_LOG(LS_INFO) << "Ignoring RouteConfigurationChange";
       break;
   }
 }
@@ -87,3 +91,5 @@
 }
 
 @end
+
+#endif // defined(WEBRTC_IOS)

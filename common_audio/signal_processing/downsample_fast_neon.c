@@ -10,6 +10,8 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 
 // NEON intrinsics version of WebRtcSpl_DownsampleFast()
@@ -215,3 +217,5 @@ int WebRtcSpl_DownsampleFastNeon(const int16_t* data_in,
 
   return 0;
 }
+
+#endif // defined(WEBRTC_HAS_NEON)

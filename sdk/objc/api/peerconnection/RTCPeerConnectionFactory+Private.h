@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCPeerConnectionFactory.h"
+#import <WebRTC/RTCPeerConnectionFactory.h>
 
 #include "api/peer_connection_interface.h"
 #include "api/scoped_refptr.h"
@@ -19,13 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RTC_OBJC_TYPE (RTCPeerConnectionFactory)
 ()
 
-    /**
-     * PeerConnectionFactoryInterface created and held by this
-     * RTCPeerConnectionFactory object. This is needed to pass to the underlying
-     * C++ APIs.
-     */
-    @property(nonatomic,
-              readonly) rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> nativeFactory;
+/**
+ * PeerConnectionFactoryInterface created and held by this
+ * RTCPeerConnectionFactory object. This is needed to pass to the underlying
+ * C++ APIs.
+ */
+@property(nonatomic, readonly) rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> nativeFactory;
 
 @property(nonatomic, readonly) rtc::Thread* signalingThread;
 @property(nonatomic, readonly) rtc::Thread* workerThread;

@@ -49,6 +49,7 @@
 #include "video/adaptation/quality_rampup_experiment_helper.h"
 #include "video/adaptation/quality_scaler_resource.h"
 #include "video/adaptation/video_stream_encoder_resource.h"
+#include "video/adaptation/video_stream_encoder_resource_manager.h"
 #include "video/config/video_encoder_config.h"
 #include "video/video_stream_encoder_observer.h"
 

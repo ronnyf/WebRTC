@@ -21,6 +21,8 @@
 #include "modules/desktop_capture/desktop_capturer_differ_wrapper.h"
 #include "system_wrappers/include/metrics.h"
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(RTC_ENABLE_WIN_WGC)
 #include "modules/desktop_capture/win/wgc_capturer_win.h"
 #include "rtc_base/win/windows_version.h"
