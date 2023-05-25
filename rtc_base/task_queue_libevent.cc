@@ -9,6 +9,9 @@
  */
 
 #include "rtc_base/task_queue_libevent.h"
+#include "rtc_base/rtc_defines.h"
+
+#if !defined(WEBRTC_MAC)
 
 #include <errno.h>
 #include <fcntl.h>
@@ -334,3 +337,5 @@ std::unique_ptr<TaskQueueFactory> CreateTaskQueueLibeventFactory() {
 }
 
 }  // namespace webrtc
+
+#endif // !defined(WEBRTC_MAC)

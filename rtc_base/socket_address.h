@@ -18,6 +18,7 @@
 #include <ostream>  // no-presubmit-check TODO(webrtc:8982)
 #endif              // WEBRTC_UNIT_TEST
 #include "rtc_base/ip_address.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/rtc_export.h"
 
 #undef SetPort

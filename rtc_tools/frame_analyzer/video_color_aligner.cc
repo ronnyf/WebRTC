@@ -22,8 +22,8 @@
 #include "api/video/i420_buffer.h"
 #include "rtc_base/checks.h"
 #include "rtc_tools/frame_analyzer/linear_least_squares.h"
-#include "third_party/libyuv/include/libyuv/planar_functions.h"
-#include "third_party/libyuv/include/libyuv/scale.h"
+#include <libyuv/planar_functions.h>
+#include <libyuv/scale.h>
 
 namespace webrtc {
 namespace test {

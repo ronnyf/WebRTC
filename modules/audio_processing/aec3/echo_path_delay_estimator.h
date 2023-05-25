@@ -16,7 +16,7 @@
 #include "absl/types/optional.h"
 #include "api/array_view.h"
 #include "modules/audio_processing/aec3/alignment_mixer.h"
-#include "modules/audio_processing/aec3/block.h"
+#include "modules/audio_processing/aec3/block.hpp"
 #include "modules/audio_processing/aec3/clockdrift_detector.h"
 #include "modules/audio_processing/aec3/decimator.h"
 #include "modules/audio_processing/aec3/delay_estimate.h"

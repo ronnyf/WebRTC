@@ -14,6 +14,7 @@
 #include <string>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
 #include "absl/strings/match.h"
 #include "api/video_codecs/video_encoder_factory.h"
 #include "api/video_codecs/video_encoder_factory_template.h"

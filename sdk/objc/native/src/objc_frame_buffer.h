@@ -13,7 +13,7 @@
 
 #import <CoreVideo/CoreVideo.h>
 
-#import "base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 #include "common_video/include/video_frame_buffer.h"
 

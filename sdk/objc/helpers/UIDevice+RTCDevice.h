@@ -8,10 +8,17 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#import <WebRTC/RTCMacros.h>
+
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 
+RTC_OBJC_EXPORT
 @interface UIDevice (RTCDevice)
 
 + (NSString *)machineName;
 
 @end
+
+#endif

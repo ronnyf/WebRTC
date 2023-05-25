@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mouse_cursor.h"
 
 #include "modules/desktop_capture/desktop_frame.h"
@@ -34,3 +38,5 @@ MouseCursor* MouseCursor::CopyOf(const MouseCursor& cursor) {
 }
 
 }  // namespace webrtc
+
+#endif

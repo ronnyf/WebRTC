@@ -10,6 +10,8 @@
 
 #import "RTCDisplayLinkTimer.h"
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import <UIKit/UIKit.h>
 
 @implementation RTCDisplayLinkTimer {
@@ -57,3 +59,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

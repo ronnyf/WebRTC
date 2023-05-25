@@ -12,6 +12,7 @@
 #define MODULES_DESKTOP_CAPTURE_SHARED_MEMORY_H_
 
 #include <stddef.h>
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_WIN)
 // Forward declare HANDLE in a windows.h compatible way so that we can avoid

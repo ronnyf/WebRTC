@@ -10,16 +10,18 @@
 
 #import "RTCEAGLVideoView.h"
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import <GLKit/GLKit.h>
 
 #import "RTCDefaultShader.h"
 #import "RTCDisplayLinkTimer.h"
 #import "RTCI420TextureCache.h"
 #import "RTCNV12TextureCache.h"
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
 // RTC_OBJC_TYPE(RTCEAGLVideoView) wraps a GLKView which is setup with
 // enableSetNeedsDisplay = NO for the purpose of gaining control of
@@ -293,3 +295,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

@@ -15,10 +15,10 @@
 
 #include "rtc_base/ignore_wundef.h"
 
-RTC_PUSH_IGNORING_WUNDEF()
-#include "third_party/opus/src/include/opus.h"
-#include "third_party/opus/src/include/opus_multistream.h"
-RTC_POP_IGNORING_WUNDEF()
+RTC_PUSH_IGNORING_WUNDEF
+#include <libopus/opus.h>
+#include <libopus/opus_multistream.h>
+RTC_POP_IGNORING_WUNDEF
 
 struct WebRtcOpusEncInst {
   OpusEncoder* encoder;

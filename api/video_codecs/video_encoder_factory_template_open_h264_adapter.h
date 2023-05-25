@@ -14,7 +14,10 @@
 #include <memory>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
+#if defined(WEBRTC_USE_H264)
 #include "modules/video_coding/codecs/h264/include/h264.h"
+#endif
 
 namespace webrtc {
 // TODO(bugs.webrtc.org/13573): When OpenH264 is no longer a conditional build

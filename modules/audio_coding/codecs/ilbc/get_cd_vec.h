@@ -23,12 +23,11 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "absl/base/attributes.h"
 #include "modules/audio_coding/codecs/ilbc/defines.h"
 
 // Returns true on success, false on failure. In case of failure, the decoder
 // state may be corrupted and needs resetting.
-ABSL_MUST_USE_RESULT
+ILBC_MUST_USE_RESULT
 bool WebRtcIlbcfix_GetCbVec(
     int16_t* cbvec, /* (o) Constructed codebook vector */
     int16_t* mem,   /* (i) Codebook buffer */

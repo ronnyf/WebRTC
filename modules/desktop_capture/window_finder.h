@@ -16,6 +16,7 @@
 #include "api/scoped_refptr.h"
 #include "modules/desktop_capture/desktop_capture_types.h"
 #include "modules/desktop_capture/desktop_geometry.h"
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
 #include "modules/desktop_capture/mac/desktop_configuration_monitor.h"

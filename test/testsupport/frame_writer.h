@@ -16,6 +16,7 @@
 #include <string>
 
 #include "api/video/video_frame.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 namespace test {

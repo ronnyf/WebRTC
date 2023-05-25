@@ -18,6 +18,7 @@
 #include "modules/audio_device/audio_device_generic.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "system_wrappers/include/metrics.h"
 
 #if defined(_WIN32)

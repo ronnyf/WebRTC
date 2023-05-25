@@ -7,6 +7,11 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#include "rtc_base/rtc_defines.h"
+
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/rtc_event_processor.h"
 
 #include "rtc_base/numerics/sequence_number_util.h"
@@ -55,3 +60,5 @@ bool RtcEventProcessor::Cmp(const RtcEventProcessor::ListPtrType& a,
 }
 
 }  // namespace webrtc
+
+#endif

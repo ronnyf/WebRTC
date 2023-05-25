@@ -11,6 +11,8 @@
 #include <string>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_POSIX)
 #include <unistd.h>
 #endif

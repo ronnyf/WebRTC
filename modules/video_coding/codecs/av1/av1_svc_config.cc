@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(RTC_USE_LIBAOM_AV1_ENCODER)
+
 #include "modules/video_coding/codecs/av1/av1_svc_config.h"
 
 #include <algorithm>
@@ -143,3 +147,5 @@ bool SetAv1SvcConfig(VideoCodec& video_codec,
 }
 
 }  // namespace webrtc
+
+#endif // defined(RTC_USE_LIBAOM_AV1_ENCODER)

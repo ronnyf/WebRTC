@@ -11,6 +11,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_H264_H264_COLOR_SPACE_H_
 #define MODULES_VIDEO_CODING_CODECS_H264_H264_COLOR_SPACE_H_
 
+#include "rtc_base/rtc_defines.h"
+
 // Everything declared in this header is only required when WebRTC is
 // build with H264 support, please do not move anything out of the
 // #ifdef unless needed and tested.

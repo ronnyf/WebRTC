@@ -10,6 +10,10 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_AV1_DAV1D_DECODER_H_
 #define MODULES_VIDEO_CODING_CODECS_AV1_DAV1D_DECODER_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #include <memory>
 
 #include "api/video_codecs/video_decoder.h"
@@ -19,5 +23,7 @@ namespace webrtc {
 std::unique_ptr<VideoDecoder> CreateDav1dDecoder();
 
 }  // namespace webrtc
+
+#endif // defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_AV1_DAV1D_DECODER_H_

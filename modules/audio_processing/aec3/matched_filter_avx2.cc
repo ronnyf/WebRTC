@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 
 #include "modules/audio_processing/aec3/matched_filter.h"
@@ -259,3 +263,5 @@ void MatchedFilterCore_AVX2(size_t x_start_index,
 
 }  // namespace aec3
 }  // namespace webrtc
+
+#endif // HAVE_AVX2

@@ -11,6 +11,7 @@
 #define RTC_BASE_MEMORY_USAGE_H_
 
 #include <stdint.h>
+#include "rtc_base/rtc_defines.h"
 
 namespace rtc {
 

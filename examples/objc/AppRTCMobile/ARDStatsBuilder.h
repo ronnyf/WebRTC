@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "sdk/objc/api/peerconnection/RTCStatisticsReport.h"
-#import "sdk/objc/base/RTCMacros.h"
+#import <WebRTC/RTCStatisticsReport.h>
+#import <WebRTC/RTCMacros.h>
 
 /** Class used to accumulate stats information into a single displayable string.
  */

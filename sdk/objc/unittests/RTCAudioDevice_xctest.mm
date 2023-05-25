@@ -13,8 +13,9 @@
 #include <stdlib.h>
 
 #include "api/task_queue/default_task_queue_factory.h"
+#include "rtc_base/rtc_defines.h"
 
-#import "sdk/objc/components/audio/RTCAudioSession+Private.h"
+#import "RTCAudioSession+Private.h"
 #import "sdk/objc/native/api/audio_device_module.h"
 #import "sdk/objc/native/src/audio/audio_device_ios.h"
 

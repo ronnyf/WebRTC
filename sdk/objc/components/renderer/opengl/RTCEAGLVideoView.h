@@ -9,11 +9,13 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <WebRTC/RTCMacros.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoRenderer.h"
-#import "RTCVideoViewShading.h"
+#if TARGET_OS_IOS
+
+#import <UIKit/UIKit.h>
+#import <WebRTC/RTCVideoRenderer.h>
+#import <WebRTC/RTCVideoViewShading.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,3 +45,5 @@ NS_EXTENSION_UNAVAILABLE_IOS("Rendering not available in app extensions.")
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif // TARGET_OS_IOS

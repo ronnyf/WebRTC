@@ -8,8 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "ssl_certificate_verifier.h"
-
+#include "ssl_certificate_verifier.h"
 #include "rtc_base/buffer.h"
 
 namespace {

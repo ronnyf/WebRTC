@@ -8,7 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "audio_device_module_ios.h"
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_IOS
+
+#import "sdk/objc/native/src/audio/audio_device_module_ios.h"
 
 #include "api/task_queue/default_task_queue_factory.h"
 #include "modules/audio_device/audio_device_config.h"
@@ -19,7 +23,7 @@
 #include "system_wrappers/include/metrics.h"
 
 #if defined(WEBRTC_IOS)
-#include "audio_device_ios.h"
+#include "sdk/objc/native/src/audio/audio_device_ios.h"
 #endif
 
 #define CHECKinitialized_() \
@@ -667,3 +671,5 @@ AudioDeviceModuleIOS::AudioDeviceModuleIOS(bool bypass_voice_processing)
 #endif  // WEBRTC_IOS
 }
 }
+
+#endif // TARGET_OS_IOS

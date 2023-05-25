@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/window_finder.h"
 
 namespace webrtc {
@@ -18,3 +22,5 @@ WindowFinder::Options::Options(const WindowFinder::Options& other) = default;
 WindowFinder::Options::Options(WindowFinder::Options&& other) = default;
 
 }  // namespace webrtc
+
+#endif

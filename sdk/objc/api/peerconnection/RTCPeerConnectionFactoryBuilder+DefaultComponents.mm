@@ -8,18 +8,18 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCPeerConnectionFactory+Native.h"
 #import "RTCPeerConnectionFactoryBuilder+DefaultComponents.h"
+#import "RTCPeerConnectionFactory+Native.h"
 
 #include "api/audio_codecs/builtin_audio_decoder_factory.h"
 #include "api/audio_codecs/builtin_audio_encoder_factory.h"
-#import "components/video_codec/RTCVideoDecoderFactoryH264.h"
-#import "components/video_codec/RTCVideoEncoderFactoryH264.h"
-#include "sdk/objc/native/api/video_decoder_factory.h"
-#include "sdk/objc/native/api/video_encoder_factory.h"
+#import <WebRTC/RTCVideoDecoderFactoryH264.h>
+#import <WebRTC/RTCVideoEncoderFactoryH264.h>
+#include "objc_to_native_video_decoder_factory.h" // previously, those names clashed
+#include "objc_to_native_video_encoder_factory.h" // previously, those names clashed
 
-#if defined(WEBRTC_IOS)
-#import "sdk/objc/native/api/audio_device_module.h"
+#if TARGET_OS_IOS
+#include "audio_device_module.h"
 #endif
 
 @implementation RTCPeerConnectionFactoryBuilder (DefaultComponents)
@@ -40,7 +40,7 @@
       [[RTC_OBJC_TYPE(RTCVideoDecoderFactoryH264) alloc] init]);
   [builder setVideoDecoderFactory:std::move(videoDecoderFactory)];
 
-#if defined(WEBRTC_IOS)
+#if TARGET_OS_IOS
   [builder setAudioDeviceModule:webrtc::CreateAudioDeviceModule()];
 #endif
   return builder;

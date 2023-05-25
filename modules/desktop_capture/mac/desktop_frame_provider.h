@@ -19,7 +19,7 @@
 
 #include "api/sequence_checker.h"
 #include "modules/desktop_capture/shared_desktop_frame.h"
-#include "sdk/objc/helpers/scoped_cftyperef.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 namespace webrtc {
 

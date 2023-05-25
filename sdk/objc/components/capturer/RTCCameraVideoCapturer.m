@@ -11,17 +11,18 @@
 #import <Foundation/Foundation.h>
 
 #import "RTCCameraVideoCapturer.h"
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
-#if TARGET_OS_IPHONE
-#import "helpers/UIDevice+RTCDevice.h"
+#if TARGET_OS_IOS || TARGET_OS_MACCATALYST
+#import <UIKit/UIKit.h>
+//#import <WebRTC/UIDevice+RTCDevice.h>
 #endif
 
-#import "helpers/AVCaptureSession+DevicePosition.h"
-#import "helpers/RTCDispatcher+Private.h"
-#include "rtc_base/system/gcd_helpers.h"
+#import "AVCaptureSession+DevicePosition.h"
+#import "RTCDispatcher+Private.h"
+#import "rtc_base/system/gcd_helpers.h"
 
 const int64_t kNanosecondsPerSecond = 1000000000;
 
@@ -41,7 +42,7 @@ const int64_t kNanosecondsPerSecond = 1000000000;
   FourCharCode _preferredOutputPixelFormat;
   FourCharCode _outputPixelFormat;
   RTCVideoRotation _rotation;
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
   UIDeviceOrientation _orientation;
   BOOL _generatingOrientationNotifications;
 #endif

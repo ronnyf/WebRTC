@@ -23,8 +23,8 @@
 #import "RTCRtpSender+Private.h"
 #import "RTCRtpTransceiver+Private.h"
 #import "RTCSessionDescription+Private.h"
-#import "base/RTCLogging.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import "NSString+StdString.h"
 
 #include <memory>
 
@@ -34,7 +34,7 @@
 #include "api/set_remote_description_observer_interface.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
-#include "sdk/objc/native/api/ssl_certificate_verifier.h"
+#include "ssl_certificate_verifier.h"
 
 NSString *const kRTCPeerConnectionErrorDomain = @"org.webrtc.RTC_OBJC_TYPE(RTCPeerConnection)";
 int const kRTCPeerConnnectionSessionDescriptionError = -1;

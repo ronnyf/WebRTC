@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include <utility>
 
 #include "modules/desktop_capture/mac/screen_capturer_mac.h"
@@ -18,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/time_utils.h"
 #include "rtc_base/trace_event.h"
-#include "sdk/objc/helpers/scoped_cftyperef.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 namespace webrtc {
 
@@ -547,3 +551,5 @@ std::unique_ptr<DesktopFrame> ScreenCapturerMac::CreateFrame() {
 }
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

@@ -14,6 +14,9 @@ namespace webrtc {
 
 namespace {
 
+#ifndef WEBRTC_OPUS_VARIABLE_COMPLEXITY
+#define WEBRTC_OPUS_VARIABLE_COMPLEXITY 0
+#endif
 #if defined(WEBRTC_ANDROID) || defined(WEBRTC_IOS)
 constexpr int kDefaultComplexity = 5;
 #else

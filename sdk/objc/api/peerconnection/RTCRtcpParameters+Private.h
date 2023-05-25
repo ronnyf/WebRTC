@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCRtcpParameters.h"
+#import <WebRTC/RTCRtcpParameters.h>
 
 #include "api/rtp_parameters.h"
 

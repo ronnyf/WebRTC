@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/screen_drawer.h"
 
 namespace webrtc {
@@ -28,3 +32,5 @@ ScreenDrawer::~ScreenDrawer() {
 }
 
 }  // namespace webrtc
+
+#endif

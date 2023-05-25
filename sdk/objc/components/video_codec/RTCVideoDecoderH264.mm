@@ -13,21 +13,22 @@
 
 #import <VideoToolbox/VideoToolbox.h>
 
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
-#import "helpers.h"
-#import "helpers/scoped_cftyperef.h"
-
-#if defined(WEBRTC_IOS)
-#import "helpers/UIDevice+RTCDevice.h"
-#endif
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
+#include "video_codec_helpers.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 #include "modules/video_coding/include/video_error_codes.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/time_utils.h"
-#include "sdk/objc/components/video_codec/nalu_rewriter.h"
+#include "nalu_rewriter.h"
+
+#if defined(WEBRTC_IOS)
+//#import <WebRTC/UIDevice+RTCDevice.h>
+#endif
 
 // Struct that we pass to the decoder per frame to decode. We receive it again
 // in the decoder callback.

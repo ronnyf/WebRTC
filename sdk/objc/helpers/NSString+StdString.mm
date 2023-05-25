@@ -10,8 +10,6 @@
 
 #import "NSString+StdString.h"
 
-#include "absl/strings/string_view.h"
-
 @implementation NSString (StdString)
 
 - (std::string)stdString {
@@ -30,6 +28,16 @@
   return [[NSString alloc] initWithBytes:stdString.data()
                                   length:stdString.length()
                                 encoding:NSUTF8StringEncoding];
+}
+
+@end
+
+@implementation NSString (StringView)
+
++ (NSString *)stringForStringView:(const std::string_view)stringView {
+	return [[NSString alloc] initWithBytes:stringView.data()
+									length:stringView.length()
+								  encoding:NSUTF8StringEncoding];
 }
 
 @end

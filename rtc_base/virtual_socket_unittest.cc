@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
 #include <math.h>
 #include <stdint.h>
 #include <stdlib.h>

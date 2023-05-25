@@ -13,6 +13,7 @@
 
 #include <stdint.h>
 #include <string.h>
+#include "rtc_base/rtc_defines.h"
 
 #ifdef __cplusplus
 extern "C" {

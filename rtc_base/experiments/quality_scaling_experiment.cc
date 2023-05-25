@@ -16,6 +16,7 @@
 #include "absl/strings/match.h"
 #include "api/field_trials_view.h"
 #include "api/transport/field_trial_based_config.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/logging.h"
 
 namespace webrtc {

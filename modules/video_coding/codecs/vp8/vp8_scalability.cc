@@ -8,6 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP8)
+
 #include "modules/video_coding/codecs/vp8/vp8_scalability.h"
 
 namespace webrtc {
@@ -22,3 +25,5 @@ bool VP8SupportsScalabilityMode(ScalabilityMode scalability_mode) {
 }
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)

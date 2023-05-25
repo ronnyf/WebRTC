@@ -13,6 +13,7 @@
 #include "api/make_ref_counted.h"
 #include "modules/audio_device/include/audio_device_defines.h"
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

@@ -10,6 +10,8 @@
 #ifndef RTC_BASE_SYNCHRONIZATION_YIELD_H_
 #define RTC_BASE_SYNCHRONIZATION_YIELD_H_
 
+#include "rtc_base/rtc_defines.h"
+
 namespace webrtc {
 
 // Request rescheduling of threads.

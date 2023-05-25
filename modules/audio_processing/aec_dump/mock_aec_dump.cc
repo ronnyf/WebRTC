@@ -7,6 +7,11 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_UNIT_TEST)
+
 #include "modules/audio_processing/aec_dump/mock_aec_dump.h"
 
 namespace webrtc {
@@ -17,3 +22,5 @@ MockAecDump::MockAecDump() = default;
 MockAecDump::~MockAecDump() = default;
 }  // namespace test
 }  // namespace webrtc
+
+#endif

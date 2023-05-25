@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mac/full_screen_mac_application_handler.h"
 
 #include <libproc.h>
@@ -236,3 +240,5 @@ CreateFullScreenMacApplicationHandler(DesktopCapturer::SourceId sourceId) {
 }
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

@@ -7,6 +7,9 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#if !__has_include(<dispatch/dispatch.h>)
+
 #include <memory>
 
 #include "api/field_trials_view.h"
@@ -21,3 +24,5 @@ std::unique_ptr<TaskQueueFactory> CreateDefaultTaskQueueFactory(
 }
 
 }  // namespace webrtc
+
+#endif // !__has_include(<dispatch/dispatch.h>)

@@ -14,6 +14,7 @@
 #include <atomic>
 
 #include "rtc_base/platform_thread_types.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/thread_annotations.h"
 
 #if defined(WEBRTC_WIN)

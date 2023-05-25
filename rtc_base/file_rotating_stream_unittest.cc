@@ -17,6 +17,7 @@
 
 #include "absl/strings/string_view.h"
 #include "rtc_base/arraysize.h"
+#include "rtc_base/rtc_defines.h"
 #include "test/gtest.h"
 #include "test/testsupport/file_utils.h"
 

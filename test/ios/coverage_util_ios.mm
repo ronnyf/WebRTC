@@ -9,6 +9,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#include "rtc_base/rtc_defines.h"
 
 #ifdef WEBRTC_IOS_ENABLE_COVERAGE
 extern "C" void __llvm_profile_set_filename(const char* name);

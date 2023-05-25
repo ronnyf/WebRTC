@@ -10,15 +10,15 @@
 
 #import "RTCDefaultVideoDecoderFactory.h"
 
-#import "RTCH264ProfileLevelId.h"
-#import "RTCVideoDecoderH264.h"
-#import "api/video_codec/RTCVideoCodecConstants.h"
-#import "api/video_codec/RTCVideoDecoderVP8.h"
-#import "api/video_codec/RTCVideoDecoderVP9.h"
-#import "base/RTCVideoCodecInfo.h"
+#import <WebRTC/RTCH264ProfileLevelId.h>
+#import <WebRTC/RTCVideoDecoderH264.h>
+#import <WebRTC/RTCVideoCodecConstants.h>
+#import <WebRTC/RTCVideoDecoderVP8.h>
+#import <WebRTC/RTCVideoDecoderVP9.h>
+#import <WebRTC/RTCVideoCodecInfo.h>
 
 #if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
-#import "api/video_codec/RTCVideoDecoderAV1.h"  // nogncheck
+#import <WebRTC/RTCVideoDecoderAV1.h>  // nogncheck
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCDefaultVideoDecoderFactory)

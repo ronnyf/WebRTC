@@ -11,6 +11,7 @@
 #import <XCTest/XCTest.h>
 
 #include <stdlib.h>
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_IOS)
 #import "sdk/objc/native/api/audio_device_module.h"

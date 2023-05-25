@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined (WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)
+
 #include "modules/desktop_capture/differ_vector_sse2.h"
 
 #if defined(_MSC_VER)
@@ -100,3 +104,5 @@ extern bool VectorDifference_SSE2_W32(const uint8_t* image1,
 }
 
 }  // namespace webrtc
+
+#endif // defined (WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)

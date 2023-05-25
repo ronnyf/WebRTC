@@ -13,8 +13,8 @@
 
 #include "rtc_base/ignore_wundef.h"
 
-RTC_PUSH_IGNORING_WUNDEF()
+RTC_PUSH_IGNORING_WUNDEF
 #include "testing/gmock/include/gmock/gmock.h"
-RTC_POP_IGNORING_WUNDEF()
+RTC_POP_IGNORING_WUNDEF
 
 #endif  // TEST_GMOCK_H_

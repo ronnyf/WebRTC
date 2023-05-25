@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if !defined(WEBRTC_IOS) && !defined(WEBRTC_MAC) && !defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "modules/desktop_capture/desktop_frame.h"
 #include "rtc_base/checks.h"
@@ -68,3 +72,5 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
 }
 
 }  // namespace webrtc
+
+#endif

@@ -17,6 +17,7 @@
 
 #include "api/video_codecs/video_encoder_factory.h"
 #include "rtc_base/system/rtc_export.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 class RTC_EXPORT InternalEncoderFactory : public VideoEncoderFactory {

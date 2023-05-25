@@ -8,11 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "modules/desktop_capture/desktop_capture_options.h"
+#include "rtc_base/rtc_defines.h"
 
-#include "api/make_ref_counted.h"
-
-#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+#if TARGET_OS_OSX && defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
 #include "modules/desktop_capture/mac/full_screen_mac_application_handler.h"
 #elif defined(WEBRTC_WIN)
 #include "modules/desktop_capture/win/full_screen_win_application_handler.h"
@@ -20,6 +18,9 @@
 #if defined(WEBRTC_USE_PIPEWIRE)
 #include "modules/desktop_capture/linux/wayland/shared_screencast_stream.h"
 #endif
+
+#include "api/make_ref_counted.h"
+#include "modules/desktop_capture/desktop_capture_options.h"
 
 namespace webrtc {
 

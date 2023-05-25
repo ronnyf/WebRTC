@@ -10,10 +10,12 @@
 
 #import "RTCI420TextureCache.h"
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import <OpenGLES/ES3/gl.h>
 
-#import "base/RTCI420Buffer.h"
-#import "base/RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 #include <vector>
 
@@ -147,3 +149,5 @@ static const GLsizei kNumTextures = kNumTexturesPerSet * kNumTextureSets;
 }
 
 @end
+
+#endif // TARGET_OS_IOS

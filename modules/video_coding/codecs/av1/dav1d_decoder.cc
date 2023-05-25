@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
+
 #include "modules/video_coding/codecs/av1/dav1d_decoder.h"
 
 #include <algorithm>
@@ -19,8 +23,8 @@
 #include "modules/video_coding/include/video_error_codes.h"
 #include "rtc_base/logging.h"
 #include "third_party/dav1d/libdav1d/include/dav1d/dav1d.h"
-#include "third_party/libyuv/include/libyuv/convert.h"
-#include "third_party/libyuv/include/libyuv/planar_functions.h"
+#include <libyuv/convert.h>
+#include <libyuv/planar_functions.h>
 
 namespace webrtc {
 namespace {
@@ -202,3 +206,5 @@ std::unique_ptr<VideoDecoder> CreateDav1dDecoder() {
 }
 
 }  // namespace webrtc
+
+#endif // defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)

@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 
 #include "modules/audio_processing/aec3/adaptive_fir_filter.h"
@@ -186,3 +190,5 @@ void ApplyFilter_Avx2(const RenderBuffer& render_buffer,
 
 }  // namespace aec3
 }  // namespace webrtc
+
+#endif // WEBRTC_ARCH_X86_FAMILY

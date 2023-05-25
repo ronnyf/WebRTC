@@ -10,13 +10,15 @@
 
 #import "RTCDefaultShader.h"
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import <OpenGLES/ES3/gl.h>
 
 #import "RTCOpenGLDefines.h"
 #import "RTCShader.h"
-#import "base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
-#include "absl/types/optional.h"
+#include <absl/types/optional.h>
 
 static const int kYTextureUnit = 0;
 static const int kUTextureUnit = 1;
@@ -199,3 +201,5 @@ static const char kNV12FragmentShaderSource[] =
 }
 
 @end
+
+#endif // TARGET_OS_IOS

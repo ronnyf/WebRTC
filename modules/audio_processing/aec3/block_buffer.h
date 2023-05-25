@@ -15,7 +15,7 @@
 
 #include <vector>
 
-#include "modules/audio_processing/aec3/block.h"
+#include "modules/audio_processing/aec3/block.hpp"
 #include "rtc_base/checks.h"
 
 namespace webrtc {

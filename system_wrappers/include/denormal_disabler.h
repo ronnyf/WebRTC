@@ -11,6 +11,7 @@
 #ifndef SYSTEM_WRAPPERS_INCLUDE_DENORMAL_DISABLER_H_
 #define SYSTEM_WRAPPERS_INCLUDE_DENORMAL_DISABLER_H_
 
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/arch.h"
 
 namespace webrtc {

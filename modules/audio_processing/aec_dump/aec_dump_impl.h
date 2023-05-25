@@ -26,7 +26,7 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_processing/debug.pb.h"
 #else
-#include "modules/audio_processing/debug.pb.h"
+#include "generated/modules/audio_processing/debug.pb.h"
 #endif
 
 namespace webrtc {
@@ -78,5 +78,7 @@ class AecDumpImpl : public AecDump {
   CaptureStreamInfo capture_stream_info_;
 };
 }  // namespace webrtc
+
+#endif // WEBRTC_ENABLE_PROTOBUF
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_

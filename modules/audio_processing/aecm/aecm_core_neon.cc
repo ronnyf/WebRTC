@@ -8,11 +8,15 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/checks.h"
+#include "rtc_base/system/arch.h"
+
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 
 #include "common_audio/signal_processing/include/real_fft.h"
 #include "modules/audio_processing/aecm/aecm_core.h"
-#include "rtc_base/checks.h"
 
 namespace webrtc {
 
@@ -204,3 +208,5 @@ void WebRtcAecm_ResetAdaptiveChannelNeon(AecmCore* aecm) {
 }
 
 }  // namespace webrtc
+
+#endif // WEBRTC_HAS_NEON

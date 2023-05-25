@@ -12,8 +12,8 @@
 
 #import <Network/Network.h>
 
-#import "base/RTCLogging.h"
-#import "helpers/RTCDispatcher+Private.h"
+#import <WebRTC/RTCLogging.h>
+#import "RTCDispatcher+Private.h"
 
 #include "rtc_base/string_utils.h"
 

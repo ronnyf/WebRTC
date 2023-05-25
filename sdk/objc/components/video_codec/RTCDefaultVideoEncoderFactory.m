@@ -10,15 +10,15 @@
 
 #import "RTCDefaultVideoEncoderFactory.h"
 
-#import "RTCH264ProfileLevelId.h"
-#import "RTCVideoEncoderH264.h"
-#import "api/video_codec/RTCVideoCodecConstants.h"
-#import "api/video_codec/RTCVideoEncoderVP8.h"
-#import "api/video_codec/RTCVideoEncoderVP9.h"
-#import "base/RTCVideoCodecInfo.h"
+#import <WebRTC/RTCH264ProfileLevelId.h>
+#import <WebRTC/RTCVideoEncoderH264.h>
+#import <WebRTC/RTCVideoCodecConstants.h>
+#import <WebRTC/RTCVideoEncoderVP8.h>
+#import <WebRTC/RTCVideoEncoderVP9.h>
+#import <WebRTC/RTCVideoCodecInfo.h>
 
 #if defined(RTC_USE_LIBAOM_AV1_ENCODER)
-#import "api/video_codec/RTCVideoEncoderAV1.h"  // nogncheck
+#import <WebRTC/RTCVideoEncoderAV1.h>  // nogncheck
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCDefaultVideoEncoderFactory)

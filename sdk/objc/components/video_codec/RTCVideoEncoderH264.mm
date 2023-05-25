@@ -14,19 +14,16 @@
 #import <VideoToolbox/VideoToolbox.h>
 #include <vector>
 
-#if defined(WEBRTC_IOS)
-#import "helpers/UIDevice+RTCDevice.h"
-#endif
-#import "RTCCodecSpecificInfoH264.h"
-#import "RTCH264ProfileLevelId.h"
-#import "api/peerconnection/RTCVideoCodecInfo+Private.h"
-#import "base/RTCCodecSpecificInfo.h"
-#import "base/RTCI420Buffer.h"
-#import "base/RTCVideoEncoder.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
-#import "helpers.h"
+#import <WebRTC/RTCCodecSpecificInfoH264.h>
+#import <WebRTC/RTCH264ProfileLevelId.h>
+#import "RTCVideoCodecInfo+Private.h"
+#import <WebRTC/RTCCodecSpecificInfo.h>
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCVideoEncoder.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
+#include "video_codec_helpers.h"
 
 #include "api/video_codecs/h264_profile_level_id.h"
 #include "common_video/h264/h264_bitstream_parser.h"
@@ -34,9 +31,14 @@
 #include "modules/video_coding/include/video_error_codes.h"
 #include "rtc_base/buffer.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/time_utils.h"
-#include "sdk/objc/components/video_codec/nalu_rewriter.h"
-#include "third_party/libyuv/include/libyuv/convert_from.h"
+#include "nalu_rewriter.h"
+#include <libyuv/convert_from.h>
+
+#if defined(WEBRTC_IOS)
+//#import <WebRTC/UIDevice+RTCDevice.h>
+#endif
 
 @interface RTC_OBJC_TYPE (RTCVideoEncoderH264)
 ()
@@ -619,47 +621,51 @@ NSUInteger GetMaxSampleRate(const webrtc::H264ProfileLevelId &profile_level_id) 
 
   // Set source image buffer attributes. These attributes will be present on
   // buffers retrieved from the encoder's pixel buffer pool.
-  NSDictionary *sourceAttributes = @{
-#if defined(WEBRTC_IOS) && (TARGET_OS_MACCATALYST || TARGET_OS_SIMULATOR)
-    (NSString *)kCVPixelBufferMetalCompatibilityKey : @(YES),
-#elif defined(WEBRTC_IOS)
-    (NSString *)kCVPixelBufferOpenGLESCompatibilityKey : @(YES),
-#elif defined(WEBRTC_MAC) && !defined(WEBRTC_ARCH_ARM64)
-    (NSString *)kCVPixelBufferOpenGLCompatibilityKey : @(YES),
-#endif
+  NSDictionary<NSString *, id> *sourceAttributes = @{
+//#if defined(WEBRTC_IOS) && (TARGET_OS_MACCATALYST || TARGET_OS_SIMULATOR)
+//    (NSString *)kCVPixelBufferMetalCompatibilityKey : @(YES),
+//#elif defined(WEBRTC_IOS)
+//    (NSString *)kCVPixelBufferOpenGLESCompatibilityKey : @(YES),
+//#elif defined(WEBRTC_MAC) && !defined(WEBRTC_ARCH_ARM64)
+//    (NSString *)kCVPixelBufferOpenGLCompatibilityKey : @(YES),
+//#endif
+	(NSString *)kCVPixelBufferMetalCompatibilityKey : @(YES),
     (NSString *)kCVPixelBufferIOSurfacePropertiesKey : @{},
     (NSString *)kCVPixelBufferPixelFormatTypeKey : @(framePixelFormat),
   };
 
-  NSDictionary *encoder_specs;
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
   // Currently hw accl is supported above 360p on mac, below 360p
   // the compression session will be created with hw accl disabled.
-  encoder_specs = @{
+  NSDictionary *encoder_specs = @{
     (NSString *)kVTVideoEncoderSpecification_EnableHardwareAcceleratedVideoEncoder : @(YES),
   };
 
 #endif
   OSStatus status = VTCompressionSessionCreate(
-      nullptr,  // use default allocator
+	  kCFAllocatorDefault,
       _width,
       _height,
       kCMVideoCodecType_H264,
-      (__bridge CFDictionaryRef)encoder_specs,  // use hardware accelerated encoder if available
+#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+      (__bridge CFDictionaryRef)encoder_specs,
+#else
+	  NULL,  // use hardware accelerated encoder if available
+#endif
       (__bridge CFDictionaryRef)sourceAttributes,
-      nullptr,  // use default compressed data allocator
+      NULL,  // use default compressed data allocator
       compressionOutputCallback,
-      nullptr,
+      NULL,
       &_compressionSession);
   if (status != noErr) {
     RTC_LOG(LS_ERROR) << "Failed to create compression session: " << status;
     return WEBRTC_VIDEO_CODEC_ERROR;
   }
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
-  CFBooleanRef hwaccl_enabled = nullptr;
+  CFBooleanRef hwaccl_enabled = NULL;
   status = VTSessionCopyProperty(_compressionSession,
                                  kVTCompressionPropertyKey_UsingHardwareAcceleratedVideoEncoder,
-                                 nullptr,
+                                 NULL,
                                  &hwaccl_enabled);
   if (status == noErr && (CFBooleanGetValue(hwaccl_enabled))) {
     RTC_LOG(LS_INFO) << "Compression session created with hw accl enabled";
@@ -674,11 +680,37 @@ NSUInteger GetMaxSampleRate(const webrtc::H264ProfileLevelId &profile_level_id) 
 
 - (void)configureCompressionSession {
   RTC_DCHECK(_compressionSession);
-  SetVTSessionProperty(_compressionSession, kVTCompressionPropertyKey_RealTime, true);
-  SetVTSessionProperty(_compressionSession,
-                       kVTCompressionPropertyKey_ProfileLevel,
-                       ExtractProfile(*_profile_level_id));
-  SetVTSessionProperty(_compressionSession, kVTCompressionPropertyKey_AllowFrameReordering, false);
+  OSStatus err = noErr;
+
+	err = VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_RealTime, kCFBooleanTrue);
+	if (err) {
+		RTC_LOG(LS_ERROR) << "VTSessionSetProperty '_RealTime' failed to set";
+		err = noErr;
+	}
+  
+	err = VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_ProfileLevel, ExtractProfile(*_profile_level_id));
+	if (err) {
+		RTC_LOG(LS_ERROR) << "VTSessionSetProperty '_ProfileLevel' failed to set";
+		err = noErr;
+	}
+	err = VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_AllowFrameReordering, kCFBooleanFalse);
+	if (err) {
+		RTC_LOG(LS_ERROR) << "VTSessionSetProperty '_AllowFrameReordering' failed to set";
+		err = noErr;
+	}
+	
+	// Set a relatively large value for keyframe emission (7200 frames or 4 minutes).
+	err = VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, (CFNumberRef)@7200);
+	if (err) {
+		RTC_LOG(LS_ERROR) << "VTSessionSetProperty '_MaxKeyFrameInterval' failed to set";
+		err = noErr;
+	}
+	
+	err = VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_MaxKeyFrameIntervalDuration, (CFNumberRef)@240);
+	if (err) {
+		RTC_LOG(LS_ERROR) << "VTSessionSetProperty '_MaxKeyFrameIntervalDuration' failed to set";
+	}
+	
   [self setEncoderBitrateBps:_targetBitrateBps frameRate:_encoderFrameRate];
   // TODO(tkchin): Look at entropy mode and colorspace matrices.
   // TODO(tkchin): Investigate to see if there's any way to make this work.
@@ -687,11 +719,6 @@ NSUInteger GetMaxSampleRate(const webrtc::H264ProfileLevelId &profile_level_id) 
   // internal::SetVTSessionProperty(compression_session_,
   //     kVTCompressionPropertyKey_MaxFrameDelayCount,
   //     1);
-
-  // Set a relatively large value for keyframe emission (7200 frames or 4 minutes).
-  SetVTSessionProperty(_compressionSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, 7200);
-  SetVTSessionProperty(
-      _compressionSession, kVTCompressionPropertyKey_MaxKeyFrameIntervalDuration, 240);
 }
 
 - (void)destroyCompressionSession {

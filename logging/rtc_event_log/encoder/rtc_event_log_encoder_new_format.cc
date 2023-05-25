@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/encoder/rtc_event_log_encoder_new_format.h"
 
 #include "absl/types/optional.h"
@@ -68,7 +72,7 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/logging/rtc_event_log/rtc_event_log2.pb.h"
 #else
-#include "logging/rtc_event_log/rtc_event_log2.pb.h"
+#include "generated/logging/rtc_event_log/rtc_event_log2.pb.h"
 #endif
 
 using webrtc_event_logging::ToUnsigned;
@@ -1965,3 +1969,5 @@ void RtcEventLogEncoderNewFormat::EncodeIceCandidatePairEvent(
 }
 
 }  // namespace webrtc
+
+#endif

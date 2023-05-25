@@ -68,6 +68,7 @@
 #include "rtc_base/experiments/struct_parameters_parser.h"
 #include "rtc_base/logging.h"
 #include "rtc_base/race_checker.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/string_encode.h"
 #include "rtc_base/strings/audio_format_to_string.h"
 #include "rtc_base/strings/string_builder.h"
@@ -81,7 +82,7 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_coding/audio_network_adaptor/config.pb.h"
 #else
-#include "modules/audio_coding/audio_network_adaptor/config.pb.h"
+#include "generated/modules/audio_coding/audio_network_adaptor/config.pb.h"
 #endif
 
 #endif

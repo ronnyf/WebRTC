@@ -21,7 +21,6 @@
 
 #include <stdint.h>
 
-#include "absl/base/attributes.h"
 #include "modules/audio_coding/codecs/ilbc/defines.h"
 
 /*----------------------------------------------------------------*
@@ -29,7 +28,7 @@
  *---------------------------------------------------------------*/
 
 // Returns 0 on success, -1 on error.
-ABSL_MUST_USE_RESULT
+ILBC_MUST_USE_RESULT
 int WebRtcIlbcfix_DecodeImpl(
     int16_t* decblock,         /* (o) decoded signal block */
     const uint16_t* bytes,     /* (i) encoded signal bits */

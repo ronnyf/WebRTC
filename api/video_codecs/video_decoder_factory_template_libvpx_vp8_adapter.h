@@ -14,18 +14,29 @@
 #include <memory>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP9)
 #include "api/video_codecs/sdp_video_format.h"
 #include "modules/video_coding/codecs/vp8/include/vp8.h"
+#endif
 
 namespace webrtc {
 struct LibvpxVp8DecoderTemplateAdapter {
   static std::vector<SdpVideoFormat> SupportedFormats() {
+#if defined(RTC_ENABLE_VP9)
     return {SdpVideoFormat("VP8")};
+#else
+	  return nullptr;
+#endif
   }
 
   static std::unique_ptr<VideoDecoder> CreateDecoder(
       const SdpVideoFormat& format) {
+#if defined(RTC_ENABLE_VP9)
     return VP8Decoder::Create();
+#else
+	  return nullptr;
+#endif
   }
 };
 }  // namespace webrtc

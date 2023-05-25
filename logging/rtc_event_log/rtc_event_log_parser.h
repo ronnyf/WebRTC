@@ -60,8 +60,8 @@
 #include "external/webrtc/webrtc/logging/rtc_event_log/rtc_event_log.pb.h"
 #include "external/webrtc/webrtc/logging/rtc_event_log/rtc_event_log2.pb.h"
 #else
-#include "logging/rtc_event_log/rtc_event_log.pb.h"
-#include "logging/rtc_event_log/rtc_event_log2.pb.h"
+#include "generated/logging/rtc_event_log/rtc_event_log.pb.h"
+#include "generated/logging/rtc_event_log/rtc_event_log2.pb.h"
 #endif
 
 namespace webrtc {

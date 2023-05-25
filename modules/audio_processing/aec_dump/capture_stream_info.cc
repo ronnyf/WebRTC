@@ -8,11 +8,17 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "modules/audio_processing/aec_dump/capture_stream_info.h"
+#include "modules/audio_processing/include/audio_frame_view.h"
 
 namespace webrtc {
 
 void CaptureStreamInfo::AddInput(const AudioFrameView<const float>& src) {
+	
   auto* stream = event_->mutable_stream();
 
   for (int i = 0; i < src.num_channels(); ++i) {
@@ -59,3 +65,5 @@ void CaptureStreamInfo::AddAudioProcessingState(
   stream->set_keypress(state.keypress);
 }
 }  // namespace webrtc
+
+#endif

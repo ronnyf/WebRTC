@@ -12,6 +12,9 @@
 // Everything declared/defined in this header is only required when WebRTC is
 // build with H264 support, please do not move anything out of the
 // #ifdef unless needed and tested.
+
+#include "rtc_base/rtc_defines.h"
+
 #ifdef WEBRTC_USE_H264
 
 #include "modules/video_coding/codecs/h264/h264_decoder_impl.h"

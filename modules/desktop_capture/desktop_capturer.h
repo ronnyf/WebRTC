@@ -19,6 +19,8 @@
 #include <type_traits>
 #include <vector>
 
+#include "rtc_base/rtc_defines.h"
+
 // TODO(alcooper): Update include usage in downstream consumers and then change
 // this to a forward declaration.
 #include "modules/desktop_capture/delegated_source_list_controller.h"

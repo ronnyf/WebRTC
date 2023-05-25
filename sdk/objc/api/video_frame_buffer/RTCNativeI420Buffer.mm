@@ -12,14 +12,14 @@
 
 #include "api/video/i420_buffer.h"
 
-#if !defined(NDEBUG) && defined(WEBRTC_IOS)
+#if !defined(NDEBUG) && TARGET_OS_IOS
 #import <UIKit/UIKit.h>
-#include "third_party/libyuv/include/libyuv.h"
+#include <libyuv/libyuv.h>
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCI420Buffer)
 
-- (instancetype)initWithWidth:(int)width height:(int)height {
+- (instancetype)initWithWidth:(NSInteger)width height:(NSInteger)height {
   if (self = [super init]) {
     _i420Buffer = webrtc::I420Buffer::Create(width, height);
   }
@@ -27,8 +27,8 @@
   return self;
 }
 
-- (instancetype)initWithWidth:(int)width
-                       height:(int)height
+- (instancetype)initWithWidth:(NSInteger)width
+                       height:(NSInteger)height
                         dataY:(const uint8_t *)dataY
                         dataU:(const uint8_t *)dataU
                         dataV:(const uint8_t *)dataV {
@@ -39,11 +39,11 @@
   return self;
 }
 
-- (instancetype)initWithWidth:(int)width
-                       height:(int)height
-                      strideY:(int)strideY
-                      strideU:(int)strideU
-                      strideV:(int)strideV {
+- (instancetype)initWithWidth:(NSInteger)width
+                       height:(NSInteger)height
+                      strideY:(NSInteger)strideY
+                      strideU:(NSInteger)strideU
+                      strideV:(NSInteger)strideV {
   if (self = [super init]) {
     _i420Buffer = webrtc::I420Buffer::Create(width, height, strideY, strideU, strideV);
   }
@@ -59,31 +59,31 @@
   return self;
 }
 
-- (int)width {
+- (NSInteger)width {
   return _i420Buffer->width();
 }
 
-- (int)height {
+- (NSInteger)height {
   return _i420Buffer->height();
 }
 
-- (int)strideY {
+- (NSInteger)strideY {
   return _i420Buffer->StrideY();
 }
 
-- (int)strideU {
+- (NSInteger)strideU {
   return _i420Buffer->StrideU();
 }
 
-- (int)strideV {
+- (NSInteger)strideV {
   return _i420Buffer->StrideV();
 }
 
-- (int)chromaWidth {
+- (NSInteger)chromaWidth {
   return _i420Buffer->ChromaWidth();
 }
 
-- (int)chromaHeight {
+- (NSInteger)chromaHeight {
   return _i420Buffer->ChromaHeight();
 }
 
@@ -99,12 +99,12 @@
   return _i420Buffer->DataV();
 }
 
-- (id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>)cropAndScaleWith:(int)offsetX
-                                                   offsetY:(int)offsetY
-                                                 cropWidth:(int)cropWidth
-                                                cropHeight:(int)cropHeight
-                                                scaleWidth:(int)scaleWidth
-                                               scaleHeight:(int)scaleHeight {
+- (id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>)cropAndScaleWith:(NSInteger)offsetX
+                                                   offsetY:(NSInteger)offsetY
+                                                 cropWidth:(NSInteger)cropWidth
+                                                cropHeight:(NSInteger)cropHeight
+                                                scaleWidth:(NSInteger)scaleWidth
+                                               scaleHeight:(NSInteger)scaleHeight {
   rtc::scoped_refptr<webrtc::VideoFrameBuffer> scaled_buffer =
       _i420Buffer->CropAndScale(offsetX, offsetY, cropWidth, cropHeight, scaleWidth, scaleHeight);
   RTC_DCHECK_EQ(scaled_buffer->type(), webrtc::VideoFrameBuffer::Type::kI420);
@@ -127,7 +127,7 @@
 
 #pragma mark - Debugging
 
-#if !defined(NDEBUG) && defined(WEBRTC_IOS)
+#if !defined(NDEBUG) && TARGET_OS_IOS
 - (id)debugQuickLookObject {
   UIGraphicsBeginImageContext(CGSizeMake(_i420Buffer->width(), _i420Buffer->height()));
   CGContextRef c = UIGraphicsGetCurrentContext();

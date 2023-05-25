@@ -12,7 +12,7 @@
 #define SDK_OBJC_NATIVE_API_VIDEO_CAPTURER_H_
 
 // import
-#import "base/RTCVideoCapturer.h"
+#import <WebRTC/RTCVideoCapturer.h>
 
 // include
 #include "api/media_stream_interface.h"

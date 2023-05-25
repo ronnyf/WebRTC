@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_UNIT_TEST)
+
 #include <array>
 #include <memory>
 #include <utility>
@@ -91,3 +95,5 @@ TEST(AecDumpIntegration, CaptureStreamShouldBeLoggedOnceEveryProcessStream) {
   apm->AttachAecDump(std::move(mock_aec_dump));
   apm->ProcessStream(frame.data(), stream_config, stream_config, frame.data());
 }
+
+#endif

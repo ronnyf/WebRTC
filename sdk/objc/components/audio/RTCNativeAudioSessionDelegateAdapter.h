@@ -8,7 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCAudioSession.h"
+#import "sdk/objc/components/audio/RTCAudioSession.h"
+
+#include "rtc_base/rtc_export_bridge.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +21,8 @@ class AudioSessionObserver;
 /** Adapter that forwards RTCAudioSessionDelegate calls to the appropriate
  *  methods on the AudioSessionObserver.
  */
+
+RTC_OBJC_EXPORT
 @interface RTCNativeAudioSessionDelegateAdapter : NSObject <RTC_OBJC_TYPE (RTCAudioSessionDelegate)>
 
 - (instancetype)init NS_UNAVAILABLE;

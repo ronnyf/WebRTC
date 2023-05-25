@@ -14,6 +14,7 @@
 
 #include "rtc_base/checks.h"
 #include "rtc_base/platform_thread_types.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/synchronization/yield.h"
 #include "rtc_base/system/unused.h"
 

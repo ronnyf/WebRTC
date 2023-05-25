@@ -14,7 +14,7 @@
 #include "api/scoped_refptr.h"
 #include "rtc_base/thread.h"
 
-#import "components/audio/RTCAudioDevice.h"
+#import <WebRTC/RTCAudioDevice.h>
 
 namespace webrtc {
 namespace objc_adm {

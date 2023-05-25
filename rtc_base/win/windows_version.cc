@@ -10,6 +10,8 @@
 
 #include "rtc_base/win/windows_version.h"
 
+#if defined(WEBRTC_WIN)
+
 #include <windows.h>
 
 #include <memory>
@@ -443,3 +445,5 @@ Version GetVersion() {
 
 }  // namespace rtc_win
 }  // namespace rtc
+
+#endif // defined(WEBRTC_WIN)

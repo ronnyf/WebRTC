@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_capturer.h"
 
 #include <stdlib.h>
@@ -20,6 +24,8 @@
 #include "modules/desktop_capture/desktop_capture_options.h"
 #include "modules/desktop_capture/desktop_capturer_differ_wrapper.h"
 #include "system_wrappers/include/metrics.h"
+
+#include "rtc_base/rtc_defines.h"
 
 #if defined(RTC_ENABLE_WIN_WGC)
 #include "modules/desktop_capture/win/wgc_capturer_win.h"
@@ -140,3 +146,5 @@ bool DesktopCapturer::IsRunningUnderWayland() {
 #endif  // defined(WEBRTC_USE_PIPEWIRE) || defined(WEBRTC_USE_X11)
 
 }  // namespace webrtc
+
+#endif

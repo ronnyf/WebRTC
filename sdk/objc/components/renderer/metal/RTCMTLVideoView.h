@@ -10,9 +10,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoFrame.h"
-#import "RTCVideoRenderer.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoRenderer.h>
+
+#if TARGET_OS_IOS
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -42,3 +44,5 @@ RTC_OBJC_EXPORT
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif // TARGET_OS_IOS

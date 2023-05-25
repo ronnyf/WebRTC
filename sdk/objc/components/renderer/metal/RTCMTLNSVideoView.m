@@ -8,12 +8,15 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+
 #import "RTCMTLNSVideoView.h"
+
+#if TARGET_OS_OSX
 
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
 
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 #import "RTCMTLI420Renderer.h"
 
@@ -120,3 +123,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_OSX

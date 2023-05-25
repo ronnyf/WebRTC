@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCRtpReceiver.h"
+#import <WebRTC/RTCRtpReceiver.h>
 
 #include "api/rtp_receiver_interface.h"
 

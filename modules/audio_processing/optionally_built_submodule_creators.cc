@@ -13,6 +13,7 @@
 #include <memory>
 
 #include "modules/audio_processing/transient/transient_suppressor_impl.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/rgba_color.h"
 
 #include "rtc_base/system/arch.h"
@@ -59,3 +63,5 @@ uint32_t RgbaColor::ToUInt32() const {
 }
 
 }  // namespace webrtc
+
+#endif

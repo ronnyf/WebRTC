@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_UNIT_TEST)
+
 #include <array>
 #include <utility>
 
@@ -85,3 +89,5 @@ TEST(AecDumper, WriteToFile) {
 }
 
 }  // namespace webrtc
+
+#endif

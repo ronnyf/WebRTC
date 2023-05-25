@@ -11,6 +11,7 @@
 #include "rtc_base/cpu_time.h"
 
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/time_utils.h"
 
 #if defined(WEBRTC_LINUX)

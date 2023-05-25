@@ -7,7 +7,12 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
 #include <memory>
+
+#include "rtc_base/rtc_defines.h"
+
+#if defined (WEBRTC_WIN)
 
 #include "api/field_trials_view.h"
 #include "api/task_queue/task_queue_factory.h"
@@ -21,3 +26,5 @@ std::unique_ptr<TaskQueueFactory> CreateDefaultTaskQueueFactory(
 }
 
 }  // namespace webrtc
+
+#endif

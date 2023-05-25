@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCLegacyStatsReport.h"
+#import <WebRTC/RTCLegacyStatsReport.h>
 
 #include "api/legacy_stats_types.h"
 

@@ -11,6 +11,10 @@
 #ifndef RTC_BASE_WIN_HSTRING_H_
 #define RTC_BASE_WIN_HSTRING_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include <hstring.h>
 #include <stdint.h>
 #include <winerror.h>
@@ -26,5 +30,7 @@ HRESULT CreateHstring(const wchar_t* src, uint32_t len, HSTRING* out_hstr);
 HRESULT DeleteHstring(HSTRING hstr);
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_WIN)
 
 #endif  // RTC_BASE_WIN_HSTRING_H_

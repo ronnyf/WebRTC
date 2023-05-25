@@ -13,7 +13,7 @@
 #import "RTCAudioSource+Private.h"
 #import "RTCMediaStreamTrack+Private.h"
 #import "RTCPeerConnectionFactory+Private.h"
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 #include "rtc_base/checks.h"
 

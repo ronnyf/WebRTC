@@ -9,6 +9,9 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <WebRTC/RTCMacros.h>
+
+#if TARGET_OS_IOS
 
 // RTCDisplayLinkTimer wraps a CADisplayLink and is set to fire every two screen
 // refreshes, which should be 30fps. We wrap the display link in order to avoid
@@ -22,3 +25,5 @@
 - (void)invalidate;
 
 @end
+
+#endif

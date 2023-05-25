@@ -11,6 +11,10 @@
 #ifndef MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_WIN_H_
 #define MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_WIN_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/window_finder.h"
 
 namespace webrtc {
@@ -27,4 +31,5 @@ class WindowFinderWin final : public WindowFinder {
 
 }  // namespace webrtc
 
+#endif
 #endif  // MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_WIN_H_

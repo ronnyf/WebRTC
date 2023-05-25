@@ -27,6 +27,7 @@
 #include "modules/video_capture/video_capture_config.h"
 #include "modules/video_capture/video_capture_defines.h"
 #include "rtc_base/race_checker.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/synchronization/mutex.h"
 #include "rtc_base/system/rtc_export.h"
 

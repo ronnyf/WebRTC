@@ -17,6 +17,8 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "modules/audio_device/include/audio_device_defines.h"
 
+#include "rtc_base/rtc_defines.h"
+
 namespace webrtc {
 
 class AudioDeviceGeneric {

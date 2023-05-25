@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/fallback_desktop_capturer_wrapper.h"
 
 #include <stddef.h>
@@ -181,3 +185,5 @@ void FallbackDesktopCapturerWrapper::OnCaptureResult(
 }
 
 }  // namespace webrtc
+
+#endif

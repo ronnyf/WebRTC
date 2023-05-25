@@ -10,7 +10,7 @@
 
 #import "RTCMediaConstraints+Private.h"
 
-#import "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 
 #include <memory>
 

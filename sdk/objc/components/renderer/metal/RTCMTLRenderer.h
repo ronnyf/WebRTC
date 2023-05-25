@@ -15,7 +15,7 @@
 #import <AppKit/AppKit.h>
 #endif
 
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 NS_ASSUME_NONNULL_BEGIN
 /**

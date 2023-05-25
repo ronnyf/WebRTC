@@ -12,6 +12,9 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP8_DEFAULT_TEMPORAL_LAYERS_H_
 #define MODULES_VIDEO_CODING_CODECS_VP8_DEFAULT_TEMPORAL_LAYERS_H_
 
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP8)
+
 #include <stddef.h>
 #include <stdint.h>
 
@@ -165,4 +168,7 @@ class DefaultTemporalLayersChecker : public TemporalLayersChecker {
 };
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)
+
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_DEFAULT_TEMPORAL_LAYERS_H_

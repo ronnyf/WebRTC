@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mac/desktop_frame_iosurface.h"
 
 #include "rtc_base/checks.h"
@@ -59,3 +63,5 @@ DesktopFrameIOSurface::~DesktopFrameIOSurface() {
 }
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

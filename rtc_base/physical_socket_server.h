@@ -42,6 +42,7 @@
 #include <vector>
 
 #include "rtc_base/deprecated/recursive_critical_section.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/socket_server.h"
 #include "rtc_base/synchronization/mutex.h"
 #include "rtc_base/system/rtc_export.h"

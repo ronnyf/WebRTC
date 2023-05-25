@@ -8,10 +8,14 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_frame_rotation.h"
 
 #include "rtc_base/checks.h"
-#include "third_party/libyuv/include/libyuv/rotate_argb.h"
+#include <libyuv/rotate_argb.h>
 
 namespace webrtc {
 
@@ -115,3 +119,5 @@ void RotateDesktopFrame(const DesktopFrame& source,
 }
 
 }  // namespace webrtc
+
+#endif

@@ -10,7 +10,7 @@
 
 #import "RTCCodecSpecificInfoH264+Private.h"
 
-#import "RTCH264ProfileLevelId.h"
+#import <WebRTC/RTCH264ProfileLevelId.h>
 
 // H264 specific settings.
 @implementation RTC_OBJC_TYPE (RTCCodecSpecificInfoH264)

@@ -21,7 +21,7 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_coding/audio_network_adaptor/config.pb.h"
 #else
-#include "modules/audio_coding/audio_network_adaptor/config.pb.h"
+#include "generated/modules/audio_coding/audio_network_adaptor/config.pb.h"
 #endif
 #endif
 

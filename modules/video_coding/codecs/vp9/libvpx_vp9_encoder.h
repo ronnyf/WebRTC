@@ -12,7 +12,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP9_LIBVPX_VP9_ENCODER_H_
 #define MODULES_VIDEO_CODING_CODECS_VP9_LIBVPX_VP9_ENCODER_H_
 
-#ifdef RTC_ENABLE_VP9
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP9)
 
 #include <array>
 #include <memory>

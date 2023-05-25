@@ -12,7 +12,7 @@
 
 #include <memory>
 
-#import "base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
 #include "system_wrappers/include/field_trial.h"
 

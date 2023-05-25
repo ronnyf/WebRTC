@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/resolution_tracker.h"
 
 namespace webrtc {
@@ -32,3 +36,5 @@ void ResolutionTracker::Reset() {
 }
 
 }  // namespace webrtc
+
+#endif

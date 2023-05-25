@@ -59,6 +59,7 @@
 #include "rtc_base/net_helper.h"
 #include "rtc_base/network.h"
 #include "rtc_base/network_constants.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/socket_address.h"
 #include "rtc_base/string_encode.h"
 #include "rtc_base/trace_event.h"
@@ -877,6 +878,7 @@ JsepTransportController* PeerConnection::InitializeTransportController_n(
       });
 
   transport_controller_->SetIceConfig(ParseIceConfig(configuration));
+  RTC_LOG(LS_INFO) << "Got transport_controller: " << transport_controller_.get();
   return transport_controller_.get();
 }
 
@@ -2540,6 +2542,8 @@ absl::optional<std::string> PeerConnection::SetupDataChannelTransport_n(
     return absl::nullopt;
   }
 
+	RTC_LOG(LS_INFO) << "got data channel transport interface: " << transport_controller_.get();
+	
   absl::optional<std::string> transport_name;
   cricket::DtlsTransportInternal* dtls_transport =
       transport_controller_->GetDtlsTransport(*sctp_mid_n_);

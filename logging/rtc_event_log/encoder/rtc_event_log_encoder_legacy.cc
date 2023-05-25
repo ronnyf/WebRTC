@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/encoder/rtc_event_log_encoder_legacy.h"
 
 #include <string.h>
@@ -59,7 +63,7 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/logging/rtc_event_log/rtc_event_log.pb.h"
 #else
-#include "logging/rtc_event_log/rtc_event_log.pb.h"
+#include "generated/logging/rtc_event_log/rtc_event_log.pb.h"
 #endif
 
 namespace webrtc {
@@ -809,3 +813,5 @@ std::string RtcEventLogEncoderLegacy::Serialize(rtclog::Event* event) {
 }
 
 }  // namespace webrtc
+
+#endif

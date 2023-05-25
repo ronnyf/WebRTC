@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mac/desktop_frame_utils.h"
 
 #include <memory>
@@ -20,3 +24,5 @@ std::unique_ptr<DesktopFrame> CreateDesktopFrameFromCGImage(
 }
 
 }  // namespace webrtc
+
+#endif

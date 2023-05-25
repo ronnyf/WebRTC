@@ -10,6 +10,8 @@
 
 #include "rtc_base/win/scoped_com_initializer.h"
 
+#if defined(WEBRTC_WIN)
+
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
@@ -55,3 +57,5 @@ void ScopedCOMInitializer::Initialize(COINIT init) {
 }
 
 }  // namespace webrtc
+
+#endif

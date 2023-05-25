@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_frame.h"
 
 #include <string.h>
@@ -19,7 +23,8 @@
 #include "modules/desktop_capture/desktop_capture_types.h"
 #include "modules/desktop_capture/desktop_geometry.h"
 #include "rtc_base/checks.h"
-#include "third_party/libyuv/include/libyuv/planar_functions.h"
+#include "rtc_base/rtc_defines.h"
+#include <libyuv/planar_functions.h>
 
 namespace webrtc {
 
@@ -222,3 +227,5 @@ SharedMemoryDesktopFrame::~SharedMemoryDesktopFrame() {
 }
 
 }  // namespace webrtc
+
+#endif

@@ -9,6 +9,9 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP8_SCREENSHARE_LAYERS_H_
 #define MODULES_VIDEO_CODING_CODECS_VP8_SCREENSHARE_LAYERS_H_
 
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP8)
+
 #include <map>
 #include <memory>
 #include <utility>
@@ -160,5 +163,7 @@ class ScreenshareLayers final : public Vp8FrameBufferController {
   std::unique_ptr<TemporalLayersChecker> checker_;
 };
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_SCREENSHARE_LAYERS_H_

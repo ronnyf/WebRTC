@@ -13,7 +13,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 #include "api/video_codecs/video_encoder_factory.h"
 

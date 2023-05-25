@@ -30,8 +30,8 @@
 #include "rtc_base/thread_annotations.h"
 #include "rtc_base/time_utils.h"
 #include "system_wrappers/include/metrics.h"
-#include "third_party/libsrtp/include/srtp.h"
-#include "third_party/libsrtp/include/srtp_priv.h"
+#include <libsrtp/srtp.h>
+#include <libsrtp/srtp_private.h>
 
 namespace cricket {
 

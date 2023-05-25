@@ -9,7 +9,7 @@
  */
 
 #import "RTCOpenGLDefines.h"
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 @interface RTCI420TextureCache : NSObject
 

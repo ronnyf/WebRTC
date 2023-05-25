@@ -11,6 +11,10 @@
 #ifndef COMMON_AUDIO_FIR_FILTER_SSE_H_
 #define COMMON_AUDIO_FIR_FILTER_SSE_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)
+
 #include <stddef.h>
 
 #include <memory>
@@ -38,4 +42,5 @@ class FIRFilterSSE2 : public FIRFilter {
 
 }  // namespace webrtc
 
+#endif // defined(WEBRTC_ARCH_X86_FAMILY)
 #endif  // COMMON_AUDIO_FIR_FILTER_SSE_H_

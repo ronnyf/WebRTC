@@ -16,6 +16,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/bitstream_reader.h"
 #include "rtc_base/byte_buffer.h"
+#include "rtc_base/rtc_defines.h"
 #include "test/gmock.h"
 #include "test/gtest.h"
 

@@ -16,6 +16,7 @@
 #include <string>
 
 #include "rtc_base/system/arch.h"
+#include "rtc_base/rtc_defines.h"
 
 // Abort the process if `jni` has a Java exception pending.
 // TODO(henrika): merge with CHECK_JNI_EXCEPTION() in jni_helpers.h.

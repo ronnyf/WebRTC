@@ -16,6 +16,7 @@
 #include <string>
 
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/strings/string_builder.h"
 
 namespace webrtc {

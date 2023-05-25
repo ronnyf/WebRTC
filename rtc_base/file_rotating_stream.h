@@ -18,6 +18,7 @@
 #include <vector>
 
 #include "absl/strings/string_view.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/file_wrapper.h"
 
 namespace rtc {

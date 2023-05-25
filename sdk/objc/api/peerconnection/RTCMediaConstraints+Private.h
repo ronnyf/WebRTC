@@ -8,11 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCMediaConstraints.h"
+#import <WebRTC/RTCMediaConstraints.h>
 
 #include <memory>
 
-#include "sdk/media_constraints.h"
+#include "media/media_constraints.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

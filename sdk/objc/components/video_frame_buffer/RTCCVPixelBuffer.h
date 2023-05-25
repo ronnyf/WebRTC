@@ -10,8 +10,8 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,26 +19,26 @@ NS_ASSUME_NONNULL_BEGIN
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCCVPixelBuffer) : NSObject <RTC_OBJC_TYPE(RTCVideoFrameBuffer)>
 
-@property(nonatomic, readonly) CVPixelBufferRef pixelBuffer;
-@property(nonatomic, readonly) int cropX;
-@property(nonatomic, readonly) int cropY;
-@property(nonatomic, readonly) int cropWidth;
-@property(nonatomic, readonly) int cropHeight;
+@property(nonatomic, assign, readonly) CVPixelBufferRef pixelBuffer;
+@property(nonatomic, assign, readonly) NSInteger cropX;
+@property(nonatomic, assign, readonly) NSInteger cropY;
+@property(nonatomic, assign, readonly) NSInteger cropWidth;
+@property(nonatomic, assign, readonly) NSInteger cropHeight;
 
 + (NSSet<NSNumber *> *)supportedPixelFormats;
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
-                       adaptedWidth:(int)adaptedWidth
-                      adaptedHeight:(int)adaptedHeight
-                          cropWidth:(int)cropWidth
-                         cropHeight:(int)cropHeight
-                              cropX:(int)cropX
-                              cropY:(int)cropY;
+                       adaptedWidth:(NSInteger)adaptedWidth
+                      adaptedHeight:(NSInteger)adaptedHeight
+                          cropWidth:(NSInteger)cropWidth
+                         cropHeight:(NSInteger)cropHeight
+                              cropX:(NSInteger)cropX
+                              cropY:(NSInteger)cropY;
 
 - (BOOL)requiresCropping;
-- (BOOL)requiresScalingToWidth:(int)width height:(int)height;
-- (int)bufferSizeForCroppingAndScalingToWidth:(int)width height:(int)height;
+- (BOOL)requiresScalingToWidth:(NSInteger)width height:(NSInteger)height;
+- (NSInteger)bufferSizeForCroppingAndScalingToWidth:(NSInteger)width height:(NSInteger)height;
 
 /** The minimum size of the `tmpBuffer` must be the number of bytes returned from the
  * bufferSizeForCroppingAndScalingToWidth:height: method.

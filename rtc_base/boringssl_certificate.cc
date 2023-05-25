@@ -12,6 +12,8 @@
 
 #include "absl/strings/string_view.h"
 
+#include "rtc_base/rtc_defines.h"
+
 #if defined(WEBRTC_WIN)
 // Must be included first before openssl headers.
 #include "rtc_base/win32.h"  // NOLINT

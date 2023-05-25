@@ -18,6 +18,7 @@
 #include <string>
 
 #include "rtc_base/buffer.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/ssl_certificate.h"
 #include "rtc_base/ssl_identity.h"
 

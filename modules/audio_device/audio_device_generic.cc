@@ -11,6 +11,7 @@
 #include "modules/audio_device/audio_device_generic.h"
 
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

@@ -10,6 +10,8 @@
 
 #include "rtc_base/win/get_activation_factory.h"
 
+#if defined(WEBRTC_WIN)
+
 #include <libloaderapi.h>
 #include <roapi.h>
 
@@ -47,3 +49,5 @@ HRESULT RoGetActivationFactoryProxy(HSTRING class_id,
 }
 
 }  // namespace webrtc
+
+#endif

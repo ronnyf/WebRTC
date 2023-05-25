@@ -11,6 +11,10 @@
 #ifndef RTC_BASE_WIN_SCOPED_COM_INITIALIZER_H_
 #define RTC_BASE_WIN_SCOPED_COM_INITIALIZER_H_
 
+#include "rtc_base/rtc_defines.h"
+
+#if defined(WEBRTC_WIN)
+
 #include <comdef.h>
 
 namespace webrtc {
@@ -52,5 +56,7 @@ class ScopedCOMInitializer {
 };
 
 }  // namespace webrtc
+
+#endif
 
 #endif  // RTC_BASE_WIN_SCOPED_COM_INITIALIZER_H_

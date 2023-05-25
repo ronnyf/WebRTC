@@ -46,7 +46,7 @@ void MatchedFilterCore_NEON(size_t x_start_index,
 #endif
 
 #if defined(WEBRTC_ARCH_X86_FAMILY)
-
+#if defined(WEBRTC_HAS_SSE2)
 // Filter core for the matched filter that is optimized for SSE2.
 void MatchedFilterCore_SSE2(size_t x_start_index,
                             float x2_sum_threshold,
@@ -59,7 +59,8 @@ void MatchedFilterCore_SSE2(size_t x_start_index,
                             bool compute_accumulated_error,
                             rtc::ArrayView<float> accumulated_error,
                             rtc::ArrayView<float> scratch_memory);
-
+#endif
+#if defined(WEBRTC_HAS_AVX2)
 // Filter core for the matched filter that is optimized for AVX2.
 void MatchedFilterCore_AVX2(size_t x_start_index,
                             float x2_sum_threshold,
@@ -72,7 +73,7 @@ void MatchedFilterCore_AVX2(size_t x_start_index,
                             bool compute_accumulated_error,
                             rtc::ArrayView<float> accumulated_error,
                             rtc::ArrayView<float> scratch_memory);
-
+#endif
 #endif
 
 // Filter core for the matched filter.

@@ -14,10 +14,11 @@
 #include <memory>
 
 #include "api/task_queue/task_queue_factory.h"
-#include "audio_device_ios.h"
 #include "modules/audio_device/audio_device_buffer.h"
 #include "modules/audio_device/include/audio_device.h"
+#include "sdk/objc/native/src/audio/audio_device_ios.h"
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 

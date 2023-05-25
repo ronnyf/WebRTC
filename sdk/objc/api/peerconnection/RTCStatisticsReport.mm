@@ -10,7 +10,7 @@
 
 #import "RTCStatisticsReport+Private.h"
 
-#include "helpers/NSString+StdString.h"
+#import "NSString+StdString.h"
 #include "rtc_base/checks.h"
 
 namespace webrtc {

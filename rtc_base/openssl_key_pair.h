@@ -18,6 +18,7 @@
 
 #include "absl/strings/string_view.h"
 #include "rtc_base/checks.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/ssl_identity.h"
 
 namespace rtc {

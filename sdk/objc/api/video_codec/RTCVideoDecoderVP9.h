@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoDecoder.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoDecoder.h>
 
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCVideoDecoderVP9) : NSObject
@@ -22,6 +22,6 @@ RTC_OBJC_EXPORT
  */
 + (id<RTC_OBJC_TYPE(RTCVideoDecoder)>)vp9Decoder;
 
-+ (bool)isSupported;
++ (BOOL)isSupported;
 
 @end

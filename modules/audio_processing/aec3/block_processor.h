@@ -18,7 +18,7 @@
 
 #include "api/audio/echo_canceller3_config.h"
 #include "api/audio/echo_control.h"
-#include "modules/audio_processing/aec3/block.h"
+#include "modules/audio_processing/aec3/block.hpp"
 #include "modules/audio_processing/aec3/echo_remover.h"
 #include "modules/audio_processing/aec3/render_delay_buffer.h"
 #include "modules/audio_processing/aec3/render_delay_controller.h"

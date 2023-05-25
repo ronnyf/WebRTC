@@ -17,7 +17,7 @@
 #include <memory>
 
 #include "modules/desktop_capture/desktop_frame.h"
-#include "sdk/objc/helpers/scoped_cftyperef.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 namespace webrtc {
 

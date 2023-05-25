@@ -16,7 +16,7 @@
 #include "api/video/i420_buffer.h"
 #include "rtc_base/checks.h"
 #include "rtc_tools/frame_analyzer/video_quality_analysis.h"
-#include "third_party/libyuv/include/libyuv/scale.h"
+#include <libyuv/scale.h>
 
 namespace webrtc {
 namespace test {

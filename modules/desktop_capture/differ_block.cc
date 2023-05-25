@@ -8,10 +8,15 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/differ_block.h"
 
 #include <string.h>
 
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/system/arch.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
@@ -74,3 +79,5 @@ bool BlockDifference(const uint8_t* image1, const uint8_t* image2, int stride) {
 }
 
 }  // namespace webrtc
+
+#endif

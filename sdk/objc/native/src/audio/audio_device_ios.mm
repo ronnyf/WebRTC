@@ -8,16 +8,20 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_IOS
+
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-#include "audio_device_ios.h"
+#import "sdk/objc/native/src/audio/audio_device_ios.h"
 
 #include <cmath>
 
 #include "api/array_view.h"
 #include "api/task_queue/pending_task_safety_flag.h"
-#include "helpers.h"
+#include "sdk/objc/native/src/audio/audio_helpers.h"
 #include "modules/audio_device/fine_audio_buffer.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
@@ -26,12 +30,14 @@
 #include "rtc_base/time_utils.h"
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
+#include "rtc_base/system/rtc_export.h"
+#include "rtc_base/rtc_export_bridge.h"
+#include "rtc_base/RTCObjCLogging.h"
 
-#import "base/RTCLogging.h"
-#import "components/audio/RTCAudioSession+Private.h"
-#import "components/audio/RTCAudioSession.h"
-#import "components/audio/RTCAudioSessionConfiguration.h"
-#import "components/audio/RTCNativeAudioSessionDelegateAdapter.h"
+#include "sdk/objc/components/audio/RTCAudioSession.h"
+#include "sdk/objc/components/audio/RTCAudioSession+Private.h"
+#include "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+#include "sdk/objc/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
 
 namespace webrtc {
 namespace ios_adm {
@@ -1125,3 +1131,5 @@ int32_t AudioDeviceIOS::RecordingIsAvailable(bool& available) {
 
 }  // namespace ios_adm
 }  // namespace webrtc
+
+#endif // TARGET_OS_IOS

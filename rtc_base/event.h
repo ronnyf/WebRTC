@@ -12,6 +12,7 @@
 #define RTC_BASE_EVENT_H_
 
 #include "api/units/time_delta.h"
+#include "rtc_base/rtc_defines.h"
 
 #if defined(WEBRTC_WIN)
 #include <windows.h>

@@ -10,8 +10,8 @@
 
 #import "RTCLegacyStatsReport+Private.h"
 
-#import "base/RTCLogging.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import "NSString+StdString.h"
 
 #include "rtc_base/checks.h"
 

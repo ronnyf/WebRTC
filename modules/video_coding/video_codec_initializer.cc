@@ -19,6 +19,7 @@
 #include "api/scoped_refptr.h"
 #include "api/units/data_rate.h"
 #include "api/video_codecs/video_encoder.h"
+#include "video/config/video_encoder_config.h"
 #include "modules/video_coding/codecs/av1/av1_svc_config.h"
 #include "modules/video_coding/codecs/vp8/vp8_scalability.h"
 #include "modules/video_coding/codecs/vp9/svc_config.h"
@@ -180,6 +181,7 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
 
   switch (video_codec.codecType) {
     case kVideoCodecVP8: {
+#if defined(RTC_ENABLE_VP8)
       if (!config.encoder_specific_settings) {
         *video_codec.VP8() = VideoEncoder::GetDefaultVp8Settings();
       }
@@ -207,10 +209,13 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
       RTC_DCHECK_GE(video_codec.VP8()->numberOfTemporalLayers, 1);
       RTC_DCHECK_LE(video_codec.VP8()->numberOfTemporalLayers,
                     kMaxTemporalStreams);
-
+#else
+	RTC_LOG(LS_INFO) << "VP8 codec not available.";
+#endif
       break;
     }
     case kVideoCodecVP9: {
+#if defined(RTC_ENABLE_VP9)
       // When the SvcRateAllocator is used, "active" is controlled by
       // `SpatialLayer::active` instead.
       if (video_codec.numberOfSimulcastStreams <= 1) {
@@ -307,10 +312,13 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
       RTC_DCHECK_GE(video_codec.VP9()->numberOfTemporalLayers, 1);
       RTC_DCHECK_LE(video_codec.VP9()->numberOfTemporalLayers,
                     kMaxTemporalStreams);
-
+#else
+	RTC_LOG(LS_INFO) << "VP9 codec not available.";
+#endif
       break;
     }
     case kVideoCodecAV1:
+#if defined(RTC_DAV1D_IN_INTERNAL_DECODER_FACTORY)
       if (SetAv1SvcConfig(video_codec,
                           /*num_temporal_layers=*/
                           streams.back().num_temporal_layers.value_or(1),
@@ -322,6 +330,9 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
       } else {
         RTC_LOG(LS_WARNING) << "Failed to configure svc bitrates for av1.";
       }
+#else
+	  RTC_LOG(LS_INFO) << "AV1 codec not available.";
+#endif
       break;
     case kVideoCodecH264: {
       RTC_CHECK(!config.encoder_specific_settings);

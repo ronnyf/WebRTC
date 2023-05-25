@@ -16,6 +16,7 @@
 #include <string>
 
 #include "absl/strings/string_view.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace rtc {
 // The openssl namespace holds static helper methods. All methods related

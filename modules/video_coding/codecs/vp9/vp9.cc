@@ -8,6 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+
 #include "modules/video_coding/codecs/vp9/include/vp9.h"
 
 #include <memory>
@@ -22,14 +23,17 @@
 #include "modules/video_coding/codecs/vp9/libvpx_vp9_encoder.h"
 #include "modules/video_coding/svc/create_scalability_structure.h"
 #include "rtc_base/checks.h"
-#include "vpx/vp8cx.h"
-#include "vpx/vp8dx.h"
-#include "vpx/vpx_codec.h"
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP9)
+#include <libvpx/vp8cx.h>
+#include <libvpx/vp8dx.h>
+#include <libvpx/vpx_codec.h>
+#endif
 
 namespace webrtc {
 
 std::vector<SdpVideoFormat> SupportedVP9Codecs(bool add_scalability_modes) {
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
   // Profile 2 might not be available on some platforms until
   // https://bugs.chromium.org/p/webm/issues/detail?id=1544 is solved.
   static bool vpx_supports_high_bit_depth =
@@ -64,7 +68,7 @@ std::vector<SdpVideoFormat> SupportedVP9Codecs(bool add_scalability_modes) {
 }
 
 std::vector<SdpVideoFormat> SupportedVP9DecoderCodecs() {
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
   std::vector<SdpVideoFormat> supported_formats = SupportedVP9Codecs();
   // The WebRTC internal decoder supports VP9 profile 1 and 3. However, there's
   // currently no way of sending VP9 profile 1 or 3 using the internal encoder.
@@ -82,7 +86,7 @@ std::vector<SdpVideoFormat> SupportedVP9DecoderCodecs() {
 }
 
 std::unique_ptr<VP9Encoder> VP9Encoder::Create() {
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
   return std::make_unique<LibvpxVp9Encoder>(
       cricket::CreateVideoCodec(cricket::kVp9CodecName),
       LibvpxInterface::Create(), FieldTrialBasedConfig());
@@ -94,7 +98,7 @@ std::unique_ptr<VP9Encoder> VP9Encoder::Create() {
 
 std::unique_ptr<VP9Encoder> VP9Encoder::Create(
     const cricket::VideoCodec& codec) {
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
   return std::make_unique<LibvpxVp9Encoder>(codec, LibvpxInterface::Create(),
                                             FieldTrialBasedConfig());
 #else
@@ -108,7 +112,7 @@ bool VP9Encoder::SupportsScalabilityMode(ScalabilityMode scalability_mode) {
 }
 
 std::unique_ptr<VP9Decoder> VP9Decoder::Create() {
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
   return std::make_unique<LibvpxVp9Decoder>();
 #else
   RTC_DCHECK_NOTREACHED();

@@ -8,6 +8,9 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+#if defined(RTC_ENABLE_VP8)
+
 #include "modules/video_coding/codecs/vp8/libvpx_vp8_encoder.h"
 
 #include <string.h>
@@ -39,10 +42,11 @@
 #include "rtc_base/experiments/field_trial_parser.h"
 #include "rtc_base/experiments/field_trial_units.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/field_trial.h"
-#include "third_party/libyuv/include/libyuv/scale.h"
-#include "vpx/vp8cx.h"
+#include <libyuv/scale.h>
+#include <libvpx/vp8cx.h>
 
 #if (defined(WEBRTC_ARCH_ARM) || defined(WEBRTC_ARCH_ARM64)) && \
     (defined(WEBRTC_ANDROID) || defined(WEBRTC_IOS))
@@ -1519,3 +1523,5 @@ LibvpxVp8Encoder::ParseVariableFramerateConfig(std::string group_name) {
 }
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)

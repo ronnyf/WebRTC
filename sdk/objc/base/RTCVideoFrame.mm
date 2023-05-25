@@ -8,33 +8,35 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCVideoFrame.h"
+#import "RTCVideoFrame+Private.h"
 
-#import "RTCI420Buffer.h"
-#import "RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
+
+#include "api/video/video_frame.h"
+#include "api/video/video_frame_buffer.h"
+#include "api/video/i420_buffer.h"
+#include "api/video/video_rotation.h"
+
+@interface RTC_OBJC_TYPE (RTCVideoFrame)()
+
+@property (nonatomic, assign) int64_t timeStampNs;
+@property (nonatomic, assign) RTCVideoRotation rotation;
+@property (nonatomic, strong) id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)> buffer;
+
+@end
 
 @implementation RTC_OBJC_TYPE (RTCVideoFrame) {
-  RTCVideoRotation _rotation;
-  int64_t _timeStampNs;
+	std::unique_ptr<webrtc::VideoFrame> _videoFrame;
 }
 
-@synthesize buffer = _buffer;
-@synthesize timeStamp;
-
-- (int)width {
+- (NSInteger)width {
   return _buffer.width;
 }
 
-- (int)height {
+- (NSInteger)height {
   return _buffer.height;
-}
-
-- (RTCVideoRotation)rotation {
-  return _rotation;
-}
-
-- (int64_t)timeStampNs {
-  return _timeStampNs;
 }
 
 - (RTC_OBJC_TYPE(RTCVideoFrame) *)newI420VideoFrame {
@@ -46,21 +48,35 @@
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
                            rotation:(RTCVideoRotation)rotation
                         timeStampNs:(int64_t)timeStampNs {
-  // Deprecated.
-  return nil;
+  RTCCVPixelBuffer *cvPixelBuffer = [[RTCCVPixelBuffer alloc] initWithPixelBuffer:pixelBuffer];
+  if (cvPixelBuffer != nil) {
+	return [self initWithBuffer:cvPixelBuffer rotation:rotation timeStampNs:timeStampNs];
+  } else {
+	return nil;
+  }
 }
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
-                        scaledWidth:(int)scaledWidth
-                       scaledHeight:(int)scaledHeight
-                          cropWidth:(int)cropWidth
-                         cropHeight:(int)cropHeight
-                              cropX:(int)cropX
-                              cropY:(int)cropY
+                        scaledWidth:(NSInteger)scaledWidth
+                       scaledHeight:(NSInteger)scaledHeight
+                          cropWidth:(NSInteger)cropWidth
+                         cropHeight:(NSInteger)cropHeight
+                              cropX:(NSInteger)cropX
+                              cropY:(NSInteger)cropY
                            rotation:(RTCVideoRotation)rotation
                         timeStampNs:(int64_t)timeStampNs {
-  // Deprecated.
-  return nil;
+	RTCCVPixelBuffer *cvPixelBuffer = [[RTCCVPixelBuffer alloc] initWithPixelBuffer:pixelBuffer
+																	   adaptedWidth:scaledWidth
+																	  adaptedHeight:scaledHeight
+																		  cropWidth:cropWidth
+																		 cropHeight:cropHeight
+																			  cropX:cropX
+																			  cropY:cropY];
+	if (cvPixelBuffer != nil) {
+		return [self initWithBuffer:cvPixelBuffer rotation:rotation timeStampNs:timeStampNs];
+	} else {
+		return nil;
+	}
 }
 
 - (instancetype)initWithBuffer:(id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>)buffer
@@ -70,9 +86,26 @@
     _buffer = buffer;
     _rotation = rotation;
     _timeStampNs = timeStampNs;
+	_timeStamp = 0;
   }
 
   return self;
+}
+
+- (instancetype)initWithNativeFrame:(const webrtc::VideoFrame &)nativeFrame {
+	self = [super init];
+	if (self) {
+		_videoFrame.reset(new webrtc::VideoFrame(nativeFrame));
+	}
+	return self;
+}
+
+- (void)setFrame:(const webrtc::VideoFrame &)nativeFrame {
+	_videoFrame.reset(new webrtc::VideoFrame(nativeFrame));
+}
+
+- (const webrtc::VideoFrame *)nativeFrame {
+	return _videoFrame.get();
 }
 
 @end

@@ -13,6 +13,7 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 namespace adm_helpers {

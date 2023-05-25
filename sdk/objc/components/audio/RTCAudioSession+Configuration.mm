@@ -8,10 +8,14 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCAudioSession+Private.h"
-#import "RTCAudioSessionConfiguration.h"
+#include "rtc_base/rtc_defines.h"
 
-#import "base/RTCLogging.h"
+#if defined(WEBRTC_IOS)
+
+#import "sdk/objc/components/audio/RTCAudioSession+Private.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+
+#include "rtc_base/RTCObjCLogging.h"
 
 @implementation RTC_OBJC_TYPE (RTCAudioSession)
 (Configuration)
@@ -148,3 +152,5 @@
 }
 
 @end
+
+#endif // defined(WEBRTC_IOS)

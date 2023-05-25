@@ -8,6 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "rtc_base/rtc_defines.h"
+
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mac/desktop_configuration_monitor.h"
 
 #include "modules/desktop_capture/mac/desktop_configuration.h"
@@ -71,3 +75,5 @@ void DesktopConfigurationMonitor::DisplaysReconfigured(
 }
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

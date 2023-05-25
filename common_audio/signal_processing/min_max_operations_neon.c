@@ -8,11 +8,13 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#include "common_audio/signal_processing/include/signal_processing_library.h"
+#include "rtc_base/checks.h"
+
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 #include <stdlib.h>
-
-#include "rtc_base/checks.h"
-#include "common_audio/signal_processing/include/signal_processing_library.h"
 
 // Maximum absolute value of word16 vector. C version for generic platforms.
 int16_t WebRtcSpl_MaxAbsValueW16Neon(const int16_t* vector, size_t length) {
@@ -331,3 +333,5 @@ void WebRtcSpl_MinMaxW16Neon(const int16_t* vector, size_t length,
   *min_val = minimum;
   *max_val = maximum;
 }
+
+#endif // defined(WEBRTC_HAS_NEON)

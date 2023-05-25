@@ -12,6 +12,7 @@
 #define COMMON_AUDIO_FIR_FILTER_H_
 
 #include <string.h>
+#include "rtc_base/rtc_defines.h"
 
 namespace webrtc {
 
