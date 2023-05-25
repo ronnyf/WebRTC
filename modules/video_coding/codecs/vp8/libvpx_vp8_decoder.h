@@ -11,6 +11,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_DECODER_H_
 #define MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_DECODER_H_
 
+#if defined(RTC_ENABLE_VP8)
+
 #include <memory>
 
 #include "absl/types/optional.h"
@@ -19,8 +21,8 @@
 #include "common_video/include/video_frame_buffer_pool.h"
 #include "modules/video_coding/codecs/vp8/include/vp8.h"
 #include "modules/video_coding/include/video_codec_interface.h"
-#include "vpx/vp8dx.h"
-#include "vpx/vpx_decoder.h"
+#include <libvpx/vp8dx.h>
+#include <libvpx/vpx_decoder.h>
 
 namespace webrtc {
 
@@ -74,5 +76,7 @@ class LibvpxVp8Decoder : public VideoDecoder {
 };
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_DECODER_H_

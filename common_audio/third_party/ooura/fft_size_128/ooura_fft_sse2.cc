@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)
+
 #include <emmintrin.h>
 #include <xmmintrin.h>
 
@@ -437,3 +439,5 @@ void rftbsub_128_SSE2(float* a) {
 #endif
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)

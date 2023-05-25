@@ -9,6 +9,8 @@
  */
 #include <memory>
 
+#if defined (WEBRTC_WIN)
+
 #include "api/field_trials_view.h"
 #include "api/task_queue/task_queue_factory.h"
 #include "rtc_base/task_queue_win.h"
@@ -21,3 +23,5 @@ std::unique_ptr<TaskQueueFactory> CreateDefaultTaskQueueFactory(
 }
 
 }  // namespace webrtc
+
+#endif

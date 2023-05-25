@@ -10,16 +10,23 @@
 
 #import "UIDevice+RTCDevice.h"
 
+#if TARGET_OS_IOS
+
 #import <sys/utsname.h>
-#include <memory>
 
 @implementation UIDevice (RTCDevice)
 
 + (NSString *)machineName {
+#if TARGET_OS_SIMULATOR
+  return [[[NSProcessInfo processInfo] environment] valueForKey:@"SIMULATOR_MODEL_IDENTIFIER"];
+#else
   struct utsname systemInfo;
   uname(&systemInfo);
   return [[NSString alloc] initWithCString:systemInfo.machine
-                                  encoding:NSUTF8StringEncoding];
+								  encoding:NSUTF8StringEncoding];
+#endif
 }
 
 @end
+
+#endif

@@ -11,6 +11,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_ENCODER_H_
 #define MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_ENCODER_H_
 
+#if defined(RTC_ENABLE_VP8)
+
 #include <memory>
 #include <string>
 #include <vector>
@@ -31,8 +33,8 @@
 #include "rtc_base/experiments/cpu_speed_experiment.h"
 #include "rtc_base/experiments/encoder_info_settings.h"
 #include "rtc_base/experiments/rate_control_settings.h"
-#include "vpx/vp8cx.h"
-#include "vpx/vpx_encoder.h"
+#include <libvpx/vp8cx.h>
+#include <libvpx/vpx_encoder.h>
 
 namespace webrtc {
 
@@ -160,5 +162,7 @@ class LibvpxVp8Encoder : public VideoEncoder {
 };
 
 }  // namespace webrtc
+
+#endi //defined(RTC_ENABLE_VP8)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_ENCODER_H_

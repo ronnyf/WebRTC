@@ -12,7 +12,7 @@
 
 #include "api/make_ref_counted.h"
 
-#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+#if TARGET_OS_OSX && defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
 #include "modules/desktop_capture/mac/full_screen_mac_application_handler.h"
 #elif defined(WEBRTC_WIN)
 #include "modules/desktop_capture/win/full_screen_win_application_handler.h"

@@ -10,9 +10,14 @@
 
 #include "modules/audio_device/mac/audio_mixer_manager_mac.h"
 
+#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+
 #include <unistd.h>  // getpid()
 
 #include "rtc_base/system/arch.h"
+#include "rtc_base/logging.h"
+
+#include <CoreAudio/CoreAudio.h>
 
 namespace webrtc {
 
@@ -921,4 +926,7 @@ void AudioMixerManagerMac::logCAMsg(const rtc::LoggingSeverity sev,
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_MAC)
+
 // EOF

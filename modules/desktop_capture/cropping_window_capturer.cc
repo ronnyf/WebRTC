@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/cropping_window_capturer.h"
 
 #include <stddef.h>
@@ -133,3 +135,5 @@ std::unique_ptr<DesktopCapturer> CroppingWindowCapturer::CreateCapturer(
 #endif
 
 }  // namespace webrtc
+
+#endif

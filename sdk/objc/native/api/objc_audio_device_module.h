@@ -11,8 +11,8 @@
 #ifndef SDK_OBJC_NATIVE_API_OBJC_AUDIO_DEVICE_MODULE_H_
 #define SDK_OBJC_NATIVE_API_OBJC_AUDIO_DEVICE_MODULE_H_
 
-#import "components/audio/RTCAudioDevice.h"
 #include "modules/audio_device/include/audio_device.h"
+#import <WebRTC/RTCAudioDevice.h>
 
 namespace webrtc {
 

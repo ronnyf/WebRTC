@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "rtc_base/system/arch.h"
 
@@ -86,3 +88,5 @@ void WebRtcSpl_CrossCorrelationNeon(int32_t* cross_correlation,
     cross_correlation++;
   }
 }
+
+#endif // defined(WEBRTC_HAS_NEON)

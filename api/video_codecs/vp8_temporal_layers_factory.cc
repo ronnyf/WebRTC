@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(RTC_ENABLE_VP8)
+
 #include "api/video_codecs/vp8_temporal_layers_factory.h"
 
 #include <algorithm>
@@ -57,3 +59,5 @@ Vp8TemporalLayersFactory::Clone() const {
 }
 
 }  // namespace webrtc
+
+#endif

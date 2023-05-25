@@ -15,7 +15,7 @@
 
 #include "rtc_base/logging.h"
 #include "rtc_base/zero_memory.h"
-#include "third_party/libsrtp/include/srtp.h"
+#include <libsrtp/srtp.h>
 
 // Begin test case 0 */
 static const uint8_t kExternalHmacTestCase0Key[20] = {

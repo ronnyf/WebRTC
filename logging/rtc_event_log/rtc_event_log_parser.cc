@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/rtc_event_log_parser.h"
 
 #include <stdint.h>
@@ -274,7 +276,7 @@ VideoCodecType GetRuntimeCodecType(rtclog2::FrameDecodedEvents::Codec codec) {
 
 ParsedRtcEventLog::ParseStatus GetHeaderExtensions(
     std::vector<RtpExtension>* header_extensions,
-    const RepeatedPtrField<rtclog::RtpHeaderExtension>&
+	const google::protobuf::RepeatedPtrField<rtclog::RtpHeaderExtension>&
         proto_header_extensions) {
   header_extensions->clear();
   for (auto& p : proto_header_extensions) {
@@ -3616,3 +3618,5 @@ ParsedRtcEventLog::ParseStatus ParsedRtcEventLog::StoreAudioSendConfig(
 }
 
 }  // namespace webrtc
+
+#endif

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(RTC_ENABLE_VP8) || defined(RTC_ENABLE_VP9)
+
 #include "modules/video_coding/codecs/interface/libvpx_interface.h"
 
 #include <memory>
@@ -371,3 +373,5 @@ std::unique_ptr<LibvpxInterface> LibvpxInterface::Create() {
 }
 
 }  // namespace webrtc
+
+#endif 

@@ -10,8 +10,8 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,26 +20,26 @@ RTC_OBJC_EXPORT
 @protocol RTC_OBJC_TYPE
 (RTCYUVPlanarBuffer)<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>
 
-    @property(nonatomic, readonly) int chromaWidth;
-@property(nonatomic, readonly) int chromaHeight;
+@property(nonatomic, readonly) NSInteger chromaWidth;
+@property(nonatomic, readonly) NSInteger chromaHeight;
 @property(nonatomic, readonly) const uint8_t *dataY;
 @property(nonatomic, readonly) const uint8_t *dataU;
 @property(nonatomic, readonly) const uint8_t *dataV;
-@property(nonatomic, readonly) int strideY;
-@property(nonatomic, readonly) int strideU;
-@property(nonatomic, readonly) int strideV;
+@property(nonatomic, readonly) NSInteger strideY;
+@property(nonatomic, readonly) NSInteger strideU;
+@property(nonatomic, readonly) NSInteger strideV;
 
-- (instancetype)initWithWidth:(int)width
-                       height:(int)height
+- (instancetype)initWithWidth:(NSInteger)width
+                       height:(NSInteger)height
                         dataY:(const uint8_t *)dataY
                         dataU:(const uint8_t *)dataU
                         dataV:(const uint8_t *)dataV;
-- (instancetype)initWithWidth:(int)width height:(int)height;
-- (instancetype)initWithWidth:(int)width
-                       height:(int)height
-                      strideY:(int)strideY
-                      strideU:(int)strideU
-                      strideV:(int)strideV;
+- (instancetype)initWithWidth:(NSInteger)width height:(NSInteger)height;
+- (instancetype)initWithWidth:(NSInteger)width
+                       height:(NSInteger)height
+                      strideY:(NSInteger)strideY
+                      strideU:(NSInteger)strideU
+                      strideV:(NSInteger)strideV;
 
 @end
 

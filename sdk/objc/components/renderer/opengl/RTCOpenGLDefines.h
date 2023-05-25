@@ -19,5 +19,9 @@
 #define FRAGMENT_SHADER_COLOR "gl_FragColor"
 #define FRAGMENT_SHADER_TEXTURE "texture2D"
 
+#if !defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+#error This file should not be included
+#endif
+
 @class EAGLContext;
 typedef EAGLContext GlContextType;

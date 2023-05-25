@@ -11,28 +11,33 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
 #import "RTCVideoDecoderVP9.h"
 #import "RTCWrappedNativeVideoDecoder.h"
 
+#if defined(RTC_ENABLE_VP9)
 #include "modules/video_coding/codecs/vp9/include/vp9.h"
+#endif
 
 @implementation RTC_OBJC_TYPE (RTCVideoDecoderVP9)
 
 + (id<RTC_OBJC_TYPE(RTCVideoDecoder)>)vp9Decoder {
+#if defined(RTC_ENABLE_VP9)
   std::unique_ptr<webrtc::VideoDecoder> nativeDecoder(webrtc::VP9Decoder::Create());
   if (nativeDecoder == nullptr) {
     return nil;
   }
   return [[RTC_OBJC_TYPE(RTCWrappedNativeVideoDecoder) alloc]
       initWithNativeDecoder:std::move(nativeDecoder)];
+#else
+  return nil;
+#endif
 }
 
-+ (bool)isSupported {
++ (BOOL)isSupported {
 #if defined(RTC_ENABLE_VP9)
-  return true;
+  return YES;
 #else
-  return false;
+  return NO;
 #endif
 }
 

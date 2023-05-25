@@ -8,11 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCAudioSessionConfiguration.h"
-#import "RTCAudioSession.h"
+#if defined(WEBRTC_IOS)
 
-#import "helpers/RTCDispatcher.h"
-#import "helpers/UIDevice+RTCDevice.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+#import "sdk/objc/components/audio/RTCAudioSession.h"
 
 // Try to use mono to save resources. Also avoids channel format conversion
 // in the I/O audio unit. Initial tests have shown that it is possible to use
@@ -110,3 +109,5 @@ static RTC_OBJC_TYPE(RTCAudioSessionConfiguration) *gWebRTCConfiguration = nil;
 }
 
 @end
+
+#endif // defined(WEBRTC_IOS)

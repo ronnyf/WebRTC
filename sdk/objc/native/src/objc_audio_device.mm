@@ -11,7 +11,7 @@
 #include "objc_audio_device.h"
 #include "objc_audio_device_delegate.h"
 
-#import "components/audio/RTCAudioDevice.h"
+#import <WebRTC/RTCAudioDevice.h>
 #include "modules/audio_device/fine_audio_buffer.h"
 
 #include "api/task_queue/default_task_queue_factory.h"

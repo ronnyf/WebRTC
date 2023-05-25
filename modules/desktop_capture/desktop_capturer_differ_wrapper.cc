@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_capturer_differ_wrapper.h"
 
 #include <stdint.h>
@@ -230,3 +232,5 @@ void DesktopCapturerDifferWrapper::OnCaptureResult(
 }
 
 }  // namespace webrtc
+
+#endif

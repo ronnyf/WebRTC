@@ -7,6 +7,9 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#if defined(WEBRTC_UNIT_TEST)
+
 #include "api/task_queue/task_queue_test.h"
 
 #include <memory>
@@ -352,3 +355,5 @@ GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(TaskQueueTest);
 
 }  // namespace
 }  // namespace webrtc
+
+#endif

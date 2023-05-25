@@ -11,9 +11,9 @@
 #ifndef SDK_OBJC_CLASSES_VIDEO_OBJC_VIDEO_TRACK_SOURCE_H_
 #define SDK_OBJC_CLASSES_VIDEO_OBJC_VIDEO_TRACK_SOURCE_H_
 
-#import "base/RTCVideoCapturer.h"
+#import <WebRTC/RTCVideoCapturer.h>
 
-#include "base/RTCMacros.h"
+#include <WebRTC/RTCMacros.h>
 #include "media/base/adapted_video_track_source.h"
 #include "rtc_base/timestamp_aligner.h"
 

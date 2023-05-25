@@ -17,13 +17,13 @@
 #include "api/scoped_refptr.h"
 #include "api/sequence_checker.h"
 #include "api/task_queue/pending_task_safety_flag.h"
-#include "audio_session_observer.h"
+#include "sdk/objc/native/src/audio/audio_session_observer.h"
 #include "modules/audio_device/audio_device_generic.h"
 #include "rtc_base/buffer.h"
+#include "rtc_base/rtc_export_bridge.h"
 #include "rtc_base/thread.h"
 #include "rtc_base/thread_annotations.h"
-#include "sdk/objc/base/RTCMacros.h"
-#include "voice_processing_audio_unit.h"
+#include "sdk/objc/native/src/audio/voice_processing_audio_unit.h"
 
 RTC_FWD_DECL_OBJC_CLASS(RTCNativeAudioSessionDelegateAdapter);
 

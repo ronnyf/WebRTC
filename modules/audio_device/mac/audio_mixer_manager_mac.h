@@ -11,6 +11,8 @@
 #ifndef AUDIO_DEVICE_AUDIO_MIXER_MANAGER_MAC_H_
 #define AUDIO_DEVICE_AUDIO_MIXER_MANAGER_MAC_H_
 
+#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+
 #include <CoreAudio/CoreAudio.h>
 
 #include "modules/audio_device/include/audio_device.h"
@@ -69,5 +71,7 @@ class AudioMixerManagerMac {
 };
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_MAC)
 
 #endif  // AUDIO_MIXER_MAC_H

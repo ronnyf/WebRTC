@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import "RTCDisplayLinkTimer.h"
 
 #import <UIKit/UIKit.h>
@@ -57,3 +59,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

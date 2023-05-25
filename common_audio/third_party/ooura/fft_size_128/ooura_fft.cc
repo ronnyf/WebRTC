@@ -355,7 +355,11 @@ void OouraFft::cft1st_128(float* a) const {
   cft1st_128_neon(a);
 #elif defined(WEBRTC_ARCH_X86_FAMILY)
   if (use_sse2_) {
+#if defined(WEBRTC_HAS_SSE2)
     cft1st_128_SSE2(a);
+#else
+	cft1st_128_C(a);
+#endif
   } else {
     cft1st_128_C(a);
   }

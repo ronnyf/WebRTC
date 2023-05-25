@@ -10,6 +10,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_AV1_LIBAOM_AV1_ENCODER_H_
 #define MODULES_VIDEO_CODING_CODECS_AV1_LIBAOM_AV1_ENCODER_H_
 
+#if defined(RTC_USE_LIBAOM_AV1_ENCODER)
+
 #include <map>
 #include <memory>
 
@@ -27,5 +29,7 @@ std::unique_ptr<VideoEncoder> CreateLibaomAv1Encoder(
     const LibaomAv1EncoderAuxConfig& aux_config);
 
 }  // namespace webrtc
+
+#endif // defined(RTC_USE_LIBAOM_AV1_ENCODER)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_AV1_LIBAOM_AV1_ENCODER_H_

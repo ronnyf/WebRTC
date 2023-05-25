@@ -11,6 +11,8 @@
 #ifndef MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_
 #define MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include <memory>
 #include <string>
 #include <vector>
@@ -78,5 +80,7 @@ class AecDumpImpl : public AecDump {
   CaptureStreamInfo capture_stream_info_;
 };
 }  // namespace webrtc
+
+#endif // WEBRTC_ENABLE_PROTOBUF
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_

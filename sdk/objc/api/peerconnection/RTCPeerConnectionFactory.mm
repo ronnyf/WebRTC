@@ -21,13 +21,13 @@
 #import "RTCPeerConnection+Private.h"
 #import "RTCVideoSource+Private.h"
 #import "RTCVideoTrack+Private.h"
-#import "base/RTCLogging.h"
-#import "base/RTCVideoDecoderFactory.h"
-#import "base/RTCVideoEncoderFactory.h"
-#import "helpers/NSString+StdString.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoDecoderFactory.h>
+#import <WebRTC/RTCVideoEncoderFactory.h>
+#import "NSString+StdString.h"
 #include "rtc_base/checks.h"
-#include "sdk/objc/native/api/network_monitor_factory.h"
-#include "sdk/objc/native/api/ssl_certificate_verifier.h"
+#include "native_network_monitor_factory.h"
+#include "ssl_certificate_verifier.h"
 #include "system_wrappers/include/field_trial.h"
 
 #include "api/audio_codecs/builtin_audio_decoder_factory.h"
@@ -36,19 +36,19 @@
 #include "api/rtc_event_log/rtc_event_log_factory.h"
 #include "api/task_queue/default_task_queue_factory.h"
 #include "api/transport/field_trial_based_config.h"
-#import "components/video_codec/RTCVideoDecoderFactoryH264.h"
-#import "components/video_codec/RTCVideoEncoderFactoryH264.h"
+#import <WebRTC/RTCVideoDecoderFactoryH264.h>
+#import <WebRTC/RTCVideoEncoderFactoryH264.h>
 #include "modules/audio_device/include/audio_device.h"
 #include "modules/audio_processing/include/audio_processing.h"
 
-#include "sdk/objc/native/api/objc_audio_device_module.h"
-#include "sdk/objc/native/api/video_decoder_factory.h"
-#include "sdk/objc/native/api/video_encoder_factory.h"
-#include "sdk/objc/native/src/objc_video_decoder_factory.h"
-#include "sdk/objc/native/src/objc_video_encoder_factory.h"
+#include "objc_audio_device_module.h"
+#include "objc_to_native_video_decoder_factory.h"
+#include "objc_to_native_video_encoder_factory.h"
+#include "objc_video_decoder_factory.h"
+#include "objc_video_encoder_factory.h"
 
-#if defined(WEBRTC_IOS)
-#import "sdk/objc/native/api/audio_device_module.h"
+#if TARGET_OS_IOS
+#import "audio_device_module.h"
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCPeerConnectionFactory) {
@@ -56,12 +56,11 @@
   std::unique_ptr<rtc::Thread> _workerThread;
   std::unique_ptr<rtc::Thread> _signalingThread;
   BOOL _hasStartedAecDump;
+  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> _nativeFactory;
 }
 
-@synthesize nativeFactory = _nativeFactory;
-
 - (rtc::scoped_refptr<webrtc::AudioDeviceModule>)audioDeviceModule {
-#if defined(WEBRTC_IOS)
+#if TARGET_OS_IOS
   return webrtc::CreateAudioDeviceModule();
 #else
   return nullptr;

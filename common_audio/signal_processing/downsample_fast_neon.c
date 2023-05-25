@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
@@ -222,3 +224,5 @@ int WebRtcSpl_DownsampleFastNeon(const int16_t* data_in,
 
   return 0;
 }
+
+#endif // defined(WEBRTC_HAS_NEON)

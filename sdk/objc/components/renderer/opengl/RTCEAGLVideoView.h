@@ -8,12 +8,15 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import <Foundation/Foundation.h>
+#import <WebRTC/RTCMacros.h>
+
 #import <UIKit/UIKit.h>
 
-#import "RTCMacros.h"
-#import "RTCVideoRenderer.h"
-#import "RTCVideoViewShading.h"
+#import <WebRTC/RTCVideoRenderer.h>
+#import <WebRTC/RTCVideoViewShading.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,3 +46,5 @@ NS_EXTENSION_UNAVAILABLE_IOS("Rendering not available in app extensions.")
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif

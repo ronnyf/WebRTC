@@ -7,6 +7,9 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#if defined(WEBRTC_UNIT_TEST)
+
 #include "video/video_analyzer.h"
 
 #include <inttypes.h>
@@ -1045,3 +1048,5 @@ void VideoAnalyzer::CapturedFrameForwarder::RemoveSink(
 }
 
 }  // namespace webrtc
+
+#endif

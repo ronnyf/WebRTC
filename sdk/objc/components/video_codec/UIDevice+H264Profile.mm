@@ -9,7 +9,10 @@
  */
 
 #import "UIDevice+H264Profile.h"
-#import "helpers/UIDevice+RTCDevice.h"
+
+#if TARGET_OS_IOS
+
+#import "UIDevice+RTCDevice.h"
 
 #include <algorithm>
 
@@ -291,3 +294,5 @@ absl::optional<H264ProfileLevelId> FindMaxSupportedProfileForDevice(NSString* ma
 }
 
 @end
+
+#endif // TARGET_OS_IOS

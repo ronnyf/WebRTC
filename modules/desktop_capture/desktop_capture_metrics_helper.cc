@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_capture_metrics_helper.h"
 
 #include "modules/desktop_capture/desktop_capture_types.h"
@@ -55,3 +57,5 @@ void RecordCapturerImpl(uint32_t capturer_id) {
 }
 
 }  // namespace webrtc
+
+#endif

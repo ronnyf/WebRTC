@@ -11,6 +11,8 @@
 #ifndef AUDIO_DEVICE_AUDIO_DEVICE_MAC_H_
 #define AUDIO_DEVICE_AUDIO_DEVICE_MAC_H_
 
+#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+
 #include <AudioToolbox/AudioConverter.h>
 #include <CoreAudio/CoreAudio.h>
 #include <mach/semaphore.h>
@@ -347,4 +349,5 @@ class AudioDeviceMac : public AudioDeviceGeneric {
 
 }  // namespace webrtc
 
+#endif // TARGET_OS_OSX
 #endif  // MODULES_AUDIO_DEVICE_MAIN_SOURCE_MAC_AUDIO_DEVICE_MAC_H_

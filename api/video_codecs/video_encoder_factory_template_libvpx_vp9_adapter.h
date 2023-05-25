@@ -14,21 +14,35 @@
 #include <memory>
 #include <vector>
 
+#if defined(RTC_ENABLE_VP9)
 #include "modules/video_coding/codecs/vp9/include/vp9.h"
+#endif
 
 namespace webrtc {
 struct LibvpxVp9EncoderTemplateAdapter {
   static std::vector<SdpVideoFormat> SupportedFormats() {
+#if defined(RTC_ENABLE_VP9)
     return SupportedVP9Codecs(/*add_scalability_modes=*/true);
+#else
+	return {};
+#endif
   }
 
   static std::unique_ptr<VideoEncoder> CreateEncoder(
       const SdpVideoFormat& format) {
-    return VP9Encoder::Create(cricket::CreateVideoCodec(format));
+#if defined(RTC_ENABLE_VP9)
+	return VP9Encoder::Create(cricket::CreateVideoCodec(format));
+#else
+	return nullptr;
+#endif
   }
 
   static bool IsScalabilityModeSupported(ScalabilityMode scalability_mode) {
-    return VP9Encoder::SupportsScalabilityMode(scalability_mode);
+#if defined(RTC_ENABLE_VP9)
+	return VP9Encoder::SupportsScalabilityMode(scalability_mode);
+#else
+	return false;
+#endif
   }
 };
 }  // namespace webrtc

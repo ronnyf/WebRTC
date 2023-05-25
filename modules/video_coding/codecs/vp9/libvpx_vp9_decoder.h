@@ -12,7 +12,7 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP9_LIBVPX_VP9_DECODER_H_
 #define MODULES_VIDEO_CODING_CODECS_VP9_LIBVPX_VP9_DECODER_H_
 
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
 
 #include "api/video_codecs/video_decoder.h"
 #include "modules/video_coding/codecs/vp9/include/vp9.h"

@@ -10,12 +10,12 @@
 
 #import "RTCCVPixelBuffer.h"
 
-#import "api/video_frame_buffer/RTCNativeMutableI420Buffer.h"
+#import <WebRTC/RTCNativeMutableI420Buffer.h>
 
 #include "common_video/libyuv/include/webrtc_libyuv.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
-#include "third_party/libyuv/include/libyuv.h"
+#include <libyuv/libyuv.h>
 
 #if !defined(NDEBUG) && defined(WEBRTC_IOS)
 #import <UIKit/UIKit.h>
@@ -23,12 +23,12 @@
 #endif
 
 @implementation RTC_OBJC_TYPE (RTCCVPixelBuffer) {
-  int _width;
-  int _height;
-  int _bufferWidth;
-  int _bufferHeight;
-  int _cropWidth;
-  int _cropHeight;
+  NSInteger _width;
+  NSInteger _height;
+  NSInteger _bufferWidth;
+  NSInteger _bufferHeight;
+  NSInteger _cropWidth;
+  NSInteger _cropHeight;
 }
 
 @synthesize pixelBuffer = _pixelBuffer;
@@ -56,12 +56,12 @@
 }
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
-                       adaptedWidth:(int)adaptedWidth
-                      adaptedHeight:(int)adaptedHeight
-                          cropWidth:(int)cropWidth
-                         cropHeight:(int)cropHeight
-                              cropX:(int)cropX
-                              cropY:(int)cropY {
+                       adaptedWidth:(NSInteger)adaptedWidth
+                      adaptedHeight:(NSInteger)adaptedHeight
+                          cropWidth:(NSInteger)cropWidth
+                         cropHeight:(NSInteger)cropHeight
+                              cropX:(NSInteger)cropX
+                              cropY:(NSInteger)cropY {
   if (self = [super init]) {
     _width = adaptedWidth;
     _height = adaptedHeight;
@@ -83,11 +83,11 @@
   CVBufferRelease(_pixelBuffer);
 }
 
-- (int)width {
+- (NSInteger)width {
   return _width;
 }
 
-- (int)height {
+- (NSInteger)height {
   return _height;
 }
 
@@ -95,19 +95,19 @@
   return _cropWidth != _bufferWidth || _cropHeight != _bufferHeight;
 }
 
-- (BOOL)requiresScalingToWidth:(int)width height:(int)height {
+- (BOOL)requiresScalingToWidth:(NSInteger)width height:(NSInteger)height {
   return _cropWidth != width || _cropHeight != height;
 }
 
-- (int)bufferSizeForCroppingAndScalingToWidth:(int)width height:(int)height {
+- (NSInteger)bufferSizeForCroppingAndScalingToWidth:(NSInteger)width height:(NSInteger)height {
   const OSType srcPixelFormat = CVPixelBufferGetPixelFormatType(_pixelBuffer);
   switch (srcPixelFormat) {
     case kCVPixelFormatType_420YpCbCr8BiPlanarFullRange:
     case kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange: {
-      int srcChromaWidth = (_cropWidth + 1) / 2;
-      int srcChromaHeight = (_cropHeight + 1) / 2;
-      int dstChromaWidth = (width + 1) / 2;
-      int dstChromaHeight = (height + 1) / 2;
+      NSInteger srcChromaWidth = (_cropWidth + 1) / 2;
+      NSInteger srcChromaHeight = (_cropHeight + 1) / 2;
+      NSInteger dstChromaWidth = (width + 1) / 2;
+      NSInteger dstChromaHeight = (height + 1) / 2;
 
       return srcChromaWidth * srcChromaHeight * 2 + dstChromaWidth * dstChromaHeight * 2;
     }
@@ -153,12 +153,12 @@
 
   return YES;
 }
-- (id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>)cropAndScaleWith:(int)offsetX
-                                                   offsetY:(int)offsetY
-                                                 cropWidth:(int)cropWidth
-                                                cropHeight:(int)cropHeight
-                                                scaleWidth:(int)scaleWidth
-                                               scaleHeight:(int)scaleHeight {
+- (id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)>)cropAndScaleWith:(NSInteger)offsetX
+                                                   offsetY:(NSInteger)offsetY
+                                                 cropWidth:(NSInteger)cropWidth
+                                                cropHeight:(NSInteger)cropHeight
+                                                scaleWidth:(NSInteger)scaleWidth
+                                               scaleHeight:(NSInteger)scaleHeight {
   return [[RTC_OBJC_TYPE(RTCCVPixelBuffer) alloc]
       initWithPixelBuffer:_pixelBuffer
              adaptedWidth:scaleWidth
@@ -182,10 +182,10 @@
     case kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange: {
       const uint8_t* srcY =
           static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(_pixelBuffer, 0));
-      const int srcYStride = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 0);
+      const size_t srcYStride = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 0);
       const uint8_t* srcUV =
           static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(_pixelBuffer, 1));
-      const int srcUVStride = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 1);
+      const size_t srcUVStride = CVPixelBufferGetBytesPerRowOfPlane(_pixelBuffer, 1);
 
       // Crop just by modifying pointers.
       srcY += srcYStride * _cropY + _cropX;

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mac/desktop_frame_cgimage.h"
 
 #include <AvailabilityMacros.h>
@@ -106,3 +108,5 @@ DesktopFrameCGImage::DesktopFrameCGImage(DesktopSize size,
 DesktopFrameCGImage::~DesktopFrameCGImage() = default;
 
 }  // namespace webrtc
+
+#endif // TARGET_OS_MAC

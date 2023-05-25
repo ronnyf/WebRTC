@@ -13,10 +13,10 @@
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
 
-#import "base/RTCI420Buffer.h"
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCI420Buffer.h>
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 #import "RTCMTLRenderer+Private.h"
 

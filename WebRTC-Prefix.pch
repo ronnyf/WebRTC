@@ -1,0 +1,26 @@
+//
+//  WebRTC.pch
+//  WebRTC
+//
+//  Created by Falk, Ronny on 1/21/24.
+//
+//  Copyright 2024 The WebRTC Project Authors. All rights reserved.
+//
+//  Use of this source code is governed by a BSD-style license
+//  that can be found in the LICENSE file in the root of the source
+//  tree. An additional intellectual property rights grant can be found
+//  in the file PATENTS.  All contributing project authors may
+//  be found in the AUTHORS file in the root of the source tree.
+//
+
+#ifndef WEBRRTC_PREFIX_PCH
+#define WEBRRTC_PREFIX_PCH
+
+#include "WebRTC-Defines.h"
+
+#if __OBJC__
+#import <Foundation/Foundation.h>
+#import <WebRTC/RTCMacros.h>
+#endif
+
+#endif //WEBRRTC_PREFIX_PCH

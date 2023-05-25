@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if !defined(WEBRTC_IOS) && !defined(WEBRTC_MAC) && !defined(WEBRTC_WIN)
+
 #include "modules/desktop_capture/screen_capturer_fuchsia.h"
 
 #include <fuchsia/sysmem/cpp/fidl.h>
@@ -389,3 +391,5 @@ uint32_t ScreenCapturerFuchsia::GetPixelsPerRow(
 }
 
 }  // namespace webrtc
+
+#endif

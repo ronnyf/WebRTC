@@ -14,6 +14,8 @@
  * Based on the sse2 version.
  */
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 
 #include "common_audio/third_party/ooura/fft_size_128/ooura_fft.h"
@@ -22,7 +24,6 @@
 
 namespace webrtc {
 
-#if defined(WEBRTC_HAS_NEON)
 void cft1st_128_neon(float* a) {
   const float32x4_t vec_swap_sign = vld1q_f32((float32_t*)k_swap_sign);
   int j, k2;
@@ -346,6 +347,7 @@ void rftbsub_128_neon(float* a) {
   }
   a[65] = -a[65];
 }
-#endif
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_HAS_NEON)

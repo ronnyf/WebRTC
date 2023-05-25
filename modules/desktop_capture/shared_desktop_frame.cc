@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/shared_desktop_frame.h"
 
 #include <memory>
@@ -57,3 +59,5 @@ SharedDesktopFrame::SharedDesktopFrame(rtc::scoped_refptr<Core> core)
 }
 
 }  // namespace webrtc
+
+#endif

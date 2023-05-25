@@ -15,7 +15,7 @@
 
 namespace webrtc {
 
-#if defined(WEBRTC_ARCH_X86_FAMILY)
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)
 void cft1st_128_SSE2(float* a);
 void cftmdl_128_SSE2(float* a);
 void rftfsub_128_SSE2(float* a);

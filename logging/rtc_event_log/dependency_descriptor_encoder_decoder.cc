@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/dependency_descriptor_encoder_decoder.h"
 
 #include <string>
@@ -219,3 +221,5 @@ RtcEventLogDependencyDescriptorEncoderDecoder::Decode(
 }
 
 }  // namespace webrtc
+
+#endif

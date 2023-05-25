@@ -10,6 +10,8 @@
 #ifndef VIDEO_VIDEO_ANALYZER_H_
 #define VIDEO_VIDEO_ANALYZER_H_
 
+#if defined(WEBRTC_UNIT_TEST)
+
 #include <deque>
 #include <map>
 #include <memory>
@@ -319,3 +321,5 @@ class VideoAnalyzer : public PacketReceiver,
 
 }  // namespace webrtc
 #endif  // VIDEO_VIDEO_ANALYZER_H_
+
+#endif // defined(WEBRTC_UNIT_TEST)

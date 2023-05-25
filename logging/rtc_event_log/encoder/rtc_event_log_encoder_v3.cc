@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/encoder/rtc_event_log_encoder_v3.h"
 
 #include <string>
@@ -162,3 +164,5 @@ std::string RtcEventLogEncoderV3::EncodeBatch(
 }
 
 }  // namespace webrtc
+
+#endif

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/mouse_cursor_monitor.h"
 
 
@@ -211,3 +213,5 @@ std::unique_ptr<MouseCursorMonitor> MouseCursorMonitor::Create(
 }
 
 }  // namespace webrtc
+
+#endif

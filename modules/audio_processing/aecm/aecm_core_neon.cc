@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 
 #include "common_audio/signal_processing/include/real_fft.h"
@@ -204,3 +206,5 @@ void WebRtcAecm_ResetAdaptiveChannelNeon(AecmCore* aecm) {
 }
 
 }  // namespace webrtc
+
+#endif // WEBRTC_HAS_NEON

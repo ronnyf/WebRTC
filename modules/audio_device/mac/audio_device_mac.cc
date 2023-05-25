@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
+
 #include "modules/audio_device/mac/audio_device_mac.h"
 
 #include <ApplicationServices/ApplicationServices.h>
@@ -2498,3 +2500,5 @@ bool AudioDeviceMac::KeyPressed() {
   return key_down;
 }
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)

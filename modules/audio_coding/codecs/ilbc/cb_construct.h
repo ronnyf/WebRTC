@@ -23,7 +23,6 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "absl/base/attributes.h"
 #include "modules/audio_coding/codecs/ilbc/defines.h"
 
 /*----------------------------------------------------------------*
@@ -31,7 +30,7 @@
  *---------------------------------------------------------------*/
 
 // Returns true on success, false on failure.
-ABSL_MUST_USE_RESULT
+ILBC_MUST_USE_RESULT
 bool WebRtcIlbcfix_CbConstruct(
     int16_t* decvector,        /* (o) Decoded vector */
     const int16_t* index,      /* (i) Codebook indices */

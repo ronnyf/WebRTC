@@ -8,11 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/api/video_renderer.h"
+#include "video_renderer.h"
 
 #include <memory>
 
-#include "sdk/objc/native/src/objc_video_renderer.h"
+#include "objc_video_renderer.h"
 
 namespace webrtc {
 

@@ -8,13 +8,16 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "voice_processing_audio_unit.h"
+#if TARGET_OS_MAC && defined(WEBRTC_IOS)
+
+#import "sdk/objc/native/src/audio/voice_processing_audio_unit.h"
 
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/metrics.h"
 
-#import "base/RTCLogging.h"
 #import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+#include "rtc_base/rtc_export_bridge.h"
+#include "rtc_base/RTCObjCLogging.h"
 
 #if !defined(NDEBUG)
 static void LogStreamDescription(AudioStreamBasicDescription description) {
@@ -486,3 +489,5 @@ void VoiceProcessingAudioUnit::DisposeAudioUnit() {
 
 }  // namespace ios_adm
 }  // namespace webrtc
+
+#endif // TARGET_OS_IOS

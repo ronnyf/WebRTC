@@ -10,26 +10,22 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
-@class RTC_OBJC_TYPE(RTCConfiguration);
-@class RTC_OBJC_TYPE(RTCDataChannel);
-@class RTC_OBJC_TYPE(RTCDataChannelConfiguration);
-@class RTC_OBJC_TYPE(RTCIceCandidate);
-@class RTC_OBJC_TYPE(RTCIceCandidateErrorEvent);
-@class RTC_OBJC_TYPE(RTCMediaConstraints);
-@class RTC_OBJC_TYPE(RTCMediaStream);
-@class RTC_OBJC_TYPE(RTCMediaStreamTrack);
-@class RTC_OBJC_TYPE(RTCPeerConnectionFactory);
-@class RTC_OBJC_TYPE(RTCRtpReceiver);
-@class RTC_OBJC_TYPE(RTCRtpSender);
-@class RTC_OBJC_TYPE(RTCRtpTransceiver);
-@class RTC_OBJC_TYPE(RTCRtpTransceiverInit);
-@class RTC_OBJC_TYPE(RTCSessionDescription);
-@class RTC_OBJC_TYPE(RTCStatisticsReport);
-@class RTC_OBJC_TYPE(RTCLegacyStatsReport);
-
-typedef NS_ENUM(NSInteger, RTCRtpMediaType);
+#import <WebRTC/RTCConfiguration.h>
+#import <WebRTC/RTCDataChannel.h>
+#import <WebRTC/RTCDataChannelConfiguration.h>
+#import <WebRTC/RTCIceCandidate.h>
+#import <WebRTC/RTCIceCandidateErrorEvent.h>
+#import <WebRTC/RTCMediaConstraints.h>
+#import <WebRTC/RTCMediaStream.h>
+#import <WebRTC/RTCMediaStreamTrack.h>
+#import <WebRTC/RTCRtpReceiver.h>
+#import <WebRTC/RTCRtpSender.h>
+#import <WebRTC/RTCRtpTransceiver.h>
+#import <WebRTC/RTCSessionDescription.h>
+#import <WebRTC/RTCStatisticsReport.h>
+#import <WebRTC/RTCLegacyStatsReport.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

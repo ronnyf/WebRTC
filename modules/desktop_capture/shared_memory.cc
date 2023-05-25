@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/shared_memory.h"
 
 namespace webrtc {
@@ -22,3 +24,5 @@ SharedMemory::SharedMemory(void* data, size_t size, Handle handle, int id)
     : data_(data), size_(size), handle_(handle), id_(id) {}
 
 }  // namespace webrtc
+
+#endif

@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCAudioSource.h"
+#import <WebRTC/RTCAudioSource.h>
 
 #import "RTCMediaSource+Private.h"
 

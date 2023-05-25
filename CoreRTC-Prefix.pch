@@ -1,0 +1,22 @@
+//
+//  corertc.pch
+//  CoreRTC
+//
+//  Created by Falk, Ronny on 1/21/24.
+//
+//  Copyright 2024 The WebRTC Project Authors. All rights reserved.
+//
+//  Use of this source code is governed by a BSD-style license
+//  that can be found in the LICENSE file in the root of the source
+//  tree. An additional intellectual property rights grant can be found
+//  in the file PATENTS.  All contributing project authors may
+//  be found in the AUTHORS file in the root of the source tree.
+//
+
+#ifndef CORERTC_PREFIX_PCH
+#define CORERTC_PREFIX_PCH
+
+#import "WebRTC-Defines.h"
+#include "rtc_base/rtc_export_bridge.h"
+
+#endif // CORERTC_PREFIX_PCH

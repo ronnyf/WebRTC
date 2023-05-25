@@ -12,7 +12,7 @@
 
 #include <string.h>
 
-#if RTC_LOG_ENABLED()
+#if RTC_LOG_ENABLED
 
 #if defined(WEBRTC_WIN)
 #include <windows.h>
@@ -23,7 +23,7 @@
 #endif
 
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
-#include <CoreServices/CoreServices.h>
+#import <CoreServices/CoreServices.h>
 #elif defined(WEBRTC_ANDROID)
 #include <android/log.h>
 
@@ -55,6 +55,8 @@ static const int kMaxLogLineSize = 1024 - 60;
 
 namespace rtc {
 namespace {
+
+#if RTC_LOG_ENABLED
 
 // By default, release builds don't log, debug builds at info level
 #if !defined(NDEBUG)
@@ -540,6 +542,8 @@ void Log(const LogArgType* fmt, ...) {
 
   va_end(args);
 }
+
+#endif // RTC_LOG_ENABLED
 
 }  // namespace webrtc_logging_impl
 }  // namespace rtc

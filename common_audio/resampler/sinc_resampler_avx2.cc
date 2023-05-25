@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -64,3 +66,5 @@ float SincResampler::Convolve_AVX2(const float* input_ptr,
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_ARCH_X86_FAMILY)

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/blank_detector_desktop_capturer_wrapper.h"
 
 #include <stdint.h>
@@ -137,3 +139,5 @@ bool BlankDetectorDesktopCapturerWrapper::IsBlankPixel(
 }
 
 }  // namespace webrtc
+
+#endif

@@ -8,11 +8,13 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import "RTCNV12TextureCache.h"
 
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
 @implementation RTCNV12TextureCache {
   CVOpenGLESTextureCacheRef _textureCache;
@@ -111,3 +113,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

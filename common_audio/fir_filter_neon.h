@@ -11,6 +11,8 @@
 #ifndef COMMON_AUDIO_FIR_FILTER_NEON_H_
 #define COMMON_AUDIO_FIR_FILTER_NEON_H_
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <memory>
 
 #include "common_audio/fir_filter.h"
@@ -36,4 +38,5 @@ class FIRFilterNEON : public FIRFilter {
 
 }  // namespace webrtc
 
+#endif // defined(WEBRTC_HAS_NEON)
 #endif  // COMMON_AUDIO_FIR_FILTER_NEON_H_

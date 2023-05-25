@@ -30,10 +30,12 @@
 #include "rtc_base/time_utils.h"
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
-#include "third_party/libyuv/include/libyuv/convert.h"
-#include "vpx/vp8.h"
-#include "vpx/vp8dx.h"
-#include "vpx/vpx_decoder.h"
+#if defined(RTC_ENABLE_VP8)
+#include <libyuv/convert.h>
+#include <libvpx/vp8.h>
+#include <libvpx/vp8dx.h>
+#include <libvpx/vpx_decoder.h>
+#endif
 
 namespace webrtc {
 namespace {
@@ -52,6 +54,7 @@ constexpr bool kIsArm = true;
 constexpr bool kIsArm = false;
 #endif
 
+#if defined(RTC_ENABLE_VP8)
 absl::optional<LibvpxVp8Decoder::DeblockParams> DefaultDeblockParams() {
   return LibvpxVp8Decoder::DeblockParams(/*max_level=*/8,
                                          /*degrade_qp=*/60,
@@ -82,12 +85,18 @@ GetPostProcParamsFromFieldTrialGroup() {
 
   return params;
 }
-
+#endif
 }  // namespace
 
 std::unique_ptr<VideoDecoder> VP8Decoder::Create() {
+#if defined(RTC_ENABLE_VP8)
   return std::make_unique<LibvpxVp8Decoder>();
+#else
+  return nullptr;
+#endif
 }
+
+#if defined(RTC_ENABLE_VP8)
 
 class LibvpxVp8Decoder::QpSmoother {
  public:
@@ -341,4 +350,7 @@ VideoDecoder::DecoderInfo LibvpxVp8Decoder::GetDecoderInfo() const {
 const char* LibvpxVp8Decoder::ImplementationName() const {
   return "libvpx";
 }
+
+#endif
+
 }  // namespace webrtc

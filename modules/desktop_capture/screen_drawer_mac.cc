@@ -10,6 +10,8 @@
 
 // TODO(zijiehe): Implement ScreenDrawerMac
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include <memory>
 
 #include "modules/desktop_capture/screen_drawer.h"
@@ -28,3 +30,5 @@ std::unique_ptr<ScreenDrawer> ScreenDrawer::Create() {
 }
 
 }  // namespace webrtc
+
+#endif

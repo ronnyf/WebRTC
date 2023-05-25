@@ -7,7 +7,10 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
 #include "modules/video_coding/codecs/av1/libaom_av1_encoder.h"
+
+#if defined(RTC_USE_LIBAOM_AV1_ENCODER)
 
 #include <stddef.h>
 #include <stdint.h>
@@ -864,3 +867,5 @@ std::unique_ptr<VideoEncoder> CreateLibaomAv1Encoder(
 }
 
 }  // namespace webrtc
+
+#endif //defined(RTC_USE_LIBAOM_AV1_ENCODER)

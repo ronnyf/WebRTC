@@ -20,7 +20,9 @@
 #ifdef WEBRTC_ANDROID_PLATFORM_BUILD
 #include "external/webrtc/webrtc/modules/audio_processing/debug.pb.h"
 #else
+#if WEBRTC_ENABLE_PROTOBUF
 #include "modules/audio_processing/debug.pb.h"
+#endif
 #endif
 
 namespace webrtc {
@@ -32,6 +34,7 @@ class CaptureStreamInfo {
   CaptureStreamInfo& operator=(const CaptureStreamInfo&) = delete;
   ~CaptureStreamInfo() = default;
 
+#if WEBRTC_ENABLE_PROTOBUF
   void AddInput(const AudioFrameView<const float>& src);
   void AddOutput(const AudioFrameView<const float>& src);
 
@@ -49,13 +52,17 @@ class CaptureStreamInfo {
     CreateNewEvent();
     return result;
   }
-
+#endif
  private:
   void CreateNewEvent() {
+#if WEBRTC_ENABLE_PROTOBUF
     event_ = std::make_unique<audioproc::Event>();
     event_->set_type(audioproc::Event::STREAM);
+#endif
   }
-  std::unique_ptr<audioproc::Event> event_;
+#if WEBRTC_ENABLE_PROTOBUF
+	std::unique_ptr<audioproc::Event> event_;
+#endif
 };
 
 }  // namespace webrtc

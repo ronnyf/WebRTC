@@ -11,14 +11,16 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_INTERFACE_LIBVPX_INTERFACE_H_
 #define MODULES_VIDEO_CODING_CODECS_INTERFACE_LIBVPX_INTERFACE_H_
 
+#if defined(RTC_ENABLE_VP8) || defined(RTC_ENABLE_VP9)
+
 #include <stdint.h>
 
 #include <memory>
 
-#include "vpx/vp8cx.h"
-#include "vpx/vpx_codec.h"
-#include "vpx/vpx_encoder.h"
-#include "vpx/vpx_image.h"
+#include <libvpx/vp8cx.h>
+#include <libvpx/vpx_codec.h>
+#include <libvpx/vpx_encoder.h>
+#include <libvpx/vpx_image.h>
 
 namespace webrtc {
 
@@ -124,5 +126,7 @@ class LibvpxInterface {
 };
 
 }  // namespace webrtc
+
+#endif // defined(RTC_ENABLE_VP8) || defined(RTC_ENABLE_VP9)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_INTERFACE_LIBVPX_INTERFACE_H_

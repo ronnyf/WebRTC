@@ -8,12 +8,12 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "audio_device_module.h"
+#if !TARGET_OS_OSX
 
+#include "audio_device_module.h"
+#include "sdk/objc/native/src/audio/audio_device_module_ios.h"
 #include "api/make_ref_counted.h"
 #include "rtc_base/logging.h"
-
-#include "sdk/objc/native/src/audio/audio_device_module_ios.h"
 
 namespace webrtc {
 
@@ -27,3 +27,5 @@ rtc::scoped_refptr<AudioDeviceModule> CreateAudioDeviceModule(bool bypass_voice_
 #endif
 }
 }
+
+#endif // !TARGET_OS_OSX

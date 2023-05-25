@@ -8,9 +8,11 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import <Foundation/Foundation.h>
+#if defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
 
-#import "RTCVideoFrame.h"
+#import <Foundation/Foundation.h>
+#import <WebRTC/RTCMacros.h>
+#import <WebRTC/RTCVideoFrame.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,3 +39,5 @@ RTC_OBJC_EXPORT
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif

@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-#import "RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,19 +30,19 @@ RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCVideoFrame) : NSObject
 
 /** Width without rotation applied. */
-@property(nonatomic, readonly) int width;
+@property(nonatomic, readonly) NSInteger width;
 
 /** Height without rotation applied. */
-@property(nonatomic, readonly) int height;
+@property(nonatomic, readonly) NSInteger height;
 @property(nonatomic, readonly) RTCVideoRotation rotation;
 
 /** Timestamp in nanoseconds. */
-@property(nonatomic, readonly) int64_t timeStampNs;
+@property(nonatomic, assign, readonly) int64_t timeStampNs;
 
 /** Timestamp 90 kHz. */
-@property(nonatomic, assign) int32_t timeStamp;
+@property(nonatomic, assign) uint32_t timeStamp;
 
-@property(nonatomic, readonly) id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)> buffer;
+@property(nonatomic, strong, readonly, nullable) id<RTC_OBJC_TYPE(RTCVideoFrameBuffer)> buffer;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
@@ -60,12 +60,12 @@ RTC_OBJC_EXPORT
  *  scaling to the final resolution of scaledWidth x scaledHeight.
  */
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
-                        scaledWidth:(int)scaledWidth
-                       scaledHeight:(int)scaledHeight
-                          cropWidth:(int)cropWidth
-                         cropHeight:(int)cropHeight
-                              cropX:(int)cropX
-                              cropY:(int)cropY
+                        scaledWidth:(NSInteger)scaledWidth
+                       scaledHeight:(NSInteger)scaledHeight
+                          cropWidth:(NSInteger)cropWidth
+                         cropHeight:(NSInteger)cropHeight
+                              cropX:(NSInteger)cropX
+                              cropY:(NSInteger)cropY
                            rotation:(RTCVideoRotation)rotation
                         timeStampNs:(int64_t)timeStampNs
     DEPRECATED_MSG_ATTRIBUTE("use initWithBuffer instead");

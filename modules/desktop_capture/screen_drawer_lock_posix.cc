@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/screen_drawer_lock_posix.h"
 
 #include <fcntl.h>
@@ -57,3 +59,5 @@ void ScreenDrawerLockPosix::Unlink(absl::string_view name) {
 }
 
 }  // namespace webrtc
+
+#endif

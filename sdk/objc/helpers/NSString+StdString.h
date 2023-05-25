@@ -9,13 +9,13 @@
  */
 
 #import <Foundation/Foundation.h>
-
+#import <WebRTC/RTCMacros.h>
+#include <absl/strings/string_view.h>
 #include <string>
-
-#include "absl/strings/string_view.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+RTC_OBJC_EXPORT
 @interface NSString (StdString)
 
 @property(nonatomic, readonly) std::string stdString;
@@ -25,6 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+RTC_OBJC_EXPORT
+@interface NSString (StringView)
+
++ (NSString *)stringForStringView:(const std::string_view)stringView;
+
+@end
+
+RTC_OBJC_EXPORT
 @interface NSString (AbslStringView)
 
 + (NSString *)stringForAbslStringView:(const absl::string_view)abslStringView;

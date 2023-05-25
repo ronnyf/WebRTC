@@ -11,6 +11,8 @@
 #ifndef RTC_BASE_TASK_QUEUE_LIBEVENT_H_
 #define RTC_BASE_TASK_QUEUE_LIBEVENT_H_
 
+#if !defined(WEBRTC_MAC)
+
 #include <memory>
 
 #include "api/task_queue/task_queue_factory.h"
@@ -20,5 +22,7 @@ namespace webrtc {
 std::unique_ptr<TaskQueueFactory> CreateTaskQueueLibeventFactory();
 
 }  // namespace webrtc
+
+#endif // !defined(WEBRTC_MAC)
 
 #endif  // RTC_BASE_TASK_QUEUE_LIBEVENT_H_

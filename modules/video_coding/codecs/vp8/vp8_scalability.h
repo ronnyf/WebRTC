@@ -11,6 +11,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_VP8_VP8_SCALABILITY_H_
 #define MODULES_VIDEO_CODING_CODECS_VP8_VP8_SCALABILITY_H_
 
+#if defined(RTC_ENABLE_VP8)
+
 #include "api/video_codecs/scalability_mode.h"
 
 namespace webrtc {
@@ -20,5 +22,7 @@ inline constexpr ScalabilityMode kVP8SupportedScalabilityModes[] = {
 bool VP8SupportsScalabilityMode(ScalabilityMode scalability_mode);
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_VP8_SCALABILITY_H_

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if WEBRTC_ENABLE_PROTOBUF
+
 #include "logging/rtc_event_log/rtc_event_log_impl.h"
 
 #include <functional>
@@ -327,3 +329,5 @@ void RtcEventLogImpl::WriteToOutput(absl::string_view output_string) {
 }
 
 }  // namespace webrtc
+
+#endif

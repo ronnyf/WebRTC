@@ -11,7 +11,7 @@
 #include "modules/audio_processing/utility/pffft_wrapper.h"
 
 #include "rtc_base/checks.h"
-#include "third_party/pffft/src/pffft.h"
+#include <pffft/pffft.h>
 
 namespace webrtc {
 namespace {

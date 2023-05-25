@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/test_utils.h"
 
 #include <stdint.h>
@@ -48,3 +50,5 @@ bool DesktopFrameDataEquals(const DesktopFrame& left,
 }
 
 }  // namespace webrtc
+
+#endif

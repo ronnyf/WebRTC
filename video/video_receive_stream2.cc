@@ -55,6 +55,7 @@
 #include "video/receive_statistics_proxy.h"
 #include "video/render/incoming_video_stream.h"
 #include "video/task_queue_frame_decode_scheduler.h"
+#include "video/config/video_encoder_config.h"
 
 namespace webrtc {
 

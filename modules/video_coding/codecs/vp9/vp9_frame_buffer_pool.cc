@@ -9,7 +9,7 @@
  *
  */
 
-#ifdef RTC_ENABLE_VP9
+#if defined(RTC_ENABLE_VP9)
 
 #include "modules/video_coding/codecs/vp9/vp9_frame_buffer_pool.h"
 

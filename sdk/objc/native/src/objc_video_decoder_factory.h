@@ -11,7 +11,7 @@
 #ifndef SDK_OBJC_NATIVE_SRC_OBJC_VIDEO_DECODER_FACTORY_H_
 #define SDK_OBJC_NATIVE_SRC_OBJC_VIDEO_DECODER_FACTORY_H_
 
-#import "base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 #include "api/video_codecs/video_decoder_factory.h"
 #include "media/base/codec.h"

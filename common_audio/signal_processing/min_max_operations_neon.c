@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_HAS_NEON)
+
 #include <arm_neon.h>
 #include <stdlib.h>
 
@@ -331,3 +333,5 @@ void WebRtcSpl_MinMaxW16Neon(const int16_t* vector, size_t length,
   *min_val = minimum;
   *max_val = maximum;
 }
+
+#endif // defined(WEBRTC_HAS_NEON)

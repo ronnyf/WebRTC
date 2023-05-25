@@ -10,13 +10,15 @@
 
 #import "RTCMTLVideoView.h"
 
+#if TARGET_OS_IOS
+
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
 
-#import "base/RTCLogging.h"
-#import "base/RTCVideoFrame.h"
-#import "base/RTCVideoFrameBuffer.h"
-#import "components/video_frame_buffer/RTCCVPixelBuffer.h"
+#import <WebRTC/RTCLogging.h>
+#import <WebRTC/RTCVideoFrame.h>
+#import <WebRTC/RTCVideoFrameBuffer.h>
+#import <WebRTC/RTCCVPixelBuffer.h>
 
 #import "RTCMTLI420Renderer.h"
 #import "RTCMTLNV12Renderer.h"
@@ -263,3 +265,5 @@
 }
 
 @end
+
+#endif // TARGET_OS_IOS

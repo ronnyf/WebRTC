@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_IOS && defined(WEBRTC_ENABLE_DEPRECATED_OPENGLES)
+
 #import "RTCShader.h"
 
 #import <OpenGLES/ES3/gl.h>
@@ -176,3 +178,5 @@ void RTCSetVertexData(RTCVideoRotation rotation) {
 
   glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(gVertices), gVertices);
 }
+
+#endif // TARGET_OS_IOS

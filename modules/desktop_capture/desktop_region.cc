@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_region.h"
 
 #include <algorithm>
@@ -565,3 +567,5 @@ void DesktopRegion::Iterator::UpdateCurrentRect() {
 }
 
 }  // namespace webrtc
+
+#endif

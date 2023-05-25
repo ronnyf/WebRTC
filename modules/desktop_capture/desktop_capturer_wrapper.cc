@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_capturer_wrapper.h"
 
 #include <utility>
@@ -58,3 +60,5 @@ bool DesktopCapturerWrapper::IsOccluded(const DesktopVector& pos) {
 }
 
 }  // namespace webrtc
+
+#endif

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/desktop_capturer.h"
 
 #include <stdlib.h>
@@ -140,3 +142,5 @@ bool DesktopCapturer::IsRunningUnderWayland() {
 #endif  // defined(WEBRTC_USE_PIPEWIRE) || defined(WEBRTC_USE_X11)
 
 }  // namespace webrtc
+
+#endif

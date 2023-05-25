@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_UNIT_TEST)
+
 #include <string>
 #include <utility>
 #include <vector>
@@ -247,3 +249,5 @@ TEST_F(AudioSendStreamCallTest, SendDtmf) {
 
 }  // namespace test
 }  // namespace webrtc
+
+#endif

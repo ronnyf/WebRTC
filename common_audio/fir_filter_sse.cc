@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(WEBRTC_HAS_SSE2)
+
 #include "common_audio/fir_filter_sse.h"
 
 #include <stdint.h>
@@ -80,3 +82,5 @@ void FIRFilterSSE2::Filter(const float* in, size_t length, float* out) {
 }
 
 }  // namespace webrtc
+
+#endif // defined(WEBRTC_ARCH_X86_FAMILY)

@@ -13,7 +13,7 @@
 
 #include <vector>
 
-#include "absl/strings/string_view.h"
+#include <absl/strings/string_view.h>
 #include "api/field_trials_view.h"
 #include "api/sequence_checker.h"
 #include "api/task_queue/pending_task_safety_flag.h"
@@ -22,8 +22,7 @@
 #include "rtc_base/string_utils.h"
 #include "rtc_base/thread.h"
 #include "rtc_base/thread_annotations.h"
-#include "sdk/objc/components/network/RTCNetworkMonitor+Private.h"
-#include "sdk/objc/native/src/network_monitor_observer.h"
+#include "RTCNetworkMonitor+Private.h"
 
 namespace webrtc {
 

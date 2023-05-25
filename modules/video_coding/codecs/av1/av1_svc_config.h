@@ -10,6 +10,8 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_AV1_AV1_SVC_CONFIG_H_
 #define MODULES_VIDEO_CODING_CODECS_AV1_AV1_SVC_CONFIG_H_
 
+#if defined(RTC_USE_LIBAOM_AV1_ENCODER)
+
 #include <vector>
 
 #include "absl/container/inlined_vector.h"
@@ -28,5 +30,7 @@ bool SetAv1SvcConfig(VideoCodec& video_codec,
                      int num_spatial_layers);
 
 }  // namespace webrtc
+
+#endif // RTC_USE_LIBAOM_AV1_ENCODER
 
 #endif  // MODULES_VIDEO_CODING_CODECS_AV1_AV1_SVC_CONFIG_H_

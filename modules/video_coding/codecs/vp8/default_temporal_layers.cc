@@ -7,6 +7,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(RTC_ENABLE_VP8)
+
 #include "modules/video_coding/codecs/vp8/default_temporal_layers.h"
 
 #include <stdlib.h>
@@ -882,3 +884,5 @@ bool DefaultTemporalLayersChecker::CheckTemporalConfig(
 }
 
 }  // namespace webrtc
+
+#endif //defined(RTC_ENABLE_VP8)

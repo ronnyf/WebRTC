@@ -13,7 +13,7 @@
 
 #include <memory>
 
-#import "components/audio/RTCAudioDevice.h"
+#import <WebRTC/RTCAudioDevice.h>
 
 #include "modules/audio_device/audio_device_buffer.h"
 #include "modules/audio_device/include/audio_device.h"

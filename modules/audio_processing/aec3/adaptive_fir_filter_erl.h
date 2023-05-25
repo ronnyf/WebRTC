@@ -37,9 +37,11 @@ void ErlComputer_SSE2(
     const std::vector<std::array<float, kFftLengthBy2Plus1>>& H2,
     rtc::ArrayView<float> erl);
 
+#if defined(WEBRTC_HAS_AVX2)
 void ErlComputer_AVX2(
     const std::vector<std::array<float, kFftLengthBy2Plus1>>& H2,
     rtc::ArrayView<float> erl);
+#endif
 #endif
 
 }  // namespace aec3

@@ -12,7 +12,7 @@
 #define SDK_OBJC_NATIVE_API_VIDEO_FRAME_BUFFER_H_
 
 // import
-#import "base/RTCVideoFrameBuffer.h"
+#import <WebRTC/RTCVideoFrameBuffer.h>
 
 // include
 #include "api/scoped_refptr.h"

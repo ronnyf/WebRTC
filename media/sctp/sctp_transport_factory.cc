@@ -9,12 +9,15 @@
  */
 
 #include "media/sctp/sctp_transport_factory.h"
-
 #include "rtc_base/system/unused.h"
 
 #ifdef WEBRTC_HAVE_DCSCTP
 #include "media/sctp/dcsctp_transport.h"    // nogncheck
 #include "system_wrappers/include/clock.h"  // nogncheck
+#else
+#ifdef WEBRTC_HAVE_SCTP
+#error Got `WEBRTC_HAVE_SCTP` but not `WEBRTC_HAVE_DCSCTP`.
+#endif
 #endif
 
 namespace cricket {

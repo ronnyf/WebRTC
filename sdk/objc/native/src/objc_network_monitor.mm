@@ -8,8 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "sdk/objc/native/src/objc_network_monitor.h"
-#include "absl/strings/string_view.h"
+#include "objc_network_monitor.h"
+#include <absl/strings/string_view.h>
 
 #include <algorithm>
 

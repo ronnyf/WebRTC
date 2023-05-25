@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "RTCNativeI420Buffer.h"
+#import <WebRTC/RTCNativeI420Buffer.h>
 
 #include "api/video/i420_buffer.h"
 

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_HAS_AVX2)
+
 #include <immintrin.h>
 
 #include "api/array_view.h"
@@ -30,3 +32,5 @@ void FftData::SpectrumAVX2(rtc::ArrayView<float> power_spectrum) const {
 }
 
 }  // namespace webrtc
+
+#endif

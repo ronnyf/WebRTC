@@ -10,8 +10,8 @@
 
 #import "RTCVideoDecoderFactoryH264.h"
 
-#import "RTCH264ProfileLevelId.h"
-#import "RTCVideoDecoderH264.h"
+#import <WebRTC/RTCH264ProfileLevelId.h>
+#import <WebRTC/RTCVideoDecoderH264.h>
 
 @implementation RTC_OBJC_TYPE (RTCVideoDecoderFactoryH264)
 

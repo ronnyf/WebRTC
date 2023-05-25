@@ -15,7 +15,7 @@
 
 #include "api/video/video_frame.h"
 #include "api/video/video_sink_interface.h"
-#import "base/RTCVideoRenderer.h"
+#import <WebRTC/RTCVideoRenderer.h>
 
 namespace webrtc {
 

@@ -41,6 +41,8 @@ typedef zx_handle_t PlatformThreadRef;
 #elif defined(WEBRTC_POSIX)
 typedef pid_t PlatformThreadId;
 typedef pthread_t PlatformThreadRef;
+#else
+#error unsupported platform
 #endif
 
 // Retrieve the ID of the current thread.

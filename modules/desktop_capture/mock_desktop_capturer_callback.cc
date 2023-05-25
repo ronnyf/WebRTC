@@ -7,6 +7,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if defined(WEBRTC_UNIT_TEST)
+
 #include "modules/desktop_capture/mock_desktop_capturer_callback.h"
 
 namespace webrtc {
@@ -21,3 +23,5 @@ void MockDesktopCapturerCallback::OnCaptureResult(
 }
 
 }  // namespace webrtc
+
+#endif

@@ -12,6 +12,7 @@
 // Everything declared/defined in this header is only required when WebRTC is
 // build with H264 support, please do not move anything out of the
 // #ifdef unless needed and tested.
+
 #ifdef WEBRTC_USE_H264
 
 #include "modules/video_coding/codecs/h264/h264_encoder_impl.h"
@@ -32,8 +33,8 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/time_utils.h"
 #include "system_wrappers/include/metrics.h"
-#include "third_party/libyuv/include/libyuv/convert.h"
-#include "third_party/libyuv/include/libyuv/scale.h"
+#include <libyuv/convert.h>
+#include <libyuv/scale.h>
 #include "third_party/openh264/src/codec/api/wels/codec_api.h"
 #include "third_party/openh264/src/codec/api/wels/codec_app_def.h"
 #include "third_party/openh264/src/codec/api/wels/codec_def.h"

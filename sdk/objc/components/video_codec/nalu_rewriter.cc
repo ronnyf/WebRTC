@@ -9,9 +9,9 @@
  *
  */
 
-#include "sdk/objc/components/video_codec/nalu_rewriter.h"
+#include "nalu_rewriter.h"
 
-#include <CoreFoundation/CoreFoundation.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 #include <memory>
 #include <vector>

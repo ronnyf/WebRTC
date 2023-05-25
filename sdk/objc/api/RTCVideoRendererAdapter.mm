@@ -9,11 +9,11 @@
  */
 
 #import "RTCVideoRendererAdapter+Private.h"
-#import "base/RTCVideoFrame.h"
+#import <WebRTC/RTCVideoFrame.h>
 
 #include <memory>
 
-#include "sdk/objc/native/api/video_frame.h"
+#include "native_to_objc_video_frame.h"
 
 namespace webrtc {
 

@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/window_finder_mac.h"
 
 #include <CoreFoundation/CoreFoundation.h>
@@ -50,3 +52,5 @@ std::unique_ptr<WindowFinder> WindowFinder::Create(
 }
 
 }  // namespace webrtc
+
+#endif

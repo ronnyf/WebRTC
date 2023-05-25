@@ -9,8 +9,9 @@
  *
  */
 
+#if defined(RTC_ENABLE_VP9)
+
 #include <memory>
-#ifdef RTC_ENABLE_VP9
 
 #include <algorithm>
 #include <limits>
@@ -43,7 +44,7 @@
 #include "rtc_base/strings/string_builder.h"
 #include "rtc_base/time_utils.h"
 #include "rtc_base/trace_event.h"
-#include "third_party/libyuv/include/libyuv/convert.h"
+#include <libyuv/convert.h>
 #include "vpx/vp8cx.h"
 #include "vpx/vpx_encoder.h"
 

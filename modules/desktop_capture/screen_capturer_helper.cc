@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/screen_capturer_helper.h"
 
 namespace webrtc {
@@ -87,3 +89,5 @@ void ScreenCapturerHelper::ExpandToGrid(const DesktopRegion& region,
 }
 
 }  // namespace webrtc
+
+#endif

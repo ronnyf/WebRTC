@@ -8,6 +8,8 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#if TARGET_OS_OSX && defined(WEBRTC_MAC)
+
 #include "modules/desktop_capture/full_screen_window_detector.h"
 
 #include "modules/desktop_capture/full_screen_application_handler.h"
@@ -83,3 +85,5 @@ void FullScreenWindowDetector::CreateApplicationHandlerIfNeeded(
 }
 
 }  // namespace webrtc
+
+#endif
