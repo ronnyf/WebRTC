@@ -10,6 +10,8 @@
 
 #import "RTCDefaultShader.h"
 
+#if TARGET_OS_IOS
+
 #import <OpenGLES/ES3/gl.h>
 
 #import "RTCOpenGLDefines.h"
@@ -199,3 +201,5 @@ static const char kNV12FragmentShaderSource[] =
 }
 
 @end
+
+#endif // TARGET_OS_IOS

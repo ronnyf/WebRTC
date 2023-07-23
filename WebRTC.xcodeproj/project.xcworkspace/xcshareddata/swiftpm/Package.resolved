@@ -1,0 +1,113 @@
+{
+  "pins" : [
+    {
+      "identity" : "abseil-cpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/abseil-cpp",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "11950a1e8a0f93af36d17dbbfc48f6a1eee91630"
+      }
+    },
+    {
+      "identity" : "boringssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/boringssl",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "ee465e24a73165ae3f1de342c0a612de29d6d3a7"
+      }
+    },
+    {
+      "identity" : "crc32c",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/crc32c",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "2d7edcc1dd87814f43699e7cb55273465b341aac"
+      }
+    },
+    {
+      "identity" : "jsoncpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/jsoncpp.git",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "0b28600ee594cc53f31ea13befd0abd93dc4ee07"
+      }
+    },
+    {
+      "identity" : "libopus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/libopus.git",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "47778cce81d0c411853631218b926de1ff2b7676"
+      }
+    },
+    {
+      "identity" : "libsrtp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/libsrtp",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "db641d436e5a22317e3e1ad0483eeaa4cdef83e8"
+      }
+    },
+    {
+      "identity" : "libvpx",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/libvpx",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "1ecfb77de1e9f94e37690bb2713271a13e230cef"
+      }
+    },
+    {
+      "identity" : "libyuv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/libyuv.git",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "dbb676f568a36a6c49a9799f510d4baa4b15fb47"
+      }
+    },
+    {
+      "identity" : "ocmock",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/erikdoe/ocmock.git",
+      "state" : {
+        "revision" : "afd2c6924e8a36cb872bc475248b978f743c6050",
+        "version" : "3.9.1"
+      }
+    },
+    {
+      "identity" : "protobuf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/protobuf",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "29b31e8d685dd9fba9a4642da27bb78dd61e9449"
+      }
+    },
+    {
+      "identity" : "rnnoise",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/rnnoise",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "e7d079b3996b9013ba11d462afcb3995eadb4907"
+      }
+    },
+    {
+      "identity" : "utf8_range",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ronnyf/utf8_range.git",
+      "state" : {
+        "branch" : "release/webrtc",
+        "revision" : "9b37a20822d6d03b7c23d9df855a14fe4805dabf"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -12,7 +12,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "sdk/objc/components/renderer/metal/RTCMTLVideoView.h"
+#import <WebRTC/RTCMTLVideoView.h>
 
 #import "UIImage+ARDUtilities.h"
 

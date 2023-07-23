@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "sdk/objc/base/RTCMacros.h"
+#import <WebRTC/RTCMacros.h>
 
 @class RTC_OBJC_TYPE(RTCStatisticsReport);
 

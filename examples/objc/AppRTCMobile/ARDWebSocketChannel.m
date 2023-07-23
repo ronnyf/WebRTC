@@ -10,7 +10,7 @@
 
 #import "ARDWebSocketChannel.h"
 
-#import "sdk/objc/base/RTCLogging.h"
+#import <WebRTC/RTCLogging.h>
 
 #import "SRWebSocket.h"
 
