@@ -12,8 +12,8 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "sdk/objc/api/peerconnection/RTCVideoTrack.h"
-#import "sdk/objc/components/renderer/metal/RTCMTLNSVideoView.h"
+#import <WebRTC/RTCVideoTrack.h>
+#import <WebRTC/RTCMTLNSVideoView.h>
 
 #import "ARDAppClient.h"
 #import "ARDCaptureController.h"
