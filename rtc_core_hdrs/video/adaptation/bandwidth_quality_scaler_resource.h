@@ -1,0 +1,1 @@
+../../../video/adaptation/bandwidth_quality_scaler_resource.h

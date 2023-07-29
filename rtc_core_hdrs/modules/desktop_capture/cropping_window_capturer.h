@@ -1,0 +1,1 @@
+../../../modules/desktop_capture/cropping_window_capturer.h

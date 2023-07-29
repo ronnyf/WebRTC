@@ -12,12 +12,12 @@
 
 #if TARGET_OS_IOS
 
-#import "modules/audio_device/ios/voice_processing_audio_unit.h"
+#import "sdk/objc/native/src/audio/voice_processing_audio_unit.h"
 
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/metrics.h"
 
-#include "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
 #include "rtc_base/rtc_export_bridge.h"
 #include "rtc_base/RTCObjCLogging.h"
 

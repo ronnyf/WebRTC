@@ -1,0 +1,1 @@
+../../../../../modules/desktop_capture/linux/wayland/mouse_cursor_monitor_pipewire.h

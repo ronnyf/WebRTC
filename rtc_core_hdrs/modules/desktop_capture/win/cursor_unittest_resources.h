@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/cursor_unittest_resources.h

@@ -8,13 +8,13 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "rtc_base/rtc_defines.h"
+#if __has_include(<ApplicationServices/ApplicationServices.h>)
+#include <ApplicationServices/ApplicationServices.h>
 
-#if TARGET_OS_MAC
+#if TARGET_OS_OSX
 
 #include "modules/desktop_capture/mac/window_list_utils.h"
 
-#include <ApplicationServices/ApplicationServices.h>
 
 #include <algorithm>
 #include <cmath>
@@ -434,3 +434,4 @@ DesktopRect GetWindowBounds(CGWindowID id) {
 }  // namespace webrtc
 
 #endif // TARGET_OS_MAC
+#endif // __has_include(<ApplicationServices/ApplicationServices.h>)

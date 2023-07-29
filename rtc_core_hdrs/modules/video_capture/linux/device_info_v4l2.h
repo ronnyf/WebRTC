@@ -1,0 +1,1 @@
+../../../../modules/video_capture/linux/device_info_v4l2.h

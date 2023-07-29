@@ -3,16 +3,16 @@
     {
       "identity" : "abseil-cpp",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/abseil-cpp",
+      "location" : "git@github.corp.ebay.com:eBayMobile/abseil-cpp",
       "state" : {
         "branch" : "ebay/release",
-        "revision" : "5f092d7a2819d9491060111c769b4a1b351adeac"
+        "revision" : "11950a1e8a0f93af36d17dbbfc48f6a1eee91630"
       }
     },
     {
       "identity" : "boringssl",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/boringssl",
+      "location" : "git@github.corp.ebay.com:eBayMobile/boringssl",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "ee465e24a73165ae3f1de342c0a612de29d6d3a7"
@@ -21,7 +21,7 @@
     {
       "identity" : "crc32c",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/crc32c",
+      "location" : "git@github.corp.ebay.com:eBayMobile/crc32c",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "2d7edcc1dd87814f43699e7cb55273465b341aac"
@@ -30,7 +30,7 @@
     {
       "identity" : "jsoncpp",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/jsoncpp.git",
+      "location" : "git@github.corp.ebay.com:eBayMobile/jsoncpp.git",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "0b28600ee594cc53f31ea13befd0abd93dc4ee07"
@@ -39,7 +39,7 @@
     {
       "identity" : "libopus",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/libopus.git",
+      "location" : "git@github.corp.ebay.com:eBayMobile/libopus",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "47778cce81d0c411853631218b926de1ff2b7676"
@@ -48,16 +48,16 @@
     {
       "identity" : "libsrtp",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/libsrtp",
+      "location" : "git@github.corp.ebay.com:eBayMobile/libsrtp",
       "state" : {
         "branch" : "ebay/release",
-        "revision" : "48c8b93ad0c160174095e058d55c9273e6551da2"
+        "revision" : "17d017c1643ae7c2abe2b293ecedb954d6530255"
       }
     },
     {
       "identity" : "libvpx",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/libvpx",
+      "location" : "git@github.corp.ebay.com:eBayMobile/libvpx",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "1ecfb77de1e9f94e37690bb2713271a13e230cef"
@@ -66,25 +66,16 @@
     {
       "identity" : "libyuv",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/libyuv.git",
+      "location" : "git@github.corp.ebay.com:eBayMobile/libyuv",
       "state" : {
         "branch" : "ebay/release",
-        "revision" : "f2971a3dcd31a37179032af054b9d3fa06387466"
-      }
-    },
-    {
-      "identity" : "ocmock",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/erikdoe/ocmock.git",
-      "state" : {
-        "revision" : "afd2c6924e8a36cb872bc475248b978f743c6050",
-        "version" : "3.9.1"
+        "revision" : "60f237b6628e36c5931e7468187bad17eaf79915"
       }
     },
     {
       "identity" : "protobuf",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/protobuf",
+      "location" : "git@github.corp.ebay.com:eBayMobile/protobuf.git",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "6616a4d4deab252105af25cb07021617c36acae6"
@@ -93,7 +84,7 @@
     {
       "identity" : "rnnoise",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.corp.ebay.com:ebayMobile/rnnoise",
+      "location" : "git@github.corp.ebay.com:eBayMobile/rnnoise",
       "state" : {
         "branch" : "ebay/release",
         "revision" : "622f1d247b5c723c3197a758f447890dc7df068b"
@@ -105,7 +96,7 @@
       "location" : "git@github.corp.ebay.com:eBayMobile/utf8_range.git",
       "state" : {
         "branch" : "ebay/release",
-        "revision" : "2f06db6c92b193571b837f994eec1aef478a5059"
+        "revision" : "cbb1ffdb24daf78b9aa84075728b6e291fc95b8a"
       }
     }
   ],

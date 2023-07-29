@@ -1,0 +1,1 @@
+../../../../modules/video_capture/windows/device_info_ds.h

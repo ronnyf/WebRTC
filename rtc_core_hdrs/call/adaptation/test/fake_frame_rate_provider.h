@@ -1,0 +1,1 @@
+../../../../call/adaptation/test/fake_frame_rate_provider.h

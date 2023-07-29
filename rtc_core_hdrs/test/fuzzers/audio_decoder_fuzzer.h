@@ -1,0 +1,1 @@
+../../../test/fuzzers/audio_decoder_fuzzer.h

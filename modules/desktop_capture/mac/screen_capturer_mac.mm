@@ -22,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/time_utils.h"
 #include "rtc_base/trace_event.h"
-#include "sdk/objc/helpers/scoped_cftyperef.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 // All these symbols have incorrect availability annotations in the 13.3 SDK.
 // These have the correct annotation. See https://crbug.com/1431897.

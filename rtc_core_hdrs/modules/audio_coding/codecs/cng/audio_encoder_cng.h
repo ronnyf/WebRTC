@@ -1,0 +1,1 @@
+../../../../../modules/audio_coding/codecs/cng/audio_encoder_cng.h

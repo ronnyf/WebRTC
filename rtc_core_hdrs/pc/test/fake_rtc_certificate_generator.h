@@ -1,0 +1,1 @@
+../../../pc/test/fake_rtc_certificate_generator.h

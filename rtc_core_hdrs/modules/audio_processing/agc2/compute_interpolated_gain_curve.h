@@ -1,0 +1,1 @@
+../../../../modules/audio_processing/agc2/compute_interpolated_gain_curve.h

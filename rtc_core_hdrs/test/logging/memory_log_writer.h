@@ -1,0 +1,1 @@
+../../../test/logging/memory_log_writer.h

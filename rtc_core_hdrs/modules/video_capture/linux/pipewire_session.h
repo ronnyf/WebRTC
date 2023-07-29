@@ -1,0 +1,1 @@
+../../../../modules/video_capture/linux/pipewire_session.h

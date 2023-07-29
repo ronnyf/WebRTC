@@ -36,7 +36,7 @@
 #include "modules/audio_device/linux/audio_device_pulse_linux.h"
 #endif
 #elif defined(WEBRTC_IOS)
-#include "modules/audio_device/ios/audio_device_ios.h"
+#include "sdk/objc/native/src/audio/audio_device_ios.h"
 #elif defined(WEBRTC_MAC)
 #include "modules/audio_device/mac/audio_device_mac.h"
 #endif

@@ -1,0 +1,1 @@
+../../../../../modules/desktop_capture/linux/wayland/xdg_session_details.h

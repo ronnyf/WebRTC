@@ -1,0 +1,1 @@
+../../../modules/desktop_capture/resolution_tracker.h

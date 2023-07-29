@@ -1,0 +1,1 @@
+../../../../../generated/sdk/WebRTC.framework/WebRTC/RTCVideoEncoderSettings.h

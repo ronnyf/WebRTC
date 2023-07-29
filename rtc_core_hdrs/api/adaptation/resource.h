@@ -1,0 +1,1 @@
+../../../api/adaptation/resource.h

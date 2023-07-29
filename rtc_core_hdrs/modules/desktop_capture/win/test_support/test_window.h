@@ -1,0 +1,1 @@
+../../../../../modules/desktop_capture/win/test_support/test_window.h

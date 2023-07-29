@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/selected_window_context.h

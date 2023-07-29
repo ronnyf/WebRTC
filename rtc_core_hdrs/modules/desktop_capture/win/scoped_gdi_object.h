@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/scoped_gdi_object.h

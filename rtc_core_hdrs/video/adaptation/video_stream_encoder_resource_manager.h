@@ -1,0 +1,1 @@
+../../../video/adaptation/video_stream_encoder_resource_manager.h

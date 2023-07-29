@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/dxgi_texture_mapping.h

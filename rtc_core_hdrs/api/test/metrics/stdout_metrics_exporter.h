@@ -1,0 +1,1 @@
+../../../../api/test/metrics/stdout_metrics_exporter.h

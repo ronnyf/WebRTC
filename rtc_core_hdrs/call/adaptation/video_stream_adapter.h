@@ -1,0 +1,1 @@
+../../../call/adaptation/video_stream_adapter.h

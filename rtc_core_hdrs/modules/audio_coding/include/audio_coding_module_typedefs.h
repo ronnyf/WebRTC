@@ -1,0 +1,1 @@
+../../../../modules/audio_coding/include/audio_coding_module_typedefs.h

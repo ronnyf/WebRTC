@@ -1,0 +1,1 @@
+../../../../modules/audio_coding/audio_network_adaptor/bitrate_controller.h

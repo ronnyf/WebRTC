@@ -1,0 +1,1 @@
+../../../modules/video_capture/device_info_impl.h

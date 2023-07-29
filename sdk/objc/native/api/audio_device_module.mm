@@ -13,7 +13,7 @@
 #if TARGET_OS_IOS
 
 #include "audio_device_module.h"
-#include "audio_device_module_ios.h"
+#include "sdk/objc/native/src/audio/audio_device_module_ios.h"
 #include "api/make_ref_counted.h"
 #include "rtc_base/logging.h"
 

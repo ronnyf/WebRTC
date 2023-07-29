@@ -1,0 +1,1 @@
+../../../../modules/audio_processing/test/fake_recording_device.h

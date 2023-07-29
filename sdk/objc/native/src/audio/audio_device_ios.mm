@@ -15,13 +15,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-#import "modules/audio_device/ios/audio_device_ios.h"
+#import "sdk/objc/native/src/audio/audio_device_ios.h"
 
 #include <cmath>
 
 #include "api/array_view.h"
 #include "api/task_queue/pending_task_safety_flag.h"
-#include "helpers.h"
+#include "sdk/objc/native/src/audio/audio_helpers.h"
 #include "modules/audio_device/fine_audio_buffer.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
@@ -34,10 +34,10 @@
 #include "rtc_base/rtc_export_bridge.h"
 #include "rtc_base/RTCObjCLogging.h"
 
-#include "modules/audio_device/ios/components/audio/RTCAudioSession.h"
-#include "modules/audio_device/ios/components/audio/RTCAudioSession+Private.h"
-#include "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
-#include "modules/audio_device/ios/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
+#include "sdk/objc/components/audio/RTCAudioSession.h"
+#include "sdk/objc/components/audio/RTCAudioSession+Private.h"
+#include "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+#include "sdk/objc/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
 
 namespace webrtc {
 namespace ios_adm {

@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/wgc_capture_source.h

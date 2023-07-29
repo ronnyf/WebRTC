@@ -12,7 +12,7 @@
 
 #if defined(WEBRTC_IOS)
 
-#import "modules/audio_device/ios/components/audio/RTCAudioSession+Private.h"
+#import "sdk/objc/components/audio/RTCAudioSession+Private.h"
 
 #import <UIKit/UIKit.h>
 
@@ -22,8 +22,7 @@
 #include "absl/base/attributes.h"
 #include "rtc_base/checks.h"
 #include "rtc_base/synchronization/mutex.h"
-
-#import "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
 #include "rtc_base/RTCObjCLogging.h"
 
 

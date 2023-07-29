@@ -1,0 +1,1 @@
+../../../../modules/video_capture/windows/video_capture_ds.h

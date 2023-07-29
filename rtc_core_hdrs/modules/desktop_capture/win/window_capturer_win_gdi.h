@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/window_capturer_win_gdi.h

@@ -1,0 +1,1 @@
+../../../../modules/audio_processing/agc/agc_manager_direct.h

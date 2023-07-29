@@ -1,0 +1,1 @@
+../../../modules/desktop_capture/cropped_desktop_frame.h

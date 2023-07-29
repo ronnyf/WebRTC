@@ -1,0 +1,1 @@
+../../../api/video_codecs/video_encoder_factory_template_libvpx_vp8_adapter.h

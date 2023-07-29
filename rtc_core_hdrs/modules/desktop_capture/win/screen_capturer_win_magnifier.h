@@ -1,0 +1,1 @@
+../../../../modules/desktop_capture/win/screen_capturer_win_magnifier.h

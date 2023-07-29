@@ -1,0 +1,1 @@
+../../../video/adaptation/quality_scaler_resource.h

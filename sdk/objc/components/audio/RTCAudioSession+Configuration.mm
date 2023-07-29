@@ -12,8 +12,8 @@
 
 #if defined(WEBRTC_IOS)
 
-#import "modules/audio_device/ios/components/audio/RTCAudioSession+Private.h"
-#import "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
+#import "sdk/objc/components/audio/RTCAudioSession+Private.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
 
 #include "rtc_base/RTCObjCLogging.h"
 

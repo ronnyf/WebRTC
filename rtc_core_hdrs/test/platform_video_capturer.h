@@ -1,0 +1,1 @@
+../../test/platform_video_capturer.h

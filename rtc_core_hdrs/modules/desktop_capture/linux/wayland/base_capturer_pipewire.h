@@ -1,0 +1,1 @@
+../../../../../modules/desktop_capture/linux/wayland/base_capturer_pipewire.h

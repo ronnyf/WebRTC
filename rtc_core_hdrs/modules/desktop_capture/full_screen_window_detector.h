@@ -1,0 +1,1 @@
+../../../modules/desktop_capture/full_screen_window_detector.h

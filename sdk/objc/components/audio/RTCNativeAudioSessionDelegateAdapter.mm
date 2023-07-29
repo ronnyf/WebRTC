@@ -12,9 +12,9 @@
 
 #if defined(WEBRTC_IOS)
 
-#import "modules/audio_device/ios/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
+#import "sdk/objc/components/audio/RTCNativeAudioSessionDelegateAdapter.h"
 
-#include "modules/audio_device/ios/audio_session_observer.h"
+#include "sdk/objc/native/src/audio/audio_session_observer.h"
 #include "rtc_base/logging.h"
 #include "rtc_base/rtc_export_bridge.h"
 

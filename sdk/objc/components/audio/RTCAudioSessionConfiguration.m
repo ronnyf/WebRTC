@@ -12,8 +12,8 @@
 
 #if defined(WEBRTC_IOS)
 
-#import "modules/audio_device/ios/components/audio/RTCAudioSessionConfiguration.h"
-#import "modules/audio_device/ios/components/audio/RTCAudioSession.h"
+#import "sdk/objc/components/audio/RTCAudioSessionConfiguration.h"
+#import "sdk/objc/components/audio/RTCAudioSession.h"
 
 // Try to use mono to save resources. Also avoids channel format conversion
 // in the I/O audio unit. Initial tests have shown that it is possible to use

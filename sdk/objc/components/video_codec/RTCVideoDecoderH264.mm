@@ -16,8 +16,8 @@
 #import <WebRTC/RTCVideoFrame.h>
 #import <WebRTC/RTCVideoFrameBuffer.h>
 #import <WebRTC/RTCCVPixelBuffer.h>
-#import "helpers.h"
-#import "scoped_cftyperef.h"
+#include "video_codec_helpers.h"
+#include "rtc_base/system/scoped_cftyperef.h"
 
 #include "modules/video_coding/include/video_error_codes.h"
 #include "rtc_base/checks.h"
