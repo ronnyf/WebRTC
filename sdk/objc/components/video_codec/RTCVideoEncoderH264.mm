@@ -23,7 +23,7 @@
 #import <WebRTC/RTCVideoFrame.h>
 #import <WebRTC/RTCVideoFrameBuffer.h>
 #import <WebRTC/RTCCVPixelBuffer.h>
-#import "video_codec_helpers.h"
+#include "video_codec_helpers.h"
 
 #include "api/video_codecs/h264_profile_level_id.h"
 #include "common_video/h264/h264_bitstream_parser.h"

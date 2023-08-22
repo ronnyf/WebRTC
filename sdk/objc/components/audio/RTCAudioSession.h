@@ -247,6 +247,7 @@ RTC_OBJC_EXPORT
                       error:(NSError **)outError;
 @end
 
+RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCAudioSession)
 (Configuration)
 
