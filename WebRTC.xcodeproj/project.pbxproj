@@ -18,6 +18,17 @@
 			name = "RTCCore Static Library XCFramework";
 			productName = "RTCCore Static Library XCFramework";
 		};
+		60EEE5482AA1011200E42814 /* WebRTC Static Library XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 60EEE54A2AA1011200E42814 /* Build configuration list for PBXAggregateTarget "WebRTC Static Library XCFramework" */;
+			buildPhases = (
+				60EEE5492AA1011200E42814 /* XCFramework */,
+			);
+			dependencies = (
+			);
+			name = "WebRTC Static Library XCFramework";
+			productName = "RTCCore Static Library XCFramework";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -19710,6 +19721,7 @@
 				60CE0C1F2A7584BF005C12BA /* CoreRTC-static */,
 				60D9D6912A7E778800B1E2A5 /* RTCCore Static Library XCFramework */,
 				60D98EC22A9414AE00971721 /* WebRTC-sdk */,
+				60EEE5482AA1011200E42814 /* WebRTC Static Library XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -19803,7 +19815,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nXCFW_NAME=\"CoreRTC\"\nCORERTC_SCHEME_NAME=\"CoreRTC\"\n\nARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/${XCFW_NAME}\"\nPKG_CACHE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/pkg-cache\"\n\nBUILD_CMDS=()\n\nif [ -d \"${ARCHIVE_PATH}-sim.xcarchive\" ]; then\n\techo \"Simulator archive exists, skipping\"\nelse\n\tSIM_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS Simulator\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-sim.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-sim\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${SIM_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-ios.xcarchive\" ]; then\n\techo \"iOS archive exists, skipping\"\nelse\n\tIOS_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS,name=Any iOS Device\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-ios.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-ios\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${IOS_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-mac.xcarchive\" ]; then\n\techo \"macOS archive exists, skipping\"\nelse\n\tMAC_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=macOS,name=Any Mac\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-mac.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-mac\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${MAC_BUILD_CMD}\")\nfi\n\necho \"running commands:\"\nfor CMD in \"${BUILD_CMDS[@]}\"\ndo\n\techo \"CMD: ${CMD}\"\n\tRESULT=$(eval ${CMD}) #> ${SCRIPT_OUTPUT_FILE_0}\n\techo \"RESULT: ${RESULT}\"\n\tif [ -n \"${RESULT}\" ]; then\n\t\techo \"archive: FAILED!!! (result:${RESULT})\"\n\t\texit ${RESULT}\n\telse\n\t\techo \"archive: SUCCESS!!!\"\n\tfi\ndone\n\necho \"Building XCFramework\"\n\nXCF_PATH=\"${ARCHIVE_PATH}.xcframework\"\nLIB_PATH=\"Products/usr/local/lib/libCoreRTC.a\"\n\nHEADERS_PATH=\"${ARCHIVE_PATH}-include\"\nif [ -d \"\" ]; then\n\techo \"Headers exist, skipping\"\nelse\n\tCP_CMD=\"cp -R -L ${SRCROOT}/rtc_core_hdrs ${HEADERS_PATH}\"\n\tCP_CMD_RESULT=$(eval \"${CP_CMD}\")\n\tif [ -n \"${CP_CMD_RESULT}\" ]; then\n\t\techo \"Copy Headers: FAILED!!! (Result:[${CP_CMD_RESULT}])\"\n\t\texit ${CP_CMD_RESULT}\n\telse\n\t\techo \"Copy Headers: SUCCESS!!!\"\n\tfi\nfi\n\nif [ -d \"${XCF_PATH}\" ]; then\n\techo \"XCFramework exists, skipping\"\nelse\n\tXCF_CMD=\"xcodebuild -create-xcframework \\\n\t\t-library ${ARCHIVE_PATH}-sim.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-ios.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-mac.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-output ${XCF_PATH}\"\n\tXCF_CMD_RESULT=$(eval \"${XCF_CMD}\")\n\tif [ -z \"${XCF_CMD_RESULT}\" ]; then\n\t\techo \"create-xcframework: FAILED!!!\"\n\t\texit -1\n\telse\n\t\techo \"${XCF_CMD_RESULT}\"\n\tfi\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nXCFW_NAME=\"CoreRTC\"\nCORERTC_SCHEME_NAME=\"CoreRTC\"\n\nARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/${XCFW_NAME}\"\nPKG_CACHE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/pkg-cache\"\n\nBUILD_CMDS=()\n\nif [ -d \"${ARCHIVE_PATH}-sim.xcarchive\" ]; then\n\techo \"Simulator archive exists, skipping\"\nelse\n\tSIM_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS Simulator\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-sim.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-sim\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${SIM_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-ios.xcarchive\" ]; then\n\techo \"iOS archive exists, skipping\"\nelse\n\tIOS_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS,name=Any iOS Device\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-ios.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-ios\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${IOS_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-mac.xcarchive\" ]; then\n\techo \"macOS archive exists, skipping\"\nelse\n\tMAC_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${CORERTC_SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=macOS,name=Any Mac\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-mac.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-mac\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${MAC_BUILD_CMD}\")\nfi\n\necho \"running commands:\"\nfor CMD in \"${BUILD_CMDS[@]}\"\ndo\n\techo \"CMD: ${CMD}\"\n\tRESULT=$(eval ${CMD}) #> ${SCRIPT_OUTPUT_FILE_0}\n\techo \"RESULT: ${RESULT}\"\ndone\n\necho \"Building XCFramework\"\n\nXCF_PATH=\"${ARCHIVE_PATH}.xcframework\"\nLIB_PATH=\"Products/usr/local/lib/libCoreRTC.a\"\n\nHEADERS_PATH=\"${ARCHIVE_PATH}-include\"\nif [ -d \"\" ]; then\n\techo \"Headers exist, skipping\"\nelse\n\tCP_CMD=\"cp -R -L ${SRCROOT}/rtc_core_hdrs ${HEADERS_PATH}\"\n\tCP_CMD_RESULT=$(eval \"${CP_CMD}\")\n\tif [ -n \"${CP_CMD_RESULT}\" ]; then\n\t\techo \"Copy Headers: FAILED!!! (Result:[${CP_CMD_RESULT}])\"\n\t\texit ${CP_CMD_RESULT}\n\telse\n\t\techo \"Copy Headers: SUCCESS!!!\"\n\tfi\nfi\n\nif [ -d \"${XCF_PATH}\" ]; then\n\techo \"XCFramework exists, skipping\"\nelse\n\tXCF_CMD=\"xcodebuild -create-xcframework \\\n\t\t-library ${ARCHIVE_PATH}-sim.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-ios.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-mac.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-output ${XCF_PATH}\"\n\tXCF_CMD_RESULT=$(eval \"${XCF_CMD}\")\n\tif [ -z \"${XCF_CMD_RESULT}\" ]; then\n\t\techo \"create-xcframework: FAILED!!!\"\n\t\texit -1\n\telse\n\t\techo \"${XCF_CMD_RESULT}\"\n\tfi\nfi\n";
+		};
+		60EEE5492AA1011200E42814 /* XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+			);
+			name = XCFramework;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/rtc-core-xcframework-results.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nXCFW_NAME=\"WebRTC\"\nSCHEME_NAME=\"libWebRTC\"\n\nARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/${XCFW_NAME}\"\nPKG_CACHE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/pkg-cache\"\n\nBUILD_CMDS=()\n\nif [ -d \"${ARCHIVE_PATH}-sim.xcarchive\" ]; then\n\techo \"Simulator archive exists, skipping\"\nelse\n\tSIM_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS Simulator\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-sim.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-sim\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${SIM_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-ios.xcarchive\" ]; then\n\techo \"iOS archive exists, skipping\"\nelse\n\tIOS_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS,name=Any iOS Device\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-ios.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-ios\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${IOS_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-mac.xcarchive\" ]; then\n\techo \"macOS archive exists, skipping\"\nelse\n\tMAC_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=macOS,name=Any Mac\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-mac.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-mac\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${MAC_BUILD_CMD}\")\nfi\n\necho \"running commands:\"\nfor CMD in \"${BUILD_CMDS[@]}\"\ndo\n\techo \"CMD: ${CMD}\"\n\tRESULT=$(eval ${CMD}) #> ${SCRIPT_OUTPUT_FILE_0}\n\techo \"RESULT: ${RESULT}\"\ndone\n\necho \"Building XCFramework\"\n\nXCF_PATH=\"${ARCHIVE_PATH}.xcframework\"\nLIB_PATH=\"Products/usr/local/lib/${SCHEME_NAME}.a\"\n\nHEADERS_PATH=\"${ARCHIVE_PATH}-include\"\nif [ -d \"\" ]; then\n\techo \"Headers exist, skipping\"\nelse\n\tCP_CMD=\"cp -R -L ${SRCROOT}/include ${HEADERS_PATH}\" \n\tCP_CMD_RESULT=$(eval \"${CP_CMD}\")\n\tif [ -n \"${CP_CMD_RESULT}\" ]; then\n\t\techo \"Copy Headers: FAILED!!! (Result:[${CP_CMD_RESULT}])\"\n\t\texit ${CP_CMD_RESULT}\n\telse\n\t\techo \"Copy Headers: SUCCESS!!!\"\n\tfi\nfi\n\nif [ -d \"${XCF_PATH}\" ]; then\n\techo \"XCFramework exists, skipping\"\nelse\n\tXCF_CMD=\"xcodebuild -create-xcframework \\\n\t\t-library ${ARCHIVE_PATH}-sim.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-ios.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-library ${ARCHIVE_PATH}-mac.xcarchive/${LIB_PATH} \\\n\t\t-headers ${HEADERS_PATH} \\\n\t\t-output ${XCF_PATH}\"\n\tXCF_CMD_RESULT=$(eval \"${XCF_CMD}\")\n\tif [ -z \"${XCF_CMD_RESULT}\" ]; then\n\t\techo \"create-xcframework: FAILED!!!\"\n\t\texit -1\n\telse\n\t\techo \"${XCF_CMD_RESULT}\"\n\tfi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -23805,6 +23838,26 @@
 			};
 			name = Release;
 		};
+		60EEE54B2AA1011200E42814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYHMMGCMJR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		60EEE54C2AA1011200E42814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYHMMGCMJR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		60FC985F2A6DA6D9006457A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -24044,6 +24097,15 @@
 			buildConfigurations = (
 				60E531982A5DD343009C93C0 /* Debug */,
 				60E531992A5DD343009C93C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EEE54A2AA1011200E42814 /* Build configuration list for PBXAggregateTarget "WebRTC Static Library XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EEE54B2AA1011200E42814 /* Debug */,
+				60EEE54C2AA1011200E42814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
