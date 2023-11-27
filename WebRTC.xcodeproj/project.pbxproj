@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		6084D8A82AA15BC70041712E /* WebRTC Dynamic Library XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6084D8AA2AA15BC70041712E /* Build configuration list for PBXAggregateTarget "WebRTC Dynamic Library XCFramework" */;
+			buildPhases = (
+				6084D8A92AA15BC70041712E /* XCFramework */,
+			);
+			dependencies = (
+			);
+			name = "WebRTC Dynamic Library XCFramework";
+			productName = "RTCCore Static Library XCFramework";
+		};
 		60D9D6912A7E778800B1E2A5 /* RTCCore Static Library XCFramework */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 60D9D6922A7E778900B1E2A5 /* Build configuration list for PBXAggregateTarget "RTCCore Static Library XCFramework" */;
@@ -151,34 +162,9 @@
 		6021A7302A607B3B00C4BAE8 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096C2B42A460173009B4A4A /* VideoToolbox.framework */; };
 		6021A7312A607B6500C4BAE8 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096C2B62A4601C4009B4A4A /* Network.framework */; };
 		6021A7322A607B6E00C4BAE8 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096C2B62A4601C4009B4A4A /* Network.framework */; };
-		602B035A2A8E6B5800642B1C /* libabsl in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03592A8E6B5800642B1C /* libabsl */; };
-		602B035D2A8E6BDA00642B1C /* libcrypto in Frameworks */ = {isa = PBXBuildFile; productRef = 602B035C2A8E6BDA00642B1C /* libcrypto */; };
-		602B035F2A8E6BDA00642B1C /* libssl in Frameworks */ = {isa = PBXBuildFile; productRef = 602B035E2A8E6BDA00642B1C /* libssl */; };
-		602B03622A8E6C5500642B1C /* libcrc32c in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03612A8E6C5500642B1C /* libcrc32c */; };
-		602B03652A8E6D7B00642B1C /* libopus in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03642A8E6D7B00642B1C /* libopus */; };
-		602B03682A8E6DE600642B1C /* libsrtp in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03672A8E6DE600642B1C /* libsrtp */; };
-		602B036B2A8E6E5900642B1C /* libvpx in Frameworks */ = {isa = PBXBuildFile; productRef = 602B036A2A8E6E5900642B1C /* libvpx */; };
-		602B036D2A8E84FF00642B1C /* libabsl in Frameworks */ = {isa = PBXBuildFile; productRef = 602B036C2A8E84FF00642B1C /* libabsl */; };
-		602B036F2A8E84FF00642B1C /* libcrypto in Frameworks */ = {isa = PBXBuildFile; productRef = 602B036E2A8E84FF00642B1C /* libcrypto */; };
-		602B03712A8E84FF00642B1C /* libcrc32c in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03702A8E84FF00642B1C /* libcrc32c */; };
-		602B03732A8E84FF00642B1C /* libopus in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03722A8E84FF00642B1C /* libopus */; };
-		602B03752A8E84FF00642B1C /* libsrtp in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03742A8E84FF00642B1C /* libsrtp */; };
-		602B03772A8E84FF00642B1C /* libvpx in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03762A8E84FF00642B1C /* libvpx */; };
-		602B03792A8E854500642B1C /* libjsoncpp in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03782A8E854500642B1C /* libjsoncpp */; };
-		602B037B2A8E854500642B1C /* libprotobuf-lite in Frameworks */ = {isa = PBXBuildFile; productRef = 602B037A2A8E854500642B1C /* libprotobuf-lite */; };
-		602B037D2A8E854500642B1C /* libabsl in Frameworks */ = {isa = PBXBuildFile; productRef = 602B037C2A8E854500642B1C /* libabsl */; };
-		602B037F2A8E854500642B1C /* libcrypto in Frameworks */ = {isa = PBXBuildFile; productRef = 602B037E2A8E854500642B1C /* libcrypto */; };
-		602B03812A8E854500642B1C /* libcrc32c in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03802A8E854500642B1C /* libcrc32c */; };
-		602B03832A8E854500642B1C /* libopus in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03822A8E854500642B1C /* libopus */; };
-		602B03852A8E854500642B1C /* libsrtp in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03842A8E854500642B1C /* libsrtp */; };
-		602B03872A8E854500642B1C /* libvpx in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03862A8E854500642B1C /* libvpx */; };
-		602B038A2A8E85A900642B1C /* libyuv in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03892A8E85A900642B1C /* libyuv */; };
-		602B038D2A8E919500642B1C /* librnn_vad in Frameworks */ = {isa = PBXBuildFile; productRef = 602B038C2A8E919500642B1C /* librnn_vad */; };
-		602B038F2A8E927400642B1C /* librnn_vad in Frameworks */ = {isa = PBXBuildFile; productRef = 602B038E2A8E927400642B1C /* librnn_vad */; };
 		602B03902A8E928B00642B1C /* libpffft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E531912A5DD343009C93C0 /* libpffft.a */; };
 		602B03C02A8EB4F800642B1C /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6030F4172A475C1D00B18C16 /* base64.h */; };
 		602B03C22A8ED05500642B1C /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B03C12A8ED05500642B1C /* ApplicationServices.framework */; platformFilters = (macos, ); };
-		602B03C42A8ED10200642B1C /* libyuv in Frameworks */ = {isa = PBXBuildFile; productRef = 602B03C32A8ED10200642B1C /* libyuv */; };
 		602B03C62A8ED50400642B1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B03C52A8ED50400642B1C /* UIKit.framework */; platformFilter = ios; };
 		602B03C72A8ED65E00642B1C /* bwe_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6030006B2A47649100B18C16 /* bwe_defines.h */; };
 		602B03C82A8ED65E00642B1C /* remote_bitrate_estimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6030006C2A47649100B18C16 /* remote_bitrate_estimator.h */; };
@@ -5269,8 +5255,6 @@
 		60E532872A5E7529009C93C0 /* rtcstats_objects.cc in Sources */ = {isa = PBXBuildFile; fileRef = 60300A4F2A4766CF00B18C16 /* rtcstats_objects.cc */; };
 		60E532882A5E7529009C93C0 /* rtc_stats.cc in Sources */ = {isa = PBXBuildFile; fileRef = 60300A4E2A4766CF00B18C16 /* rtc_stats.cc */; };
 		60F7FF742A368F5500533264 /* WebRTCTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60F7FF732A368F5500533264 /* WebRTCTests.mm */; };
-		60FB3EF22A7FACB50092AEED /* libjsoncpp in Frameworks */ = {isa = PBXBuildFile; productRef = 60FB3EF12A7FACB50092AEED /* libjsoncpp */; };
-		60FB3EF52A7FCBD40092AEED /* libprotobuf-lite in Frameworks */ = {isa = PBXBuildFile; productRef = 60FB3EF42A7FCBD40092AEED /* libprotobuf-lite */; };
 		60FC95A12A6CA1B0006457A3 /* sinc_resampler_sse.cc in Sources */ = {isa = PBXBuildFile; fileRef = 60FC95A02A6CA1B0006457A3 /* sinc_resampler_sse.cc */; };
 		60FC95A42A6CA291006457A3 /* ooura_fft_sse2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 60FC95A32A6CA291006457A3 /* ooura_fft_sse2.cc */; };
 		60FC97C12A6CA34E006457A3 /* window_capturer_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60FC96C82A6CA34E006457A3 /* window_capturer_mac.mm */; platformFilters = (macos, ); };
@@ -10194,16 +10178,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602B03682A8E6DE600642B1C /* libsrtp in Frameworks */,
-				602B035A2A8E6B5800642B1C /* libabsl in Frameworks */,
 				6021A7322A607B6E00C4BAE8 /* Network.framework in Frameworks */,
 				6021A72F2A607B3300C4BAE8 /* VideoToolbox.framework in Frameworks */,
 				60FCD4182A5C67C70020CF10 /* libCoreRTC.a in Frameworks */,
-				602B036B2A8E6E5900642B1C /* libvpx in Frameworks */,
-				602B035D2A8E6BDA00642B1C /* libcrypto in Frameworks */,
-				602B03652A8E6D7B00642B1C /* libopus in Frameworks */,
-				602B035F2A8E6BDA00642B1C /* libssl in Frameworks */,
-				602B03622A8E6C5500642B1C /* libcrc32c in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10232,17 +10209,7 @@
 			files = (
 				602B03902A8E928B00642B1C /* libpffft.a in Frameworks */,
 				602B03C22A8ED05500642B1C /* ApplicationServices.framework in Frameworks */,
-				602B03852A8E854500642B1C /* libsrtp in Frameworks */,
-				602B037D2A8E854500642B1C /* libabsl in Frameworks */,
-				602B037F2A8E854500642B1C /* libcrypto in Frameworks */,
-				602B03872A8E854500642B1C /* libvpx in Frameworks */,
-				602B038F2A8E927400642B1C /* librnn_vad in Frameworks */,
-				602B03812A8E854500642B1C /* libcrc32c in Frameworks */,
 				602B03C62A8ED50400642B1C /* UIKit.framework in Frameworks */,
-				602B03832A8E854500642B1C /* libopus in Frameworks */,
-				602B03C42A8ED10200642B1C /* libyuv in Frameworks */,
-				602B03792A8E854500642B1C /* libjsoncpp in Frameworks */,
-				602B037B2A8E854500642B1C /* libprotobuf-lite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10282,17 +10249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602B036D2A8E84FF00642B1C /* libabsl in Frameworks */,
-				60FB3EF22A7FACB50092AEED /* libjsoncpp in Frameworks */,
-				602B03772A8E84FF00642B1C /* libvpx in Frameworks */,
-				602B03712A8E84FF00642B1C /* libcrc32c in Frameworks */,
-				60FB3EF52A7FCBD40092AEED /* libprotobuf-lite in Frameworks */,
-				602B038D2A8E919500642B1C /* librnn_vad in Frameworks */,
-				602B038A2A8E85A900642B1C /* libyuv in Frameworks */,
 				60E5319E2A5DD3DF009C93C0 /* libpffft.a in Frameworks */,
-				602B03732A8E84FF00642B1C /* libopus in Frameworks */,
-				602B036F2A8E84FF00642B1C /* libcrypto in Frameworks */,
-				602B03752A8E84FF00642B1C /* libsrtp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -19433,13 +19390,6 @@
 			);
 			name = WebRTC;
 			packageProductDependencies = (
-				602B03592A8E6B5800642B1C /* libabsl */,
-				602B035C2A8E6BDA00642B1C /* libcrypto */,
-				602B035E2A8E6BDA00642B1C /* libssl */,
-				602B03612A8E6C5500642B1C /* libcrc32c */,
-				602B03642A8E6D7B00642B1C /* libopus */,
-				602B03672A8E6DE600642B1C /* libsrtp */,
-				602B036A2A8E6E5900642B1C /* libvpx */,
 			);
 			productName = WebRTC;
 			productReference = 6026CD092A285B490018A202 /* WebRTC.framework */;
@@ -19503,16 +19453,6 @@
 			);
 			name = "CoreRTC-static";
 			packageProductDependencies = (
-				602B03782A8E854500642B1C /* libjsoncpp */,
-				602B037A2A8E854500642B1C /* libprotobuf-lite */,
-				602B037C2A8E854500642B1C /* libabsl */,
-				602B037E2A8E854500642B1C /* libcrypto */,
-				602B03802A8E854500642B1C /* libcrc32c */,
-				602B03822A8E854500642B1C /* libopus */,
-				602B03842A8E854500642B1C /* libsrtp */,
-				602B03862A8E854500642B1C /* libvpx */,
-				602B038E2A8E927400642B1C /* librnn_vad */,
-				602B03C32A8ED10200642B1C /* libyuv */,
 			);
 			productName = "CoreRTC-static";
 			productReference = 60CE0C202A7584BF005C12BA /* CoreRTC_static.framework */;
@@ -19614,16 +19554,6 @@
 			);
 			name = CoreRTC;
 			packageProductDependencies = (
-				60FB3EF12A7FACB50092AEED /* libjsoncpp */,
-				60FB3EF42A7FCBD40092AEED /* libprotobuf-lite */,
-				602B036C2A8E84FF00642B1C /* libabsl */,
-				602B036E2A8E84FF00642B1C /* libcrypto */,
-				602B03702A8E84FF00642B1C /* libcrc32c */,
-				602B03722A8E84FF00642B1C /* libopus */,
-				602B03742A8E84FF00642B1C /* libsrtp */,
-				602B03762A8E84FF00642B1C /* libvpx */,
-				602B03892A8E85A900642B1C /* libyuv */,
-				602B038C2A8E919500642B1C /* librnn_vad */,
 			);
 			productName = _rtc_base;
 			productReference = 60FCD13D2A5C60A70020CF10 /* libCoreRTC.a */;
@@ -19695,16 +19625,6 @@
 			);
 			mainGroup = 6026CCFF2A285B490018A202;
 			packageReferences = (
-				60FB3EF02A7FACB50092AEED /* XCRemoteSwiftPackageReference "jsoncpp" */,
-				60FB3EF32A7FCBD40092AEED /* XCRemoteSwiftPackageReference "protobuf" */,
-				602B03582A8E6B5800642B1C /* XCRemoteSwiftPackageReference "abseil-cpp" */,
-				602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */,
-				602B03602A8E6C5500642B1C /* XCRemoteSwiftPackageReference "crc32c" */,
-				602B03632A8E6D7B00642B1C /* XCRemoteSwiftPackageReference "libopus" */,
-				602B03662A8E6DE600642B1C /* XCRemoteSwiftPackageReference "libsrtp" */,
-				602B03692A8E6E5900642B1C /* XCRemoteSwiftPackageReference "libvpx" */,
-				602B03882A8E85A900642B1C /* XCRemoteSwiftPackageReference "libyuv" */,
-				602B038B2A8E919500642B1C /* XCRemoteSwiftPackageReference "rnnoise" */,
 			);
 			productRefGroup = 6026CD0A2A285B490018A202 /* Products */;
 			projectDirPath = "";
@@ -19722,6 +19642,7 @@
 				60D9D6912A7E778800B1E2A5 /* RTCCore Static Library XCFramework */,
 				60D98EC22A9414AE00971721 /* WebRTC-sdk */,
 				60EEE5482AA1011200E42814 /* WebRTC Static Library XCFramework */,
+				6084D8A82AA15BC70041712E /* WebRTC Dynamic Library XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -19796,6 +19717,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6084D8A92AA15BC70041712E /* XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+			);
+			name = XCFramework;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/rtc-core-xcframework-results.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nXCFW_NAME=\"WebRTC\"\nSCHEME_NAME=\"WebRTC\"\n\nARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/${XCFW_NAME}\"\nPKG_CACHE_PATH=\"${BUILD_DIR}/${CONFIGURATION}-xcf/pkg-cache\"\n\nBUILD_CMDS=()\n\nif [ -d \"${ARCHIVE_PATH}-sim.xcarchive\" ]; then\n\techo \"Simulator archive exists, skipping\"\nelse\n\tSIM_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS Simulator\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-sim.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-sim\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${SIM_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-ios.xcarchive\" ]; then\n\techo \"iOS archive exists, skipping\"\nelse\n\tIOS_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=iOS,name=Any iOS Device\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-ios.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-ios\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${IOS_BUILD_CMD}\")\nfi\n\nif [ -d \"${ARCHIVE_PATH}-mac.xcarchive\" ]; then\n\techo \"macOS archive exists, skipping\"\nelse\n\tMAC_BUILD_CMD=\"xcodebuild archive \\\n\t\t-scheme ${SCHEME_NAME} \\\n\t\t-destination \\\"generic/platform=macOS,name=Any Mac\\\" \\\n\t\t-archivePath \\\"${ARCHIVE_PATH}-mac.xcarchive\\\" \\\n\t\t-packageCachePath \\\"${PKG_CACHE_PATH}-mac\\\" \\\n\t\tSKIP_INSTALL=NO \\\n\t\tBUILD_LIBRARY_FOR_DISTRIBUTION=YES\"\n\tBUILD_CMDS+=(\"${MAC_BUILD_CMD}\")\nfi\n\necho \"running commands:\"\nfor CMD in \"${BUILD_CMDS[@]}\"\ndo\n\techo \"CMD: ${CMD}\"\n\tRESULT=$(eval ${CMD}) #> ${SCRIPT_OUTPUT_FILE_0}\n\techo \"RESULT: ${RESULT}\"\ndone\n\necho \"Building XCFramework\"\n\nXCF_PATH=\"${ARCHIVE_PATH}.xcframework\"\nLIB_PATH=\"Products/Library/Frameworks/${SCHEME_NAME}.framework\"\n\nif [ -d \"${XCF_PATH}\" ]; then\n\techo \"XCFramework exists, skipping\"\nelse\n\tXCF_CMD=\"xcodebuild -create-xcframework \\\n\t\t-framework ${ARCHIVE_PATH}-sim.xcarchive/${LIB_PATH} \\\n\t\t-framework ${ARCHIVE_PATH}-ios.xcarchive/${LIB_PATH} \\\n\t\t-framework ${ARCHIVE_PATH}-mac.xcarchive/${LIB_PATH} \\\n\t\t-output ${XCF_PATH}\"\n\n\tXCF_CMD_RESULT=$(eval \"${XCF_CMD}\")\n\tif [ -z \"${XCF_CMD_RESULT}\" ]; then\n\t\techo \"create-xcframework: FAILED!!!\"\n\t\texit -1\n\telse\n\t\techo \"${XCF_CMD_RESULT}\"\n\tfi\nfi\n";
+		};
 		60D9D6972A7E77BA00B1E2A5 /* XCFramework */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -23371,7 +23313,6 @@
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 15.0;
@@ -23614,6 +23555,26 @@
 					"-Wno-documentation",
 				);
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		6084D8AB2AA15BC70041712E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYHMMGCMJR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6084D8AC2AA15BC70041712E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYHMMGCMJR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -24065,6 +24026,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6084D8AA2AA15BC70041712E /* Build configuration list for PBXAggregateTarget "WebRTC Dynamic Library XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6084D8AB2AA15BC70041712E /* Debug */,
+				6084D8AC2AA15BC70041712E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		60CE0C242A7584BF005C12BA /* Build configuration list for PBXNativeTarget "CoreRTC-static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -24140,70 +24110,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		602B03582A8E6B5800642B1C /* XCRemoteSwiftPackageReference "abseil-cpp" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/abseil-cpp";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/boringssl";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B03602A8E6C5500642B1C /* XCRemoteSwiftPackageReference "crc32c" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/crc32c";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B03632A8E6D7B00642B1C /* XCRemoteSwiftPackageReference "libopus" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/libopus";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B03662A8E6DE600642B1C /* XCRemoteSwiftPackageReference "libsrtp" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/libsrtp";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B03692A8E6E5900642B1C /* XCRemoteSwiftPackageReference "libvpx" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/libvpx";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B03882A8E85A900642B1C /* XCRemoteSwiftPackageReference "libyuv" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/libyuv";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		602B038B2A8E919500642B1C /* XCRemoteSwiftPackageReference "rnnoise" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/rnnoise";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
 		6047BAE12A747C5500A41F70 /* XCRemoteSwiftPackageReference "abseil-cpp" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.corp.ebay.com:ebayMobile/abseil-cpp";
@@ -24220,150 +24126,9 @@
 				kind = branch;
 			};
 		};
-		60FB3EF02A7FACB50092AEED /* XCRemoteSwiftPackageReference "jsoncpp" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/jsoncpp.git";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
-		60FB3EF32A7FCBD40092AEED /* XCRemoteSwiftPackageReference "protobuf" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.corp.ebay.com:eBayMobile/protobuf.git";
-			requirement = {
-				branch = ebay/release;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		602B03592A8E6B5800642B1C /* libabsl */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03582A8E6B5800642B1C /* XCRemoteSwiftPackageReference "abseil-cpp" */;
-			productName = libabsl;
-		};
-		602B035C2A8E6BDA00642B1C /* libcrypto */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */;
-			productName = libcrypto;
-		};
-		602B035E2A8E6BDA00642B1C /* libssl */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */;
-			productName = libssl;
-		};
-		602B03612A8E6C5500642B1C /* libcrc32c */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03602A8E6C5500642B1C /* XCRemoteSwiftPackageReference "crc32c" */;
-			productName = libcrc32c;
-		};
-		602B03642A8E6D7B00642B1C /* libopus */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03632A8E6D7B00642B1C /* XCRemoteSwiftPackageReference "libopus" */;
-			productName = libopus;
-		};
-		602B03672A8E6DE600642B1C /* libsrtp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03662A8E6DE600642B1C /* XCRemoteSwiftPackageReference "libsrtp" */;
-			productName = libsrtp;
-		};
-		602B036A2A8E6E5900642B1C /* libvpx */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03692A8E6E5900642B1C /* XCRemoteSwiftPackageReference "libvpx" */;
-			productName = libvpx;
-		};
-		602B036C2A8E84FF00642B1C /* libabsl */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03582A8E6B5800642B1C /* XCRemoteSwiftPackageReference "abseil-cpp" */;
-			productName = libabsl;
-		};
-		602B036E2A8E84FF00642B1C /* libcrypto */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */;
-			productName = libcrypto;
-		};
-		602B03702A8E84FF00642B1C /* libcrc32c */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03602A8E6C5500642B1C /* XCRemoteSwiftPackageReference "crc32c" */;
-			productName = libcrc32c;
-		};
-		602B03722A8E84FF00642B1C /* libopus */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03632A8E6D7B00642B1C /* XCRemoteSwiftPackageReference "libopus" */;
-			productName = libopus;
-		};
-		602B03742A8E84FF00642B1C /* libsrtp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03662A8E6DE600642B1C /* XCRemoteSwiftPackageReference "libsrtp" */;
-			productName = libsrtp;
-		};
-		602B03762A8E84FF00642B1C /* libvpx */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03692A8E6E5900642B1C /* XCRemoteSwiftPackageReference "libvpx" */;
-			productName = libvpx;
-		};
-		602B03782A8E854500642B1C /* libjsoncpp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60FB3EF02A7FACB50092AEED /* XCRemoteSwiftPackageReference "jsoncpp" */;
-			productName = libjsoncpp;
-		};
-		602B037A2A8E854500642B1C /* libprotobuf-lite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60FB3EF32A7FCBD40092AEED /* XCRemoteSwiftPackageReference "protobuf" */;
-			productName = "libprotobuf-lite";
-		};
-		602B037C2A8E854500642B1C /* libabsl */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03582A8E6B5800642B1C /* XCRemoteSwiftPackageReference "abseil-cpp" */;
-			productName = libabsl;
-		};
-		602B037E2A8E854500642B1C /* libcrypto */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B035B2A8E6BDA00642B1C /* XCRemoteSwiftPackageReference "boringssl" */;
-			productName = libcrypto;
-		};
-		602B03802A8E854500642B1C /* libcrc32c */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03602A8E6C5500642B1C /* XCRemoteSwiftPackageReference "crc32c" */;
-			productName = libcrc32c;
-		};
-		602B03822A8E854500642B1C /* libopus */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03632A8E6D7B00642B1C /* XCRemoteSwiftPackageReference "libopus" */;
-			productName = libopus;
-		};
-		602B03842A8E854500642B1C /* libsrtp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03662A8E6DE600642B1C /* XCRemoteSwiftPackageReference "libsrtp" */;
-			productName = libsrtp;
-		};
-		602B03862A8E854500642B1C /* libvpx */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03692A8E6E5900642B1C /* XCRemoteSwiftPackageReference "libvpx" */;
-			productName = libvpx;
-		};
-		602B03892A8E85A900642B1C /* libyuv */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03882A8E85A900642B1C /* XCRemoteSwiftPackageReference "libyuv" */;
-			productName = libyuv;
-		};
-		602B038C2A8E919500642B1C /* librnn_vad */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B038B2A8E919500642B1C /* XCRemoteSwiftPackageReference "rnnoise" */;
-			productName = librnn_vad;
-		};
-		602B038E2A8E927400642B1C /* librnn_vad */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B038B2A8E919500642B1C /* XCRemoteSwiftPackageReference "rnnoise" */;
-			productName = librnn_vad;
-		};
-		602B03C32A8ED10200642B1C /* libyuv */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 602B03882A8E85A900642B1C /* XCRemoteSwiftPackageReference "libyuv" */;
-			productName = libyuv;
-		};
 		6047BAE02A747C5500A41F70 /* libabsl */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6047BAE12A747C5500A41F70 /* XCRemoteSwiftPackageReference "abseil-cpp" */;
@@ -24373,16 +24138,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6047BAE32A747C5500A41F70 /* XCRemoteSwiftPackageReference "libyuv" */;
 			productName = libyuv;
-		};
-		60FB3EF12A7FACB50092AEED /* libjsoncpp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60FB3EF02A7FACB50092AEED /* XCRemoteSwiftPackageReference "jsoncpp" */;
-			productName = libjsoncpp;
-		};
-		60FB3EF42A7FCBD40092AEED /* libprotobuf-lite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60FB3EF32A7FCBD40092AEED /* XCRemoteSwiftPackageReference "protobuf" */;
-			productName = "libprotobuf-lite";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
